@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-Personal portfolio designed with Vue Js Framework
+Personal Portfolio designed with Vue Js Framework
 
 ## Author
 
