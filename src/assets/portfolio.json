@@ -1,0 +1,176 @@
+{
+    "basic_details": {
+        "greetings": "Hi, <em>I am</em> <b>Gideon</b>",
+
+        "personal_details": {
+            "name": "Gideon Kimaiyo",
+            "title": "Software Developer",
+            "profile_image": "display_picture.jpg"
+        },
+        
+        "contact_info": {
+            "email": "gdkimaiyo@gmail.com",
+            "tel_no": "",
+            "country": "Hungary",
+            "location": "Budapest",
+            "website": "https://localhost:8080"
+        },
+    
+        "languages": {
+            "dialects": ["English", "Swahili"]
+        },
+
+        "others": {
+            "logo": "logo.png",
+            "navbar_banner": "navbar_banner_image_1.jpg"
+        }
+    },
+
+    "about_me": [
+        {
+          "paragraph": "Some <b>quick</b> <a href='http://localhost:8080'>Twitter</a> text to build on the card title and make up the bulk of the card's content."
+        },
+
+        {
+          "paragraph": "Some quick <a href='http://localhost:8080'>Twitter</a> text to build on the card title and make up the bulk of the card's content."
+        }
+    ],
+
+    "education": {
+        "1": {
+            "course_name": "",
+            "major": "",
+            "institution": "",
+            "start_year": "",
+            "end_year":"" 
+        },
+
+        "2": {
+            "course_name": "",
+            "major": "",
+            "institution": "",
+            "start_year": "",
+            "end_year":"" 
+        }
+
+    },
+
+    "projects": {
+        "all_projects_link": "https://github.com/gdkimaiyo?tab=repositories",
+
+        "project_details": [
+            {
+                "project_title": "Card Game",
+                "project_preview_image": "tynker_3.png",
+                "project_desc": "A very fun game of cards...",
+                "project_preview_link": "http://localhost:8080/",
+                "project_source_code_link": "http://localhost:8080/"
+            },
+    
+            {
+                "project_title": "Tic-Tac-Toe",
+                "project_preview_image": "",
+                "project_desc": "A very fun game of Tic-Tac-Toe.",
+                "project_preview_link": "http://localhost:8080/",
+                "project_source_code_link": "http://localhost:8080/"
+            },
+    
+            {
+                "project_title": "Todoist",
+                "project_preview_image": "",
+                "project_desc": "A simple Todo app..",
+                "project_preview_link": "http://localhost:8080/",
+                "project_source_code_link": "http://localhost:8080/"
+            },
+
+            {
+                "project_title": "Project Manager",
+                "project_preview_image": "",
+                "project_desc": "Project management app for overall tasks.",
+                "project_preview_link": "http://localhost:8080/",
+                "project_source_code_link": "http://localhost:8080/"
+            }
+        ]
+    },
+
+    "expertise": {
+        "skills": ["JavaScript", "Laravel", "C", "Python"]
+    },
+    
+    "my_services": [
+        {
+            "service_title": "Web Development",
+            "service_desc": "I design beautiful websites, which are as easy to use as possible"
+        },
+
+        {
+            "service_title": "Maintenance",
+            "service_desc": "Carry out mainntence and handle issues arising on your website."
+        },
+
+        {
+            "service_title": "Testing",
+            "service_desc": "I conduct extensive testing to ensure consistency across broswers, responsiveness, e.t.c to guarantee functionality."
+        }
+    ],
+
+    "testimonies": {
+        "1": {
+            "name": "Sam Wangai",
+            "title": "Software Engineer",
+            "company": "The Discovery Centre",
+            "testimony": "Gideon is a very competent fellow, who delivers quality UI designs."
+        },
+
+        "2": {
+            "name": "Ruth Njeri",
+            "title": "Software Engineer",
+            "company": "The Discovery Centre",
+            "testimony": "Gideon is a very competent fellow, who delivers quality UI designs."
+        },
+
+        "3": {
+            "name": "Stephen Ng'ang'a",
+            "title": "Web Developer",
+            "company": "Longhorn Publishers",
+            "testimony": "Gideon is a very competent fellow, who delivers quality UI designs."
+        }
+    },
+
+    "social_media": {
+        "1": {
+            "social_media_name": "Github",
+            "social_media_desc": "Find all of my projects on Github",
+            "social_media_link": "https://github.com/gdkimaiyo"
+        },
+
+        "2": {
+            "social_media_name": "LinkedIn",
+            "social_media_desc": "Find me at LinkedIn",
+            "social_media_link": "https://www.linkedin.com/in/gideon-kimaiyo/"
+        },
+
+        "3": {
+            "social_media_name": "Medium",
+            "social_media_desc": "Find my blogs on Medium",
+            "social_media_link": "https://medium.com/"
+        },
+
+        "4": {
+            "social_media_name": "Dev",
+            "social_media_desc": "Find my blogs on Medium",
+            "social_media_link": "https://medium.com/"
+        },
+
+        "5": {
+            "social_media_name": "Hashnode",
+            "social_media_desc": "Find my blogs on Medium",
+            "social_media_link": "https://medium.com/"
+        }
+    },
+
+    "author": {
+        "name": "Gideon Kimaiyo",
+        "author_link": "https://www.linkedin.com/in/gideon-kimaiyo/"
+    }
+}
