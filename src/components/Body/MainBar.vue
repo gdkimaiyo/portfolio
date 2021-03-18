@@ -32,13 +32,56 @@
         />
       </div>
     </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="shadow mb-5"
+      v-if="emptyObjectNode(projects_data.project_details)"
+    >
+      <h4 class="card-header font-weight-bold">My Projects</h4>
+      <div
+        class="card"
+        v-for="(value, index) in projects_data.project_details"
+        :key="index"
+      >
+        <BaseImage
+          v-if="value.project_preview_image"
+          className="rounded img-fluid p-2"
+          :img_alt="value.project_title + ' preview image'"
+          :img="value.project_preview_image"
+        />
+        <BaseCardBody
+          :card_title="value.project_title"
+          :card_desc="value.project_desc"
+          :preview_link="value.project_preview_link"
+          :preview_link_text="'Preview Project'"
+          :source_code_link="value.project_source_code_link"
+          :source_code_link_text="'Source Code'"
+        />
+
+        <div
+          class="card-footer border-bottom"
+          v-if="index === projects_data.project_details.length - 1"
+        >
+          <BaseButton
+            :href_link="projects_data.all_projects_link"
+            target_option="_blank"
+            className="btn btn-primary"
+            btn_text="See All Projects"
+          />
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
 import BaseAboutMe from "../Base/BaseAboutMe.vue";
 import BaseCardBody from "../Base/BaseCardBody.vue";
+import BaseImage from "../Base/BaseImage.vue";
 import BaseBadge from "../Base/BaseBadge.vue";
+import BaseButton from "../Base/BaseButton.vue";
 
 import jsonData from "../../mixins/jsonData.js";
 
@@ -48,8 +91,10 @@ export default {
 
   components: {
     BaseAboutMe,
+    BaseCardBody,
+    BaseImage,
     BaseBadge,
-    BaseCardBody
+    BaseButton
   }
 };
 </script>
