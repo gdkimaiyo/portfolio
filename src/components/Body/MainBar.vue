@@ -73,6 +73,23 @@
         </div>
       </div>
     </section>
+
+    <!-- Testimonials -->
+    <section class="shadow mb-4" v-if="emptyObjectParent(testimonies_data)">
+      <h4 class="card-header font-weight-bold">Testimonials</h4>
+      <div
+        class="card mb-0"
+        v-for="(value, index) in testimonies_data"
+        :key="index"
+      >
+        <BaseQuote
+          :quote_text="value.testimony"
+          :owner="value.name"
+          :title="value.title"
+          :company="value.company"
+        />
+      </div>
+    </section>
   </main>
 </template>
 
@@ -82,6 +99,7 @@ import BaseCardBody from "../Base/BaseCardBody.vue";
 import BaseImage from "../Base/BaseImage.vue";
 import BaseBadge from "../Base/BaseBadge.vue";
 import BaseButton from "../Base/BaseButton.vue";
+import BaseQuote from "../Base/BaseQuote.vue";
 
 import jsonData from "../../mixins/jsonData.js";
 
@@ -94,6 +112,7 @@ export default {
     BaseCardBody,
     BaseImage,
     BaseBadge,
+    BaseQuote,
     BaseButton
   }
 };
