@@ -90,6 +90,42 @@
         />
       </div>
     </section>
+
+    <!-- Social Media Section -->
+    <section
+      id="find-me"
+      class="shadow mb-4"
+      v-if="emptyObjectParent(social_data)"
+    >
+      <h4 class="card-header font-weight-bold">Find Me</h4>
+      <div class="card">
+        <div class="card-body border-bottom">
+          <p class="card-text">
+            Feel free to connect. You can find me on the following platforms.
+          </p>
+          <span class="p-1" v-for="(value, index) in social_data" :key="index">
+            <BaseBadge
+              :show_anchor="true"
+              className="p-2 mb-2 badge badge-light"
+              :fa_class="
+                'fab fa-' + convertToLowerCase(value.social_media_name)
+              "
+              :href_link="value.social_media_link"
+              :href_link_text="value.social_media_name"
+            />
+          </span>
+        </div>
+        <!-- Card footer -->
+        <div class="card-footer border-bottom">
+          <BaseButton
+            @btnMethod="scrollToTop()"
+            className="btn btn-primary"
+            btn_text="Back to top"
+            fa_class="fas fa-arrow-up"
+          />
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
