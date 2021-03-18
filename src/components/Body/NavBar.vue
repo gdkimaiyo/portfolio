@@ -1,9 +1,13 @@
 <template>
   <div class="">
-    <nav id="banner"
+    <nav
+      id="banner"
       class="navbar navbar navbar-expand-lg navbar-light bg-light"
-      :style="{ 
-        'background-image' : 'url(' + require('../../assets/' + basic_data.others.navbar_banner) + ')'
+      :style="{
+        'background-image':
+          'url(' +
+          require('../../assets/' + basic_data.others.navbar_banner) +
+          ')'
       }"
     >
       <div class="container justify-content-center">
@@ -25,11 +29,21 @@
       </div>
     </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom pb-1 pt-1">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light border-bottom pb-1 pt-1"
+    >
       <div class="container">
         <!-- Dropdown visible on Mobile View -->
         <div class="menu dropdown">
-          <a class="navbar-toggler" type="button" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a
+            class="navbar-toggler"
+            type="button"
+            href="#"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             <i class="text-info fas fa-bars"></i>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -63,13 +77,17 @@
               <i class="fas fa-donate"></i>
               Support Me
             </a>
-            <a class="dropdown-item text-primary" href="mailto:gdkimaiyo@gmail.com" target="_blank">
-                <i class="fas fa-mail-bulk"></i>
-                Contact Me
+            <a
+              class="dropdown-item text-primary"
+              href="mailto:gdkimaiyo@gmail.com"
+              target="_blank"
+            >
+              <i class="fas fa-mail-bulk"></i>
+              Contact Me
             </a>
           </div>
         </div>
-        
+
         <!-- Navbar visible on Desktop View -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="nav navbar-nav navbar-right mr-auto">
@@ -117,7 +135,11 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-primary" href="mailto:gdkimaiyo@gmail.com" target="_blank">
+              <a
+                class="nav-link text-primary"
+                href="mailto:gdkimaiyo@gmail.com"
+                target="_blank"
+              >
                 <i class="fas fa-mail-bulk"></i>
                 Contact Me
               </a>
@@ -145,11 +167,11 @@ export default {
 </script>
 
 <style>
-  .avatar {
-    border: 3px solid #fff;
-  }
-  
-  .navbar-toggler {
-    border: none;
-  }
+.avatar {
+  border: 3px solid #fff;
+}
+
+.navbar-toggler {
+  border: none;
+}
 </style>

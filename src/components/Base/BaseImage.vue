@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style>
-  .avatar {
-    vertical-align: middle;
-  }
+.avatar {
+  vertical-align: middle;
+}
 </style>
