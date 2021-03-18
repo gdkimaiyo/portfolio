@@ -47,21 +47,33 @@
             <i class="text-info fas fa-bars"></i>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item text-primary" href="#abtme">
+            <a class="dropdown-item text-primary" href="#abtme" v-smooth-scroll>
               <span class="fas fa-info-circle"></span>
               About Me
             </a>
-            <a class="dropdown-item text-primary" href="#services">
+            <a
+              class="dropdown-item text-primary"
+              href="#services"
+              v-smooth-scroll
+            >
               <span class="fas fa-info-circle"></span>
               Services
             </a>
 
-            <a class="dropdown-item text-primary" href="#projects">
+            <a
+              class="dropdown-item text-primary"
+              href="#projects"
+              v-smooth-scroll
+            >
               <span class="fas fa-code-branch"></span>
               Projects
             </a>
 
-            <a class="dropdown-item text-primary" href="#find-me">
+            <a
+              class="dropdown-item text-primary"
+              href="#find-me"
+              v-smooth-scroll
+            >
               <span class="fas fa-at"></span>
               Find Me
             </a>
@@ -92,28 +104,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="nav navbar-nav navbar-right mr-auto">
             <li class="nav-item">
-              <a class="nav-link text-primary" href="#abtme">
+              <a class="nav-link text-primary" href="#abtme" v-smooth-scroll>
                 <span class="fas fa-info-circle"></span>
                 About Me
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-primary" href="#services">
+              <a class="nav-link text-primary" href="#services" v-smooth-scroll>
                 <span class="fas fa-info-circle"></span>
                 Services
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-primary" href="#projects">
+              <a class="nav-link text-primary" href="#projects" v-smooth-scroll>
                 <span class="fas fa-code-branch"></span>
                 Projects
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-primary" href="#find-me">
+              <a class="nav-link text-primary" href="#find-me" v-smooth-scroll>
                 <span class="fas fa-at"></span>
                 Find Me
               </a>
