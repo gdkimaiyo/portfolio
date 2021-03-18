@@ -1,17 +1,22 @@
 <template>
   <main>
-    <h2>I am the main section</h2>
+    <!-- About Section -->
+    <BaseAboutMe />
   </main>
 </template>
 
 <script>
-// import jsonData from "../../mixins/jsonData.js";
+import BaseAboutMe from "../Base/BaseAboutMe.vue";
+
+import jsonData from "../../mixins/jsonData.js";
 
 export default {
   name: "MainBar",
-  // mixins: [jsonData],
+  mixins: [jsonData],
 
-  components: {}
+  components: {
+    BaseAboutMe
+  }
 };
 </script>
 
