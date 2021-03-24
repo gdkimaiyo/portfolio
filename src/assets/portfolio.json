@@ -4,18 +4,18 @@
 
         "personal_details": {
             "name": "Gideon Kimaiyo",
-            "title": "Software Developer",
+            "title": "Software Engineer",
             "profile_image": "display_picture.jpg"
         },
-        
+
         "contact_info": {
             "email": "gdkimaiyo@gmail.com",
             "tel_no": "",
-            "country": "Hungary",
-            "location": "Budapest",
+            "country": "Kenya",
+            "location": "Nairobi",
             "website": "https://localhost:8080"
         },
-    
+
         "languages": {
             "dialects": ["English", "Swahili"]
         },
@@ -28,11 +28,15 @@
 
     "about_me": [
         {
-          "paragraph": "Some <b>quick</b> <a href='http://localhost:8080'>Twitter</a> text to build on the card title and make up the bulk of the card's content."
+            "paragraph": "I am a <b>Software Engineer</b> based in <b>Nairobi</b>. Over a period of <b>2+</b> years, I have been building web applications which are beautiful, simple and user-friendly."
         },
 
         {
-          "paragraph": "Some quick <a href='http://localhost:8080'>Twitter</a> text to build on the card title and make up the bulk of the card's content."
+            "paragraph": "On my free time, I read, spend time with my friends or do courses on technologies that interest me."
+        },
+
+        {
+            "paragraph": "You can find me on <a href='https://github.com/gdkimaiyo'>GitHub</a> where I build web applications projects like this Portfolio or on <a href='https://www.linkedin.com/in/gideon-kimaiyo/'>Linkedin</a>."
         }
     ],
 
@@ -42,7 +46,7 @@
             "major": "",
             "institution": "",
             "start_year": "",
-            "end_year":"" 
+            "end_year": ""
         },
 
         "2": {
@@ -50,9 +54,8 @@
             "major": "",
             "institution": "",
             "start_year": "",
-            "end_year":"" 
+            "end_year": ""
         }
-
     },
 
     "projects": {
@@ -66,7 +69,7 @@
                 "project_preview_link": "http://localhost:8080/",
                 "project_source_code_link": "http://localhost:8080/"
             },
-    
+
             {
                 "project_title": "Tic-Tac-Toe",
                 "project_preview_image": "",
@@ -74,7 +77,7 @@
                 "project_preview_link": "http://localhost:8080/",
                 "project_source_code_link": "http://localhost:8080/"
             },
-    
+
             {
                 "project_title": "Todoist",
                 "project_preview_image": "",
@@ -96,7 +99,7 @@
     "expertise": {
         "skills": ["JavaScript", "Laravel", "C", "Python"]
     },
-    
+
     "my_services": [
         {
             "service_title": "Web Development",
