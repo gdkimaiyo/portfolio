@@ -73,7 +73,7 @@
             {
                 "project_title": "Todo List App",
                 "project_preview_image": "",
-                "project_desc": "A Todo List App I built with <b>JavaScript</b>. A user adds out their Todos, set due date for the Todo, and mark a Todo as done. What I learnt mostly was <b>DOM Manipulation</b> and Persisting data using <b>Web Storage</b> - localStorage.",
+                "project_desc": "A Todo List App I built with <b>JavaScript</b>. A user adds their Todos, set due date for the Todo, and mark a Todo as done. What I learnt mostly was <b>DOM Manipulation</b> and Persisting data using <b>Web Storage</b> - localStorage.",
                 "project_preview_link": "https://gdkimaiyo.github.io/todo-list-app-with-js/",
                 "project_source_code_link": "https://github.com/gdkimaiyo/todo-list-app-with-js"
             },
@@ -110,7 +110,7 @@
     "my_services": [
         {
             "service_title": "Web Development",
-            "service_desc": "I design beautiful websites, which are as easy to use as possible"
+            "service_desc": "I design beautiful responsive web applications, which are as easy to use as possible"
         },
 
         {
