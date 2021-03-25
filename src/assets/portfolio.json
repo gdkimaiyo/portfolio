@@ -28,7 +28,7 @@
 
     "about_me": [
         {
-            "paragraph": "I am a <b>Software Engineer</b> based in <b>Nairobi</b>. Over a period of <b>2+</b> years, I have been building web applications which are beautiful, simple and user-friendly."
+            "paragraph": "I am a <b>Software Engineer</b> based in <b>Nairobi</b>. Over a period of <b>2+</b> years, I have been building web applications with focus on making them simple and user-friendly."
         },
 
         {
@@ -63,41 +63,48 @@
 
         "project_details": [
             {
-                "project_title": "Card Game",
-                "project_preview_image": "tynker_3.png",
-                "project_desc": "A very fun game of cards...",
+                "project_title": "My Portfolio",
+                "project_preview_image": "",
+                "project_desc": "This website. A typical portfolio website where one can display information about themselves such as about section, the services they offer, showcase their projects, testimonials and how to get in touch to them. <br /><br />I designed this project using <b>Vue Js</b>. Code reusability (<b>Mixins</b>) and components <b>reuse</b> were the core concepts I learnt from designing this portfolio website.",
                 "project_preview_link": "http://localhost:8080/",
-                "project_source_code_link": "http://localhost:8080/"
+                "project_source_code_link": "https://github.com/gdkimaiyo/portfolio"
             },
 
             {
-                "project_title": "Tic-Tac-Toe",
+                "project_title": "Todo List App",
                 "project_preview_image": "",
-                "project_desc": "A very fun game of Tic-Tac-Toe.",
-                "project_preview_link": "http://localhost:8080/",
-                "project_source_code_link": "http://localhost:8080/"
+                "project_desc": "A Todo List App I built with <b>JavaScript</b>. A user adds out their Todos, set due date for the Todo, and mark a Todo as done. What I learnt mostly was <b>DOM Manipulation</b> and Persisting data using <b>Web Storage</b> - localStorage.",
+                "project_preview_link": "https://gdkimaiyo.github.io/todo-list-app-with-js/",
+                "project_source_code_link": "https://github.com/gdkimaiyo/todo-list-app-with-js"
             },
 
             {
-                "project_title": "Todoist",
-                "project_preview_image": "",
-                "project_desc": "A simple Todo app..",
-                "project_preview_link": "http://localhost:8080/",
-                "project_source_code_link": "http://localhost:8080/"
+                "project_title": "Mini-Netflix",
+                "project_preview_image": "mini_netflix.png",
+                "project_desc": "A Mini-Netflix web application I built with <b>Angular</b>. This application displays a list of movies, movie display image, movie synopsis, ratings, e.t.c. Also users can add movies to their favorites list",
+                "project_preview_link": "https://mini-netflix-gdkimaiyo.netlify.app/",
+                "project_source_code_link": "https://github.com/gdkimaiyo/mini-netflix"
             },
 
             {
-                "project_title": "Project Manager",
+                "project_title": "TaskManager",
                 "project_preview_image": "",
-                "project_desc": "Project management app for overall tasks.",
-                "project_preview_link": "http://localhost:8080/",
-                "project_source_code_link": "http://localhost:8080/"
+                "project_desc": "Project management app where users can create and manage a project and its related tasks. This project was designed with PHP's CodeIgniter3 Framework. Main Concepts I learnt are CRUD and MySQL.",
+                "project_preview_link": "",
+                "project_source_code_link": "https://github.com/gdkimaiyo/ci3_app"
             }
         ]
     },
 
     "expertise": {
-        "skills": ["JavaScript", "Laravel", "C", "Python"]
+        "skills": [
+            "JavaScript",
+            "HTML / CSS",
+            "PHP",
+            "Python",
+            "MySQL / PostgreSQL, MongoDB",
+            "C"
+        ]
     },
 
     "my_services": [

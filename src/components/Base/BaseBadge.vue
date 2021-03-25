@@ -1,38 +1,38 @@
 <template>
-  <span>
-    <a :href="href_link" :class="className" v-if="show_anchor">
-      <i :class="fa_class"></i>
-      {{ href_link_text }}
-    </a>
+    <span>
+        <a :href="href_link" :class="className" v-if="show_anchor">
+            <i :class="fa_class"></i>
+            {{ href_link_text }}
+        </a>
 
-    <span class="text-monospace font-weight-bold" v-if="show_heading">{{
-      skill
-    }}</span>
-  </span>
+        <span class="font-weight-bold" v-if="show_heading">
+            {{ skill }}
+        </span>
+    </span>
 </template>
 
 <script>
 export default {
-  name: "BaseBadge",
+    name: "BaseBadge",
 
-  components: {},
+    components: {},
 
-  props: {
-    show_anchor: {
-      type: Boolean,
-      default: false
-    },
+    props: {
+        show_anchor: {
+            type: Boolean,
+            default: false
+        },
 
-    show_heading: {
-      type: Boolean,
-      default: false
-    },
+        show_heading: {
+            type: Boolean,
+            default: false
+        },
 
-    className: String,
-    fa_class: String,
-    href_link: String,
-    href_link_text: String,
-    skill: String
-  }
+        className: String,
+        fa_class: String,
+        href_link: String,
+        href_link_text: String,
+        skill: String
+    }
 };
 </script>
