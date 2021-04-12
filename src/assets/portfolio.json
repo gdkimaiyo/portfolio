@@ -28,7 +28,7 @@
 
     "about_me": [
         {
-            "paragraph": "I am a <b>Software Engineer</b> based in <b>Nairobi</b>. Over a period of <b>2+</b> years, I have been building web applications with focus on making them simple and user-friendly."
+            "paragraph": "I am a <b>Software Engineer</b> based in <b>Nairobi</b>. Over a period of <b>3+</b> years, I have been building web applications with focus on making them simple and user-friendly."
         },
 
         {
@@ -126,24 +126,10 @@
 
     "testimonies": {
         "1": {
-            "name": "Sam Wangai",
+            "name": "Ruth Njeri Mbugua",
             "title": "Software Engineer",
             "company": "The Discovery Centre",
-            "testimony": "Gideon is a very competent fellow, who delivers quality UI designs."
-        },
-
-        "2": {
-            "name": "Ruth Njeri",
-            "title": "Software Engineer",
-            "company": "The Discovery Centre",
-            "testimony": "Gideon is a very competent fellow, who delivers quality UI designs."
-        },
-
-        "3": {
-            "name": "Stephen Ng'ang'a",
-            "title": "Web Developer",
-            "company": "Longhorn Publishers",
-            "testimony": "Gideon is a very competent fellow, who delivers quality UI designs."
+            "testimony": "<p>Over the time I have with Gideon, I have known him to be a hardworking person who is willing to go an extra mile and beyond to accomplish a task.</p><p>He is a good team player and takes up leadership roles when needed to. He has taken up the role of a project manager which he performed exemplary well. I happily recommend Gideon Kimaiyo to work in any creative organization that values being on top of projects, and is looking for a highly competent, determined and hardworking individual.</p>"
         }
     },
 
@@ -161,18 +147,6 @@
         },
 
         "3": {
-            "social_media_name": "Medium",
-            "social_media_desc": "Find my blogs on Medium",
-            "social_media_link": "https://medium.com/"
-        },
-
-        "4": {
-            "social_media_name": "Dev",
-            "social_media_desc": "Find my blogs on Medium",
-            "social_media_link": "https://medium.com/"
-        },
-
-        "5": {
             "social_media_name": "Hashnode",
             "social_media_desc": "Find my blogs on Medium",
             "social_media_link": "https://medium.com/"

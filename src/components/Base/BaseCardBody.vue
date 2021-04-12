@@ -4,7 +4,12 @@
         <div class="card-body border-bottom">
             <h6 class="card-title font-weight-bold">{{ card_title }}</h6>
             <p class="card-text"><span v-html="card_desc"></span></p>
-            <a :href="preview_link" :class="className" v-if="preview_link">
+            <a
+                :href="preview_link"
+                target="_blank"
+                :class="className"
+                v-if="preview_link"
+            >
                 {{ preview_link_text }}
             </a>
             <a
@@ -34,7 +39,7 @@ export default {
 
     props: {
         card_title: String,
-        card_desc: Array,
+        card_desc: String,
         preview_link: String,
         preview_link_text: String,
         source_code_link: String,

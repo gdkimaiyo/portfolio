@@ -4,7 +4,7 @@
         <BaseAboutMe />
 
         <!-- Skill set / Expertise Section -->
-        <section id="services" class="shadow mb-5">
+        <section class="shadow mb-5">
             <h4 class="card-header font-weight-bold">Expertise</h4>
             <div class="card">
                 <div class="card-body border-bottom">
@@ -22,7 +22,7 @@
         </section>
 
         <!-- My Services Section -->
-        <section class="shadow mb-5">
+        <section id="services" class="shadow mb-5">
             <h4 class="card-header font-weight-bold">What I do</h4>
             <div
                 class="card"
