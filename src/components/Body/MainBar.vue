@@ -98,7 +98,7 @@
         <!-- Social Media Section -->
         <section
             id="find-me"
-            class="shadow mb-4"
+            class="shadow"
             v-if="emptyObjectParent(social_data)"
         >
             <h4 class="card-header font-weight-bold">Find Me</h4>
