@@ -13,7 +13,7 @@
             "tel_no": "",
             "country": "Kenya",
             "location": "Nairobi",
-            "website": "https://localhost:8080"
+            "website": "https://gideon-kimaiyo-portfolio.netlify.app/"
         },
 
         "languages": {
@@ -67,7 +67,7 @@
                 "project_title": "My Portfolio",
                 "project_preview_image": "",
                 "project_desc": "This website. A typical portfolio website where one can display information about themselves such as about section, the services they offer, showcase their projects, testimonials and how to get in touch to them. <br /><br />I designed this project using <b>Vue Js</b>. Code reusability (<b>Mixins</b>) and components <b>reuse</b> were the core concepts I learnt from designing this portfolio website.",
-                "project_preview_link": "http://localhost:8080/",
+                "project_preview_link": "https://gideon-kimaiyo-portfolio.netlify.app/",
                 "project_source_code_link": "https://github.com/gdkimaiyo/portfolio"
             },
 
