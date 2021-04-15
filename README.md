@@ -2,9 +2,13 @@
 
 Personal Portfolio designed with Vue Js Framework
 
-## Author
+## Developer
 
 [Gideon Kimaiyo](https://github.com/gdkimaiyo), Software Engineer.
+
+## Website
+
+Preview this project here: [Portfolio](https://gideon-kimaiyo-portfolio.netlify.app/).
 
 ## Clone Project
 
