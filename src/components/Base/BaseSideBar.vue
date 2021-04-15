@@ -32,6 +32,18 @@
                             {{ basic_data.contact_info.tel_no }}</span
                         >
                     </li>
+
+                    <li v-if="basic_data.contact_info.website !== ''">
+                        <i class="text-muted pr-2 fab fa-wordpress"></i>
+                        <a class="" :href="basic_data.contact_info.website">
+                            {{
+                                basic_data.contact_info.website.replace(
+                                    /^\/\/|^.*?:\/\//,
+                                    ""
+                                )
+                            }}
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
