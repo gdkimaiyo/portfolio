@@ -1,0 +1,182 @@
+<template>
+  <q-header id="navbar">
+    <q-toolbar class="toolbar bg-white text-primary q-py-sm">
+      <q-toolbar-title>
+        <a class="logo-btn lt-sm" clickable> My Portfolio </a>
+        <a class="nav-btn gt-xs" clickable>
+          <q-icon name="fas fa-circle-info" size="18px" />
+          About Me
+        </a>
+        <a class="nav-btn gt-xs" clickable>
+          <q-icon name="fas fa-code-branch" size="18px" />
+          Projects
+        </a>
+        <a class="nav-btn gt-xs" clickable>
+          <q-icon name="fas fa-circle-info" size="18px" />
+          Services
+        </a>
+        <a class="nav-btn gt-xs" clickable>
+          <q-icon name="fas fa-at" size="18px" />
+          Find Me
+        </a>
+        <a class="nav-btn gt-xs" clickable>
+          <q-icon name="fab fa-blogger" size="18px" />
+          My Blogs
+        </a>
+      </q-toolbar-title>
+
+      <div>
+        <a class="nav-btn gt-xs" clickable>
+          <q-icon name="fas fa-circle-dollar-to-slot" size="18px" />
+          <!-- <q-icon name="fas fa-hand-holding-dollar" size="18px" /> -->
+          Support Me
+        </a>
+        <a class="nav-btn gt-xs" clickable>
+          <q-icon name="fas fa-square-envelope" size="18px" />
+          Contact Me
+        </a>
+        <q-btn
+          flat
+          dense
+          round
+          class="menu-btn lt-sm"
+          icon="menu"
+          aria-label="Menu"
+          @click="dropDownMenu = !dropDownMenu"
+        >
+          <q-menu
+            auto-close
+            :offset="[15, 15]"
+            transition-show="jump-down"
+            transition-hide="jump-up"
+            max-width="450px"
+            max-height="93vh"
+            class="lt-sm"
+          >
+            <q-list
+              class="dropdown-menu bg-primary text-white q-pt-xl"
+              style="min-width: 300px; min-height: 85vh; margin-top: 0"
+            >
+              <q-item class="q-pl-xl" exact clickable v-ripple>
+                <q-item-section style="display: inline-block">
+                  <q-icon name="fas fa-circle-info" class="q-pr-sm" />
+                  About Me
+                </q-item-section>
+              </q-item>
+
+              <q-item class="q-pl-xl" exact clickable v-ripple>
+                <q-item-section style="display: inline-block">
+                  <q-icon name="fas fa-code-branch" class="q-pr-sm" />
+                  Projects
+                </q-item-section>
+              </q-item>
+
+              <q-item class="q-pl-xl" exact clickable v-ripple>
+                <q-item-section style="display: inline-block">
+                  <q-icon name="fas fa-circle-info" class="q-pr-sm" />
+                  Services
+                </q-item-section>
+              </q-item>
+
+              <q-item class="q-pl-xl" exact clickable v-ripple>
+                <q-item-section style="display: inline-block">
+                  <q-icon name="fas fa-at" class="q-pr-sm" />
+                  Find Me
+                </q-item-section>
+              </q-item>
+
+              <q-item class="q-pl-xl" exact clickable v-ripple>
+                <q-item-section style="display: inline-block">
+                  <q-icon name="fab fa-blogger" class="q-pr-sm" />
+                  My Blogs
+                </q-item-section>
+              </q-item>
+
+              <q-separator inset color="white" class="lt-sm q-my-lg" />
+
+              <q-item class="lt-sm q-pl-xl" exact clickable v-ripple>
+                <q-item-section style="display: inline-block">
+                  <q-icon name="fas fa-circle-dollar-to-slot" class="q-pr-sm" />
+                  Support Me
+                </q-item-section>
+              </q-item>
+
+              <q-item class="lt-sm q-pl-xl" exact clickable v-ripple>
+                <q-item-section style="display: inline-block">
+                  <q-icon name="fas fa-square-envelope" class="q-pr-sm" />
+                  Contact Me
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
+      </div>
+    </q-toolbar>
+  </q-header>
+</template>
+
+<script>
+import { defineComponent, ref } from "vue";
+
+export default defineComponent({
+  name: "NavBar",
+
+  setup() {
+    return {
+      dropDownMenu: ref(false),
+    };
+  },
+});
+</script>
+
+<style lang="scss" scoped>
+#navbar {
+  font-family: "Avenir";
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(40px);
+  border-bottom: 1.5px solid #f0effb;
+  // border-bottom: 0.5px solid #ed220b;
+}
+.toolbar {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.logo-btn,
+.nav-btn {
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #007bff;
+  margin-right: 12px;
+}
+.nav-btn:hover,
+.logo-btn:hover {
+  color: #2356ad;
+}
+
+.menu-btn {
+  // color: #534b84;
+  background-color: #f9f9f9;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 42.5px;
+}
+
+.dropdown-menu .q-item.q-router-link--active,
+.dropdown-menu .q-item--active {
+  color: #ffffff !important;
+}
+
+@media only screen and (max-width: 575px) {
+  .logo-btn {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 0;
+  }
+  .toolbar {
+    padding-left: 16px;
+  }
+}
+</style>
