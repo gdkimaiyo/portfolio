@@ -1,10 +1,10 @@
-# Personal Portfolio
+# My Portfolio (portfolio)
 
-Personal Portfolio designed with Vue Js Framework
+My Personal Portfolio build with Vue 3, Quasar Framework
 
 ## Developer
 
-[Gideon Kimaiyo](https://github.com/gdkimaiyo), Software Engineer.
+[Gideon Kimaiyo](https://www.linkedin.com/in/gideon-kimaiyo/), Software Engineer.
 
 ## Website
 
@@ -16,30 +16,42 @@ Preview this project here: [Portfolio](https://gideon-kimaiyo-portfolio.netlify.
 git clone https://github.com/gdkimaiyo/portfolio.git
 ```
 
-## Project setup
+## Install the dependencies
 
-```
+```bash
+yarn
+# or
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
 
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
+```bash
+quasar dev
 ```
 
-### Lints and fixes files
+### Lint the files
 
-```
+```bash
+yarn lint
+# or
 npm run lint
 ```
 
-### Customize configuration
+### Format the files
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```bash
+yarn format
+# or
+npm run format
+```
+
+### Build the app for production
+
+```bash
+quasar build
+```
+
+### Customize the configuration
+
+See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
