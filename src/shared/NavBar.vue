@@ -132,10 +132,9 @@ export default defineComponent({
 <style lang="scss" scoped>
 #navbar {
   font-family: "Avenir";
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255);
   backdrop-filter: blur(40px);
   border-bottom: 1.5px solid #f0effb;
-  // border-bottom: 0.5px solid #ed220b;
 }
 .toolbar {
   width: 100%;
