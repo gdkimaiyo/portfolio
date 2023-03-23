@@ -1,30 +1,157 @@
 <template>
   <div id="about-me" class="about-section q-mb-lg">
-    <div class="text-h5 text-weight-bold">About Me</div>
-    <q-separator spaced />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-      aspernatur asperiores dolorem eveniet fugit. Ipsum, magnam vitae
-      temporibus maiores unde fugiat explicabo autem. Officiis voluptatibus
-      sapiente totam odio, expedita culpa?
-    </p>
+    <div class="section q-mt-md">
+      <div class="image-div lt-sm">
+        <q-avatar size="300px">
+          <img src="../assets/vital_dp_2.jpg" alt="user image" />
+        </q-avatar>
+      </div>
+      <div class="content-div">
+        <div class="about-header text-h5 text-weight-bold">About Me</div>
+        <div class="q-mt-md">
+          <p>
+            I am a <b>Software Engineer</b> from Kenya. Over a period of
+            <b>{{ years }}+</b> years, I have been building web applications
+            with focus on making them simple and user-friendly.
+          </p>
+          <p>
+            On my free time, I read, spend time with my friends or do courses on
+            technologies that interest me.
+          </p>
+          <p>
+            You can find me on
+            <a
+              href="https://www.linkedin.com/in/gideon-kimaiyo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="href-link text-primary"
+            >
+              Linkedin
+            </a>
+            or
+            <a
+              href="https://github.com/gdkimaiyo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="href-link text-primary"
+            >
+              GitHub
+            </a>
+            where I build web applications projects like this Portfolio.
+          </p>
+          <p>
+            <span class="sub-label">
+              <q-icon name="fas fa-location-dot" size="18px" />
+              Nairobi,
+            </span>
+            <span style="font-style: italic">Kenya</span>
+
+            <span class="q-px-md gt-xs">
+              <q-icon name="fas fa-circle" size="6px" />
+            </span>
+
+            <br class="lt-sm" />
+
+            <span class="sub-label">
+              <q-icon name="fas fa-square-envelope" size="18px" />
+            </span>
+            <span style="font-style: italic">gdkimaiyo@gmail.com</span>
+
+            <span class="q-px-md gt-xs">
+              <q-icon name="fas fa-circle" size="6px" />
+            </span>
+
+            <br class="lt-sm" />
+
+            <span class="sub-label"> Languages </span>
+            <span style="font-style: italic">English</span>
+            <span class="q-px-sm">
+              <q-icon name="fas fa-circle" size="4px" />
+            </span>
+            <span style="font-style: italic">Swahili</span>
+          </p>
+        </div>
+      </div>
+      <div class="image-div gt-xs">
+        <q-avatar size="300px">
+          <img src="../assets/vital_dp_2.jpg" alt="user image" />
+        </q-avatar>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "AboutSection",
+
+  setup() {
+    return {
+      years: ref(new Date().getFullYear() - 2018),
+    };
+  },
 });
 </script>
 
 <style lang="scss" scoped>
 #about-me {
   font-family: "Avenir";
+  font-size: 16px;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.image-div {
+  width: 40%;
+  max-width: 40%;
+  align-content: center;
+  text-align: center;
+  flex-grow: 1;
+}
+.content-div {
+  width: 60%;
+  max-width: 60%;
+  margin-right: 24px;
+  align-content: center;
+  flex-grow: 1;
+}
+.href-link {
+  text-decoration: none;
+}
+.href-link:hover {
+  text-decoration: underline;
+}
+.sub-label {
+  padding-right: 6px;
+  color: #6c757d;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 575px) {
-  //
+  #about-me {
+    font-size: 14px;
+  }
+  .section {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px;
+  }
+  .image-div {
+    width: 100%;
+    max-width: 100%;
+  }
+  .content-div {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+  .about-header {
+    margin-top: 24px;
+  }
 }
 </style>
