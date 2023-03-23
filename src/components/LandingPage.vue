@@ -15,6 +15,12 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "LandingPage",
+
+  methods: {
+    isHandset() {
+      return screen.width <= 575 ? true : false;
+    },
+  },
 });
 </script>
 

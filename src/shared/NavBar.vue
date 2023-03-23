@@ -3,19 +3,19 @@
     <q-toolbar class="toolbar bg-white text-primary q-py-sm">
       <q-toolbar-title>
         <a class="logo-btn lt-sm" clickable> My Portfolio </a>
-        <a class="nav-btn gt-xs" clickable>
+        <a class="nav-btn gt-xs" clickable @click="scrollTo('abtme')">
           <q-icon name="fas fa-circle-info" size="18px" />
           About Me
         </a>
-        <a class="nav-btn gt-xs" clickable>
+        <a class="nav-btn gt-xs" clickable @click="scrollTo('projects')">
           <q-icon name="fas fa-code-branch" size="18px" />
           Projects
         </a>
-        <a class="nav-btn gt-xs" clickable>
+        <a class="nav-btn gt-xs" clickable @click="scrollTo('services')">
           <q-icon name="fas fa-circle-info" size="18px" />
           Services
         </a>
-        <a class="nav-btn gt-xs" clickable>
+        <a class="nav-btn gt-xs" clickable @click="scrollTo('findme')">
           <q-icon name="fas fa-at" size="18px" />
           Find Me
         </a>
@@ -58,28 +58,40 @@
               style="min-width: 300px; min-height: 85vh; margin-top: 0"
             >
               <q-item class="q-pl-xl" exact clickable v-ripple>
-                <q-item-section style="display: inline-block">
+                <q-item-section
+                  style="display: inline-block"
+                  @click="scrollTo('abtme')"
+                >
                   <q-icon name="fas fa-circle-info" class="q-pr-sm" />
                   About Me
                 </q-item-section>
               </q-item>
 
               <q-item class="q-pl-xl" exact clickable v-ripple>
-                <q-item-section style="display: inline-block">
+                <q-item-section
+                  style="display: inline-block"
+                  @click="scrollTo('projects')"
+                >
                   <q-icon name="fas fa-code-branch" class="q-pr-sm" />
                   Projects
                 </q-item-section>
               </q-item>
 
               <q-item class="q-pl-xl" exact clickable v-ripple>
-                <q-item-section style="display: inline-block">
+                <q-item-section
+                  style="display: inline-block"
+                  @click="scrollTo('services')"
+                >
                   <q-icon name="fas fa-circle-info" class="q-pr-sm" />
                   Services
                 </q-item-section>
               </q-item>
 
               <q-item class="q-pl-xl" exact clickable v-ripple>
-                <q-item-section style="display: inline-block">
+                <q-item-section
+                  style="display: inline-block"
+                  @click="scrollTo('findme')"
+                >
                   <q-icon name="fas fa-at" class="q-pr-sm" />
                   Find Me
                 </q-item-section>
@@ -126,6 +138,22 @@ export default defineComponent({
       dropDownMenu: ref(false),
     };
   },
+
+  methods: {
+    scrollTo(ref) {
+      window.scrollTo(0, 0);
+      const position = document.getElementById(ref).offsetTop;
+      const offsetPosition = position + window.pageYOffset - 70;
+
+      // smooth scroll
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    },
+  },
 });
 </script>
 
@@ -150,6 +178,7 @@ export default defineComponent({
   font-weight: 500;
   color: #007bff;
   margin-right: 12px;
+  text-decoration: none;
 }
 .nav-btn:hover,
 .logo-btn:hover {
