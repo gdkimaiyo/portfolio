@@ -2,15 +2,13 @@
   <div id="index-page">
     <LandingPage />
 
-    <div class="after-landing q-py-lg q-px-md">
-      <div class="text-h5 text-weight-bold">About Me</div>
-      <q-separator spaced />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-        aspernatur asperiores dolorem eveniet fugit. Ipsum, magnam vitae
-        temporibus maiores unde fugiat explicabo autem. Officiis voluptatibus
-        sapiente totam odio, expedita culpa?
-      </p>
+    <div class="after-landing q-pt-lg q-pb-xl q-px-md">
+      <AboutSection id="abtme" />
+      <ProjectsSection id="projects" />
+      <ServicesSection id="services" />
+      <ExpertiseSection />
+      <TestimonialsSection />
+      <FindMe id="findme" />
     </div>
   </div>
 </template>
@@ -18,11 +16,25 @@
 <script>
 import { defineComponent } from "vue";
 import LandingPage from "../components/LandingPage.vue";
+import AboutSection from "../components/AboutSection.vue";
+import ProjectsSection from "../components/ProjectsSection.vue";
+import ServicesSection from "../components/ServicesSection.vue";
+import ExpertiseSection from "../components/ExpertiseSection.vue";
+import TestimonialsSection from "../components/TestimonialsSection.vue";
+import FindMe from "../components/FindMe.vue";
 
 export default defineComponent({
   name: "IndexPage",
 
-  components: { LandingPage },
+  components: {
+    LandingPage,
+    AboutSection,
+    ProjectsSection,
+    ServicesSection,
+    ExpertiseSection,
+    TestimonialsSection,
+    FindMe,
+  },
 });
 </script>
 
