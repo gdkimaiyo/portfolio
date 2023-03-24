@@ -187,7 +187,8 @@ export default defineComponent({
 
 .menu-btn {
   // color: #534b84;
-  background-color: #f9f9f9;
+  color: #f9f9f9;
+  background-color: #007bff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.08);
   border-radius: 42.5px;
 }
