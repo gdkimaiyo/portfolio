@@ -1,30 +1,37 @@
 <template>
   <div id="projects" class="projects-section q-my-lg">
-    <div class="text-h5 text-weight-bold">My Projects</div>
-    <q-separator spaced />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-      aspernatur asperiores dolorem eveniet fugit. Ipsum, magnam vitae
-      temporibus maiores unde fugiat explicabo autem. Officiis voluptatibus
-      sapiente totam odio, expedita culpa?
-    </p>
+    <div class="text-h5 text-weight-bold q-mb-lg">Featured Projects</div>
+    <ProjectHolder :projects="projects" />
   </div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
+import ProjectHolder from "./ProjectHolder.vue";
+import { PROJECTS } from "../utils/constants";
 
 export default defineComponent({
   name: "ProjectsSection",
+
+  components: { ProjectHolder },
+
+  setup() {
+    return {
+      projects: ref(PROJECTS),
+    };
+  },
 });
 </script>
 
 <style lang="scss" scoped>
-#projects-me {
+#projects {
   font-family: "Avenir";
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 575px) {
-  //
+  #projects {
+    font-size: 16px;
+  }
 }
 </style>
