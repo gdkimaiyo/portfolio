@@ -45,3 +45,8 @@ export const animateFunc = () => {
   // start the text animation
   StartTextAnimation(0);
 };
+
+// HELPER functions
+export const getImgUrl = (image) => {
+  return new URL(`../assets/${image}`, import.meta.url).href;
+};
