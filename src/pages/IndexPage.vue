@@ -2,10 +2,14 @@
   <div id="index-page">
     <LandingPage />
 
-    <div class="after-landing q-pt-lg q-pb-xl q-px-md">
+    <div class="after-landing q-pt-lg q-px-md">
       <AboutSection id="abtme" />
       <ProjectsSection id="projects" />
-      <ServicesSection id="services" />
+    </div>
+
+    <ServicesSection id="services" />
+
+    <div class="after-landing q-pt-lg q-pb-xl q-px-md">
       <ExpertiseSection />
       <TestimonialsSection />
       <FindMe id="findme" />

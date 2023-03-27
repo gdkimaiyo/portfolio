@@ -1,6 +1,6 @@
 <template>
   <div id="projects" class="projects-section q-my-lg">
-    <div class="text-h5 text-weight-bold q-mb-lg">Featured Projects</div>
+    <div class="text-h4 text-weight-bold q-mb-lg">Featured Projects</div>
     <ProjectHolder :projects="projects" />
   </div>
 </template>
