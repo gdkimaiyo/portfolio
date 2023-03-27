@@ -2,24 +2,52 @@
   <q-header id="navbar">
     <q-toolbar class="toolbar bg-white text-primary q-py-sm">
       <q-toolbar-title>
-        <a class="logo-btn lt-sm" clickable> My Portfolio </a>
-        <a class="nav-btn gt-xs" clickable @click="scrollTo('abtme')">
+        <a class="logo-btn lt-sm" clickable @click="goHome()"> My Portfolio </a>
+        <a
+          class="logo-btn gt-xs"
+          clickable
+          @click="goHome()"
+          v-if="currentRoute === '/contact'"
+        >
+          My Portfolio
+        </a>
+        <a
+          class="nav-btn gt-xs"
+          clickable
+          @click="scrollTo('abtme')"
+          v-if="currentRoute === '/'"
+        >
           <q-icon name="fas fa-circle-info" size="18px" />
           About Me
         </a>
-        <a class="nav-btn gt-xs" clickable @click="scrollTo('projects')">
+        <a
+          class="nav-btn gt-xs"
+          clickable
+          @click="scrollTo('projects')"
+          v-if="currentRoute === '/'"
+        >
           <q-icon name="fas fa-code-branch" size="18px" />
           Projects
         </a>
-        <a class="nav-btn gt-xs" clickable @click="scrollTo('services')">
+        <a
+          class="nav-btn gt-xs"
+          clickable
+          @click="scrollTo('services')"
+          v-if="currentRoute === '/'"
+        >
           <q-icon name="fas fa-circle-info" size="18px" />
           Services
         </a>
-        <a class="nav-btn gt-xs" clickable @click="scrollTo('findme')">
+        <a
+          class="nav-btn gt-xs"
+          clickable
+          @click="scrollTo('findme')"
+          v-if="currentRoute === '/'"
+        >
           <q-icon name="fas fa-at" size="18px" />
           Find Me
         </a>
-        <a class="nav-btn gt-xs" clickable>
+        <a class="nav-btn gt-xs" clickable v-if="currentRoute === '/'">
           <q-icon name="fab fa-blogger" size="18px" />
           My Blogs
         </a>
@@ -31,7 +59,12 @@
           <!-- <q-icon name="fas fa-hand-holding-dollar" size="18px" /> -->
           Support Me
         </a>
-        <a class="nav-btn gt-xs" clickable>
+        <a
+          class="nav-btn gt-xs"
+          :class="{ 'active-link': currentRoute === '/contact' }"
+          clickable
+          @click="goTo('/contact')"
+        >
           <q-icon name="fas fa-square-envelope" size="18px" />
           Contact Me
         </a>
@@ -113,7 +146,14 @@
                 </q-item-section>
               </q-item>
 
-              <q-item class="lt-sm q-pl-xl" exact clickable v-ripple>
+              <q-item
+                class="lt-sm q-pl-xl"
+                :class="{ 'active-q-item': currentRoute === '/contact' }"
+                exact
+                clickable
+                v-ripple
+                @click="goTo('/contact')"
+              >
                 <q-item-section style="display: inline-block">
                   <q-icon name="fas fa-square-envelope" class="q-pr-sm" />
                   Contact Me
@@ -129,6 +169,7 @@
 
 <script>
 import { defineComponent, ref } from "vue";
+import { useRoute } from "vue-router";
 
 export default defineComponent({
   name: "NavBar",
@@ -139,8 +180,28 @@ export default defineComponent({
     };
   },
 
+  computed: {
+    currentRoute() {
+      return useRoute().path;
+    },
+  },
+
   methods: {
+    goHome() {
+      this.$router.push("/").then(() => {
+        this.$router.go();
+      });
+    },
+
+    goTo(route) {
+      this.$router.push(route);
+    },
+
     scrollTo(ref) {
+      if (document.getElementById(ref) === null) {
+        this.goHome();
+        return;
+      }
       window.scrollTo(0, 0);
       const position = document.getElementById(ref).offsetTop;
       const offsetPosition = position + window.pageYOffset - 70;
@@ -184,6 +245,12 @@ export default defineComponent({
 .logo-btn:hover {
   color: #2356ad;
 }
+.logo-btn {
+  font-weight: 700;
+}
+.active-link {
+  color: #2356ad;
+}
 
 .menu-btn {
   // color: #534b84;
@@ -194,8 +261,10 @@ export default defineComponent({
 }
 
 .dropdown-menu .q-item.q-router-link--active,
-.dropdown-menu .q-item--active {
+.dropdown-menu .q-item--active,
+.dropdown-menu .active-q-item {
   color: #ffffff !important;
+  background-color: #2356ad !important;
 }
 
 @media only screen and (max-width: 575px) {
