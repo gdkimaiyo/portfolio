@@ -42,3 +42,26 @@ export const PROJECTS = [
     },
   },
 ];
+
+export const SERVICES = [
+  {
+    title: "Tailored Web Development",
+    desc: "I design beautiful responsive web applications, which are as easy to use as possible. I build with your goals in mind, whether you want a simple flexible website, a custom web app or a SaaS product.",
+    icon: "fas fa-laptop-code",
+  },
+  {
+    title: "Maintenance and Support",
+    desc: "Carry out mainntence and handle issues arising on your website. Your website is always growing. Whether you are adding new features or making improvements I am here to help. I will always be available to answer any questions you might have.",
+    icon: "fas fa-headset",
+  },
+  {
+    title: "Testing",
+    desc: "I conduct extensive testing using multiple approaches to ensure consistency across broswers, responsiveness, e.t.c to guarantee functionality and everything to work as expected.",
+    icon: "fas fa-vial",
+  },
+  {
+    title: "Coding Tutor",
+    desc: "I am a Coding Tutor. I teach computer programming languages such as JavaScript, Python, C/C++ and Web Development starting from the basics to advanced concepts. My target age groups are: 7 - 12 years and teenagers",
+    icon: "fas fa-chalkboard-user",
+  },
+];
