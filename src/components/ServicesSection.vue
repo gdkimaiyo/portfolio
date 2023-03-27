@@ -3,7 +3,7 @@
     <div class="section q-pt-lg q-px-md">
       <div class="text-h4 text-weight-bold">Services</div>
     </div>
-    <div class="section q-pt-lg q-px-md">
+    <div class="section q-pt-lg q-pb-md q-px-md">
       <div class="text-h5 text-weight-bold">
         <em>I provide everything you need to create your perfect website</em>
       </div>
@@ -21,18 +21,19 @@
           <div class="text-h6 q-mb-md text-weight-bold">
             {{ service.title }}
           </div>
-          <div class="">{{ service.desc }}</div>
+          <div class="service-desc">{{ service.desc }}</div>
         </div>
       </div>
     </div>
 
-    <div class="section q-py-lg q-px-md">
+    <div class="section services-footer q-px-md">
       <div class="text-h5 text-weight-bold">
         <q-btn
           unelevated
           rounded
           color="positive"
           label="Let's work together"
+          to="/contact"
         />
       </div>
     </div>
@@ -93,12 +94,22 @@ export default defineComponent({
   border-radius: 12px;
   padding: 12px;
 }
+.services-footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 
 @media only screen and (max-width: 575px) {
   .service-card {
     width: 100%;
     max-width: 100%;
     padding: 0;
+  }
+  .service-desc {
+    margin-bottom: 48px;
+  }
+  .services-footer {
+    padding-top: 0;
   }
 }
 </style>
