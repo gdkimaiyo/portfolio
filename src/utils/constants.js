@@ -6,7 +6,7 @@ export const PROJECTS = [
     img: "mini-netflix-preview-image-1.png",
     projectLink: "https://gdkimaiyo.github.io/netflix",
     codeLink: "https://github.com/gdkimaiyo/netflix",
-    desc: "Mini-Netflix is a Netflix clone application. With this app, users can view movie details like, the movie image, title, year of production, e.t.c. In addition, users can add movies or TV shows they like to their favourites list.",
+    desc: "Mini-Netflix is a Netflix clone application. With this app, users can view movie details such as, the movie image, title, overview, year of production, e.t.c. In addition, users can add movies or TV shows they like to their favourites list.",
     customStyle: {
       background: "#f0e9ee",
       border: "0.5px solid #4b135d",
@@ -21,7 +21,7 @@ export const PROJECTS = [
     codeLink: "https://github.com/gdkimaiyo/portfolio",
     desc: "This website. A typical portfolio website where one can display information about themselves such as about section, the services they offer, showcase their projects, testimonials and how to get in touch to them.",
     desc2:
-      "I designed this project using Vue Js. Code reusability (Mixins) and components reuse were the core concepts I learnt from designing this portfolio website.",
+      "I designed this project using Vue Js. Code reusability and component reuse were the core concepts I learnt from designing this portfolio website.",
     customStyle: {
       background: "#e9f0f4",
       border: "0.5px solid #1d4778",
