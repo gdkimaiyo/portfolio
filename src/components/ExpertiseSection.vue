@@ -1,6 +1,6 @@
 <template>
   <div id="expertise" class="expertise-section q-my-lg">
-    <div class="text-h5 text-weight-bold">Expertise</div>
+    <div class="text-h4 text-weight-bold">Expertise</div>
     <q-separator spaced />
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio

@@ -1,6 +1,6 @@
 <template>
   <div id="find-me" class="findme-section q-mb-xl">
-    <div class="text-h5 text-weight-bold">Find Me</div>
+    <div class="text-h4 text-weight-bold">Find Me</div>
     <q-separator spaced />
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio

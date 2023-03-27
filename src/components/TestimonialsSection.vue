@@ -1,6 +1,6 @@
 <template>
   <div id="testimonials" class="testimonials-section q-my-lg">
-    <div class="text-h5 text-weight-bold">Testimonials</div>
+    <div class="text-h4 text-weight-bold">Testimonials</div>
     <q-separator spaced />
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
