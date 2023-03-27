@@ -7,7 +7,7 @@
         </q-avatar>
       </div>
       <div class="content-div">
-        <div class="about-header text-h5 text-weight-bold">About Me</div>
+        <div class="about-header text-h4 text-weight-bold">About Me</div>
         <div class="q-mt-md">
           <p>
             I am a <b>Software Engineer</b> from Kenya. Over a period of
