@@ -1,8 +1,8 @@
 export const animateFunc = () => {
   const dataText = [
-    "I am Gideon",
+    "Hi, I am Gideon",
     "I am a Software Engineer",
-    "sky is the limit!",
+    "Sky is the limit!",
   ];
 
   // type one text in the typwriter
@@ -11,8 +11,11 @@ export const animateFunc = () => {
     // chekc if text isn't finished yet
     if (i < text.length) {
       // add next character to h1
-      document.querySelector("em").innerHTML =
-        text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+      const emElm = document.querySelector("em");
+      if (emElm !== null) {
+        emElm.innerHTML =
+          text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+      }
 
       // wait for a while and call this function again for next character
       setTimeout(function () {
@@ -49,4 +52,22 @@ export const animateFunc = () => {
 // HELPER functions
 export const getImgUrl = (image) => {
   return new URL(`../assets/${image}`, import.meta.url).href;
+};
+
+export const validateEmail = (email) => {
+  if (email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  } else {
+    return false;
+  }
+};
+
+export const validateFullName = (name) => {
+  if (name) {
+    const re = /^[a-zA-Z\-’']+( [a-zA-Z\-’']+)+$/;
+    return re.test(name);
+  } else {
+    return false;
+  }
 };
