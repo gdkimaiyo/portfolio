@@ -41,11 +41,11 @@
         <a
           class="nav-btn gt-xs"
           clickable
-          @click="scrollTo('findme')"
+          @click="scrollTo('testimonials')"
           v-if="currentRoute === '/'"
         >
-          <q-icon name="fas fa-at" size="18px" />
-          Find Me
+          <q-icon name="fas fa-comment-dots" size="18px" />
+          Testimonials
         </a>
         <a class="nav-btn gt-xs" clickable v-if="currentRoute === '/'">
           <q-icon name="fab fa-blogger" size="18px" />
@@ -123,10 +123,10 @@
               <q-item class="q-pl-xl" exact clickable v-ripple>
                 <q-item-section
                   style="display: inline-block"
-                  @click="scrollTo('findme')"
+                  @click="scrollTo('testimonials')"
                 >
-                  <q-icon name="fas fa-at" class="q-pr-sm" />
-                  Find Me
+                  <q-icon name="fas fa-comment-dots" class="q-pr-sm" />
+                  Testimonials
                 </q-item-section>
               </q-item>
 

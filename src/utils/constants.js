@@ -120,3 +120,15 @@ export const SKILLS = [
   //   icon: "c.png",
   // },
 ];
+
+export const TESTIMONIALS = [
+  {
+    name: "Ruth Njeri Mbugua",
+    testimony:
+      "Over the time I have been with Gideon, I have known him to be a hardworking person who is willing to go an extra mile and beyond to accomplish a task.",
+    testimony2:
+      "He is a good team player and takes up leadership roles when needed to. He has taken up the role of a project manager which he performed exemplary well. I happily recommend Gideon Kimaiyo to work in any creative organization that values being on top of projects, and is looking for a highly competent, determined and hardworking individual.",
+    profession: "Software Engineer, Vitafluence.ai",
+    initials: "RN",
+  },
+];
