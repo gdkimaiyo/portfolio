@@ -11,8 +11,8 @@
 
     <div class="after-landing q-pt-lg q-pb-xl q-px-md">
       <ExpertiseSection />
-      <TestimonialsSection />
-      <FindMe id="findme" />
+      <TestimonialsSection id="testimonials" />
+      <FindMe />
     </div>
   </div>
 </template>
