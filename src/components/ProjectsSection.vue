@@ -2,6 +2,16 @@
   <div id="projects" class="projects-section q-my-lg">
     <div class="text-h4 text-weight-bold q-mb-lg">Featured Projects</div>
     <ProjectHolder :projects="projects" />
+
+    <q-btn
+      unelevated
+      rounded
+      color="primary"
+      class="q-mb-xl"
+      href="https://github.com/gdkimaiyo?tab=repositories"
+      target="_blank"
+      label="View All Projects"
+    />
   </div>
 </template>
 
