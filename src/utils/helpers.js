@@ -50,8 +50,8 @@ export const animateFunc = () => {
 };
 
 // HELPER functions
-export const getImgUrl = (image) => {
-  return new URL(`../assets/${image}`, import.meta.url).href;
+export const getImgUrl = (dir, image) => {
+  return new URL(`${dir}${image}`, import.meta.url).href;
 };
 
 export const validateEmail = (email) => {
