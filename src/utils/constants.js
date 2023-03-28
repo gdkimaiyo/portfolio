@@ -65,3 +65,58 @@ export const SERVICES = [
     icon: "fas fa-chalkboard-user",
   },
 ];
+
+export const SKILLS = [
+  {
+    language: "JavaScript",
+    icon: "js.png",
+  },
+  {
+    language: "Python",
+    icon: "python.png",
+  },
+  {
+    language: "HTML",
+    icon: "html5.png",
+  },
+  {
+    language: "CSS",
+    icon: "css.png",
+  },
+  {
+    language: "Angular",
+    icon: "angular.png",
+  },
+  {
+    language: "Vue",
+    icon: "vue.png",
+  },
+  {
+    language: "PHP",
+    icon: "php2.png",
+  },
+  {
+    language: "Flask",
+    icon: "flask.png",
+  },
+  {
+    language: "Laravel",
+    icon: "laravel.png",
+  },
+  {
+    language: "MongoBB",
+    icon: "mongodb.png",
+  },
+  {
+    language: "MySQL",
+    icon: "mysql.png",
+  },
+  {
+    language: "PostGreSQL",
+    icon: "postgresql.png",
+  },
+  // {
+  //   language: "C",
+  //   icon: "c.png",
+  // },
+];
