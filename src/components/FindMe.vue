@@ -1,5 +1,5 @@
 <template>
-  <div id="find-me" class="findme-section q-mb-xl">
+  <div id="find-me" class="findme-section q-my-lg">
     <div class="text-h4 text-weight-bold">Find Me</div>
     <div class="q-mt-lg q-mb-md">
       Feel free to connect. You can find me on the following platforms.
