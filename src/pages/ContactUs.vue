@@ -43,6 +43,9 @@ export default defineComponent({
 }
 
 @media only screen and (max-width: 575px) {
+  #contact-us {
+    padding-bottom: 0;
+  }
   .page-header {
     font-size: 1.5rem;
   }
