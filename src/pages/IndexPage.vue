@@ -9,9 +9,13 @@
 
     <ServicesSection id="services" />
 
-    <div class="after-landing q-pt-lg q-pb-xl q-px-md">
+    <div class="after-landing q-pt-lg q-px-md">
       <ExpertiseSection />
-      <TestimonialsSection id="testimonials" />
+    </div>
+
+    <TestimonialsSection id="testimonials" />
+
+    <div class="after-landing q-pt-lg q-pb-xl q-px-md">
       <FindMe />
     </div>
   </div>
