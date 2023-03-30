@@ -7,7 +7,7 @@
           class="logo-btn gt-xs"
           clickable
           @click="goHome()"
-          v-if="currentRoute === '/contact'"
+          v-if="currentRoute === '/contact' || currentRoute === '/support-me'"
         >
           My Portfolio
         </a>
@@ -54,7 +54,12 @@
       </q-toolbar-title>
 
       <div>
-        <a class="nav-btn gt-xs" clickable>
+        <a
+          class="nav-btn gt-xs"
+          :class="{ 'active-link': currentRoute === '/support-me' }"
+          clickable
+          @click="goTo('/support-me')"
+        >
           <q-icon name="fas fa-circle-dollar-to-slot" size="18px" />
           <!-- <q-icon name="fas fa-hand-holding-dollar" size="18px" /> -->
           Support Me
@@ -139,7 +144,14 @@
 
               <q-separator inset color="white" class="lt-sm q-my-lg" />
 
-              <q-item class="lt-sm q-pl-xl" exact clickable v-ripple>
+              <q-item
+                class="lt-sm q-pl-xl"
+                :class="{ 'active-q-item': currentRoute === '/support-me' }"
+                exact
+                clickable
+                v-ripple
+                @click="goTo('/support-me')"
+              >
                 <q-item-section style="display: inline-block">
                   <q-icon name="fas fa-circle-dollar-to-slot" class="q-pr-sm" />
                   Support Me

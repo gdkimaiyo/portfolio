@@ -95,7 +95,9 @@
           </a>
         </div>
         <div class="nav-btn">
-          <a class="q-pr-sm" clickable>Support Me</a>
+          <a class="q-pr-sm" clickable @click="goTo('/support-me')">
+            Support Me
+          </a>
         </div>
       </div>
     </div>
