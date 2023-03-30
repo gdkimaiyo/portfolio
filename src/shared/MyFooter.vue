@@ -235,7 +235,7 @@ export default defineComponent({
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-    padding-bottom: 10%;
+    padding-bottom: 0;
   }
   .content {
     width: 100%;
@@ -248,6 +248,7 @@ export default defineComponent({
 
   .copyright {
     padding: 16px;
+    padding-bottom: 10%;
   }
 }
 </style>
