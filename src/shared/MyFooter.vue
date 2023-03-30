@@ -111,7 +111,15 @@
           size="5px"
           style="padding: 0 6px"
         />
-        Gideon Kimaiyo
+        <a
+          href="https://www.linkedin.com/in/gideon-kimaiyo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="href-link"
+          style="color: #ffffff"
+        >
+          Gideon Kimaiyo
+        </a>
       </div>
     </div>
   </footer>
