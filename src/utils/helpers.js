@@ -49,6 +49,27 @@ export const animateFunc = () => {
   StartTextAnimation(0);
 };
 
+export const scrollToTop = () => {
+  // Get the button:
+  const mybutton = document.getElementById("scroll-back-btn");
+
+  // When the user scrolls down 700px from the top of the document, show the button
+  window.onscroll = () => {
+    scrollFunction();
+  };
+
+  const scrollFunction = () => {
+    if (
+      document.body.scrollTop > 700 ||
+      document.documentElement.scrollTop > 700
+    ) {
+      mybutton.style.visibility = "visible";
+    } else {
+      mybutton.style.visibility = "hidden";
+    }
+  };
+};
+
 // HELPER functions
 export const getImgUrl = (dir, image) => {
   return new URL(`${dir}${image}`, import.meta.url).href;

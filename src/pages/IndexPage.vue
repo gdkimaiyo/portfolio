@@ -18,6 +18,18 @@
     <div class="after-landing q-pt-lg q-pb-xl q-px-md">
       <FindMe />
     </div>
+
+    <q-btn
+      unelevated
+      round
+      color="white"
+      text-color="primary"
+      size="sm"
+      icon="fas fa-angles-up"
+      class="scroll-back-btn"
+      id="scroll-back-btn"
+      @click="scrollBack()"
+    />
   </div>
 </template>
 
@@ -31,6 +43,8 @@ import ExpertiseSection from "../components/ExpertiseSection.vue";
 import TestimonialsSection from "../components/TestimonialsSection.vue";
 import FindMe from "../components/FindMe.vue";
 
+import { scrollToTop } from "../utils/helpers";
+
 export default defineComponent({
   name: "IndexPage",
 
@@ -42,6 +56,22 @@ export default defineComponent({
     ExpertiseSection,
     TestimonialsSection,
     FindMe,
+  },
+
+  mounted() {
+    scrollToTop();
+  },
+
+  methods: {
+    scrollBack() {
+      // smooth scroll
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    },
   },
 });
 </script>
@@ -55,5 +85,19 @@ export default defineComponent({
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+}
+
+.scroll-back-btn {
+  position: fixed;
+  visibility: hidden;
+  bottom: 20px;
+  z-index: 99;
+  right: 17%;
+}
+
+@media only screen and (max-width: 575px) {
+  .scroll-back-btn {
+    right: 10%;
+  }
 }
 </style>
