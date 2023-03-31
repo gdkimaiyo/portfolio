@@ -1,6 +1,6 @@
 <template>
   <div id="projects" class="projects-section q-my-lg">
-    <div class="text-h4 text-weight-bold q-mb-lg">Featured Projects</div>
+    <div class="page-header text-h4 text-weight-bold">Featured Projects</div>
     <ProjectHolder :projects="projects" />
 
     <q-btn
@@ -38,10 +38,16 @@ export default defineComponent({
   font-family: "Avenir";
   font-size: 16px;
 }
+.page-header {
+  margin-bottom: 48px;
+}
 
 @media only screen and (max-width: 575px) {
   #projects {
     font-size: 16px;
+  }
+  .page-header {
+    margin-bottom: 28px;
   }
 }
 </style>

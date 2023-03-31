@@ -1,5 +1,5 @@
 <template>
-  <div id="about-me" class="about-section q-mb-lg">
+  <div id="about-me" class="about-section">
     <div class="section q-mt-md">
       <div class="image-div lt-sm">
         <q-avatar size="300px">
@@ -100,6 +100,10 @@ export default defineComponent({
   font-family: "Avenir";
   font-size: 16px;
 }
+.about-section {
+  margin-top: 48px;
+  margin-bottom: 64px;
+}
 .section {
   display: flex;
   flex-direction: row;
@@ -135,6 +139,10 @@ export default defineComponent({
 @media only screen and (max-width: 575px) {
   #about-me {
     font-size: 14px;
+  }
+  .about-section {
+    margin-top: 24px;
+    margin-bottom: 32px;
   }
   .section {
     flex-direction: column;
