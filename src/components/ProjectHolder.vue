@@ -11,7 +11,7 @@
   >
     <div class="project-image" v-if="project.leftSided && project.showImage">
       <img
-        :src="getImgUrl('../assets/', project.img)"
+        :src="getImgUrl('assets/', project.img)"
         alt="project preview image"
         class="left-sided-img"
       />
@@ -72,7 +72,7 @@
       v-if="!project.leftSided && project.showImage"
     >
       <img
-        :src="getImgUrl('../assets/', project.img)"
+        :src="getImgUrl('assets/', project.img)"
         alt="project preview image"
         class="right-sided-img"
       />
@@ -132,7 +132,7 @@
       v-if="!project.leftSided && project.showImage"
     >
       <img
-        :src="getImgUrl('../assets/', project.img)"
+        :src="getImgUrl('assets/', project.img)"
         alt="project preview image"
         class="right-sided-img"
       />
