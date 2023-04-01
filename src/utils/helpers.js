@@ -72,7 +72,11 @@ export const scrollToTop = () => {
 
 // HELPER functions
 export const getImgUrl = (dir, image) => {
-  return new URL(`../${dir}${image}`, import.meta.url).href;
+  console.log(dir);
+  if (dir === "assets/") {
+    return new URL(`../assets/${image}`, import.meta.url).href;
+  }
+  return new URL(`../assets/se_icons/${image}`, import.meta.url).href;
 };
 
 export const validateEmail = (email) => {
