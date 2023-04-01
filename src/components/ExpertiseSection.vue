@@ -5,7 +5,7 @@
       <div class="content">
         <div class="skill-card" v-for="(skill, index) in skills" :key="index">
           <img
-            :src="getImgUrl('../assets/se_icons/', skill.icon)"
+            :src="getImgUrl('assets/se_icons/', skill.icon)"
             :alt="skill.language + ' image'"
             class="card-icon"
           />
