@@ -4,7 +4,7 @@ export const PROJECTS = [
     showImage: true,
     header: "Mini-Netflix",
     img: "mini-netflix-preview-image-1.png",
-    projectLink: "https://gdkimaiyo.github.io/netflix",
+    projectLink: "https://netflix.maiyo.dev",
     codeLink: "https://github.com/gdkimaiyo/netflix",
     desc: "Mini-Netflix is a Netflix clone application. With this app, users can view movie details such as, the movie image, title, overview, year of production, e.t.c. In addition, users can add movies or TV shows they like to their favourites list.",
     customStyle: {
@@ -17,7 +17,7 @@ export const PROJECTS = [
     leftSided: false,
     showImage: false,
     header: "My Portfolio",
-    projectLink: "https://gideonkimaiyo.netlify.app",
+    projectLink: "https://portfolio.maiyo.dev",
     codeLink: "https://github.com/gdkimaiyo/portfolio",
     desc: "This website. A typical portfolio website where one can display information about themselves such as about section, the services they offer, showcase their projects, testimonials and how to get in touch to them.",
     desc2:
