@@ -72,7 +72,6 @@ export const scrollToTop = () => {
 
 // HELPER functions
 export const getImgUrl = (dir, image) => {
-  console.log(dir);
   if (dir === "assets/") {
     return new URL(`../assets/${image}`, import.meta.url).href;
   }
