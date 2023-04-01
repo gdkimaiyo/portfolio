@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.0.1",
   "description": "My Personal Portfolio build with Vue 3, Quasar Framework",
-  "productName": "My Portfolio",
+  "productName": "Gideon Kimaiyo Portfolio",
   "author": "gdkimaiyo <gdkimaiyo@gmail.com>",
   "private": true,
   "scripts": {

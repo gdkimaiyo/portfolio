@@ -2,6 +2,8 @@
 
 My Personal Portfolio build with Vue 3, Quasar Framework
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4580dcfd-528e-492a-a101-c05098e4d471/deploy-status)](https://app.netlify.com/sites/gideonkimaiyo/deploys)
+
 ## Developer
 
 [Gideon Kimaiyo](https://www.linkedin.com/in/gideon-kimaiyo/), Software Engineer.
