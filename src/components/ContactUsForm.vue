@@ -33,20 +33,20 @@
       class="q-py-md"
       filled
       bg-color="white"
-      v-model="desc"
+      v-model="message"
       label="Your Message *"
       placeholder="Enter your message"
       hint="Minimum of 65 characters"
       counter
       autogrow
       lazy-rules
-      :rules="[(val) => validateDesc(val)]"
+      :rules="[(val) => validateMessage(val)]"
     />
     <div class="q-mt-lg">
       <q-btn no-caps type="submit" color="primary"> Submit </q-btn>
-      <span style="padding-left: 8px" v-if="isLoading">
-        <q-spinner color="primary" />
-        Submitting...
+      <span style="padding-left: 8px" class="text-primary" v-if="isLoading">
+        Submitting
+        <q-spinner-dots color="primary" size="1.5rem" />
       </span>
     </div>
   </q-form>
@@ -56,6 +56,7 @@
 import { defineComponent, ref } from "vue";
 import { Notify } from "quasar";
 import { validateEmail, validateFullName } from "../utils/helpers";
+import { saveMessage } from "../shared/services/contact.service";
 
 export default defineComponent({
   name: "ContactUsForm",
@@ -64,7 +65,7 @@ export default defineComponent({
     return {
       fullname: ref(null),
       email: ref(null),
-      desc: ref(null),
+      message: ref(null),
       isLoading: ref(false),
     };
   },
@@ -76,27 +77,45 @@ export default defineComponent({
       const payload = {
         fullname: this.fullname,
         email: this.email,
-        desc: this.desc,
+        message: this.message,
       };
 
-      console.log(payload);
-      this.isLoading = false;
-      Notify.create({
-        type: "info",
-        message: "Feature for posting your message will be completed soon...",
-        group: false,
-      });
+      await saveMessage(payload)
+        .then(async (res) => {
+          console.log(res);
+          Notify.create({
+            type: "positive",
+            message: "Success. Message send successfully.",
+            group: false,
+          });
+          // this.clearForm();
+          this.isLoading = false;
+        })
+        .catch((error) => {
+          Notify.create({
+            type: "negative",
+            message: "Error! Something went wrong while sending message.",
+            group: false,
+          });
+          this.isLoading = false;
+        });
     },
 
     validateEmail,
     validateFullName,
 
-    validateDesc(desc) {
-      if (desc && desc.length > 64) {
+    validateMessage(message) {
+      if (message && message.length > 64) {
         return true;
       } else {
         return "Your message should have a minimum of 65 characters";
       }
+    },
+
+    clearForm() {
+      this.fullname = null;
+      this.email = null;
+      this.message = null;
     },
   },
 });

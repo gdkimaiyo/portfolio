@@ -11,6 +11,9 @@
 const { configure } = require("quasar/wrappers");
 
 module.exports = configure(function (/* ctx */) {
+  // Load the environment variables from `.env` if it exists
+  require("dotenv").config();
+
   return {
     eslint: {
       // fix: true,
@@ -62,7 +65,9 @@ module.exports = configure(function (/* ctx */) {
 
       // publicPath: '/',
       // analyze: true,
-      // env: {},
+      env: {
+        VUE_APP_BACKEND_API: process.env.VUE_APP_BACKEND_API,
+      },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
