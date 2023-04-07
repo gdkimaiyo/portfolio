@@ -10,7 +10,7 @@ My Personal Portfolio build with Vue 3, Quasar Framework
 
 ## Website
 
-Preview this project here: [Portfolio](https://gideon-kimaiyo-portfolio.netlify.app/).
+Preview this project here: [Portfolio](https://portfolio.maiyo.dev).
 
 ## Clone Project
 
