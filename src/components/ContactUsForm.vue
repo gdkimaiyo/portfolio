@@ -82,7 +82,6 @@ export default defineComponent({
 
       await saveMessage(payload)
         .then(async (res) => {
-          console.log(res);
           Notify.create({
             type: "positive",
             message: "Success. Message send successfully.",
