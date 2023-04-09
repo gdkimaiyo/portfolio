@@ -3,7 +3,10 @@ export const PROJECTS = [
     leftSided: true,
     showImage: true,
     header: "Mini-Netflix",
-    img: "mini-netflix-preview-image-1.png",
+    imgs: [
+      "mini-netflix-preview-image-1.png",
+      "mini-netflix-preview-image-2.png",
+    ],
     projectLink: "https://netflix.maiyo.dev",
     codeLink: "https://github.com/gdkimaiyo/netflix",
     desc: "Mini-Netflix is a Netflix clone application. With this app, users can view movie details such as, the movie image, title, overview, year of production, e.t.c. In addition, users can add movies or TV shows they like to their favourites list.",
@@ -29,10 +32,10 @@ export const PROJECTS = [
     },
   },
   {
-    leftSided: true,
+    leftSided: false,
     showImage: true,
     header: "TaskManager",
-    img: "mini-netflix-preview-image-1.png",
+    imgs: ["task_manager.jpg"],
     codeLink: "https://github.com/gdkimaiyo/ci3_app",
     desc: "Project management app where users can create and manage a project and its related tasks. This project was designed with PHP's CodeIgniter3 Framework. Main Concepts I learnt are CRUD and MySQL.",
     customStyle: {

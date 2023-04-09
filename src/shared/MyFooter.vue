@@ -28,7 +28,10 @@
             <q-item class="q-pl-none">
               <q-item-section avatar>
                 <q-avatar size="64px">
-                  <img src="../assets/vital_dp_2.jpg" alt="user image" />
+                  <img
+                    src="../assets/profile_pics/dp_primary.jpg"
+                    alt="user image"
+                  />
                 </q-avatar>
               </q-item-section>
               <q-item-section>
