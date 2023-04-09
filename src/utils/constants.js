@@ -95,6 +95,14 @@ export const SKILLS = [
     icon: "vue.png",
   },
   {
+    language: "Node Js",
+    icon: "nodejs.png",
+  },
+  {
+    language: "Git",
+    icon: "git.png",
+  },
+  {
     language: "PHP",
     icon: "php2.png",
   },
@@ -117,6 +125,10 @@ export const SKILLS = [
   {
     language: "PostGreSQL",
     icon: "postgresql.png",
+  },
+  {
+    language: "Agile Development",
+    icon: "agile.png",
   },
   // {
   //   language: "C",
