@@ -183,10 +183,14 @@
 import { defineComponent, ref } from "vue";
 import { useRoute } from "vue-router";
 
+import { BACKEND_API_2, NODE_ENV } from "../secrets.config";
+
 export default defineComponent({
   name: "NavBar",
 
   setup() {
+    console.log(BACKEND_API_2, "BACKEND API");
+    console.log(NODE_ENV, "NODE ENV");
     return {
       dropDownMenu: ref(false),
     };
