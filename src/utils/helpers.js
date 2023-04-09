@@ -74,6 +74,8 @@ export const scrollToTop = () => {
 export const getImgUrl = (dir, image) => {
   if (dir === "assets/") {
     return new URL(`../assets/${image}`, import.meta.url).href;
+  } else if (dir === "assets/profile_pics/") {
+    return new URL(`../assets/profile_pics/${image}`, import.meta.url).href;
   }
   return new URL(`../assets/se_icons/${image}`, import.meta.url).href;
 };
@@ -94,4 +96,10 @@ export const validateFullName = (name) => {
   } else {
     return false;
   }
+};
+
+// Generate a random number
+export const randomNumber = (min, max) => {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
 };

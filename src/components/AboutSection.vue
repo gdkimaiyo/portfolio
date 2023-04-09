@@ -3,7 +3,15 @@
     <div class="section q-mt-md">
       <div class="image-div lt-sm">
         <q-avatar size="300px">
-          <img src="../assets/vital_dp_2.jpg" alt="user image" />
+          <img
+            :src="
+              getImgUrl(
+                'assets/profile_pics/',
+                pics[randomNumber(0, pics.length - 1)]
+              )
+            "
+            alt="user image"
+          />
         </q-avatar>
       </div>
       <div class="content-div">
@@ -74,7 +82,15 @@
       </div>
       <div class="image-div gt-xs">
         <q-avatar size="300px">
-          <img src="../assets/vital_dp_2.jpg" alt="user image" />
+          <img
+            :src="
+              getImgUrl(
+                'assets/profile_pics/',
+                pics[randomNumber(0, pics.length - 1)]
+              )
+            "
+            alt="user image"
+          />
         </q-avatar>
       </div>
     </div>
@@ -83,6 +99,7 @@
 
 <script>
 import { defineComponent, ref } from "vue";
+import { getImgUrl, randomNumber } from "../utils/helpers";
 
 export default defineComponent({
   name: "AboutSection",
@@ -90,7 +107,13 @@ export default defineComponent({
   setup() {
     return {
       years: ref(new Date().getFullYear() - 2018),
+      pics: ref(["dp_primary.jpg", "dp_secondary.jpg"]),
     };
+  },
+
+  methods: {
+    getImgUrl,
+    randomNumber,
   },
 });
 </script>

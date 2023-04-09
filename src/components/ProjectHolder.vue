@@ -11,7 +11,12 @@
   >
     <div class="project-image" v-if="project.leftSided && project.showImage">
       <img
-        :src="getImgUrl('assets/', project.img)"
+        :src="
+          getImgUrl(
+            'assets/',
+            project.imgs[randomNumber(0, project.imgs.length - 1)]
+          )
+        "
         alt="project preview image"
         class="left-sided-img"
       />
@@ -72,7 +77,12 @@
       v-if="!project.leftSided && project.showImage"
     >
       <img
-        :src="getImgUrl('assets/', project.img)"
+        :src="
+          getImgUrl(
+            'assets/',
+            project.imgs[randomNumber(0, project.imgs.length - 1)]
+          )
+        "
         alt="project preview image"
         class="right-sided-img"
       />
@@ -132,7 +142,12 @@
       v-if="!project.leftSided && project.showImage"
     >
       <img
-        :src="getImgUrl('assets/', project.img)"
+        :src="
+          getImgUrl(
+            'assets/',
+            project.imgs[randomNumber(0, project.imgs.length - 1)]
+          )
+        "
         alt="project preview image"
         class="right-sided-img"
       />
@@ -142,7 +157,7 @@
 
 <script>
 import { defineComponent } from "vue";
-import { getImgUrl } from "../utils/helpers";
+import { getImgUrl, randomNumber } from "../utils/helpers";
 
 export default defineComponent({
   name: "ProjectHolder",
@@ -153,6 +168,7 @@ export default defineComponent({
 
   methods: {
     getImgUrl,
+    randomNumber,
   },
 });
 </script>
@@ -180,7 +196,7 @@ export default defineComponent({
   img {
     width: 100%;
     height: 370px;
-    margin-top: 6px;
+    margin-top: 8px;
   }
 }
 .left-sided-img {
@@ -211,6 +227,7 @@ export default defineComponent({
     max-width: 100%;
 
     img {
+      height: fit-content;
       margin-top: 0;
     }
   }
