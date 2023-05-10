@@ -196,7 +196,7 @@ export default defineComponent({
   img {
     width: 100%;
     height: 370px;
-    margin-top: 8px;
+    margin-top: 6px;
   }
 }
 .left-sided-img {

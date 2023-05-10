@@ -35,8 +35,17 @@
           @click="scrollTo('services')"
           v-if="currentRoute === '/'"
         >
-          <q-icon name="fas fa-circle-info" size="18px" />
+          <q-icon name="fas fa-gear" size="18px" />
           Services
+        </a>
+        <a
+          class="nav-btn gt-xs"
+          clickable
+          @click="scrollTo('skills')"
+          v-if="currentRoute === '/'"
+        >
+          <q-icon name="fas fa-laptop-code" size="18px" />
+          Skills
         </a>
         <a
           class="nav-btn gt-xs"
@@ -47,10 +56,10 @@
           <q-icon name="fas fa-comment-dots" size="18px" />
           Testimonials
         </a>
-        <a class="nav-btn gt-xs" clickable v-if="currentRoute === '/'">
+        <!-- <a class="nav-btn gt-xs" clickable v-if="currentRoute === '/'">
           <q-icon name="fab fa-blogger" size="18px" />
           My Blogs
-        </a>
+        </a> -->
       </q-toolbar-title>
 
       <div>
@@ -120,8 +129,18 @@
                   style="display: inline-block"
                   @click="scrollTo('services')"
                 >
-                  <q-icon name="fas fa-circle-info" class="q-pr-sm" />
+                  <q-icon name="fas fa-gear" class="q-pr-sm" />
                   Services
+                </q-item-section>
+              </q-item>
+
+              <q-item class="q-pl-xl" exact clickable v-ripple>
+                <q-item-section
+                  style="display: inline-block"
+                  @click="scrollTo('skills')"
+                >
+                  <q-icon name="fas fa-laptop-code" class="q-pr-sm" />
+                  Skills
                 </q-item-section>
               </q-item>
 
@@ -135,12 +154,12 @@
                 </q-item-section>
               </q-item>
 
-              <q-item class="q-pl-xl" exact clickable v-ripple>
+              <!-- <q-item class="q-pl-xl" exact clickable v-ripple>
                 <q-item-section style="display: inline-block">
                   <q-icon name="fab fa-blogger" class="q-pr-sm" />
                   My Blogs
                 </q-item-section>
-              </q-item>
+              </q-item> -->
 
               <q-separator inset color="white" class="lt-sm q-my-lg" />
 
@@ -216,7 +235,7 @@ export default defineComponent({
       }
       window.scrollTo(0, 0);
       const position = document.getElementById(ref).offsetTop;
-      const offsetPosition = position + window.pageYOffset - 70;
+      const offsetPosition = position + window.pageYOffset - 50;
 
       // smooth scroll
       window.scrollTo({

@@ -1,5 +1,5 @@
 <template>
-  <div id="testimonials" class="q-py-lg q-px-md">
+  <div id="testimonials" class="q-mt-xl q-py-lg q-px-md">
     <div class="testimonials-section">
       <div class="text-h4 text-weight-bold q-pt-lg q-pb-md">Testimonials</div>
       <div

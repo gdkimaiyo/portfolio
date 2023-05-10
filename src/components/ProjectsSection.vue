@@ -39,7 +39,8 @@ export default defineComponent({
   font-size: 16px;
 }
 .page-header {
-  margin-bottom: 48px;
+  padding-top: 48px;
+  margin-bottom: 56px;
 }
 
 @media only screen and (max-width: 575px) {
@@ -47,7 +48,7 @@ export default defineComponent({
     font-size: 16px;
   }
   .page-header {
-    margin-bottom: 28px;
+    margin-bottom: 42px;
   }
 }
 </style>
