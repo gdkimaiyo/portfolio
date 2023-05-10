@@ -34,14 +34,30 @@ export const PROJECTS = [
   {
     leftSided: false,
     showImage: true,
+    header: "ShengBase",
+    imgs: ["shengbase.png"],
+    projectLink: "https://shengbase.maiyo.dev",
+    codeLink: "https://github.com/gdkimaiyo/shengbase",
+    desc: "ShengBase is a Sheng Dictionary. The dictionary is enriched with latest and old sheng words, which is is constantly updated by users.",
+    desc2:
+      "New users can easily create an account and earn points by adding new sheng words or updating existing words in the dictionary.",
+    customStyle: {
+      background: "#edf4e3",
+      border: "0.5px solid #2e693b",
+      btnColor: "#006b35",
+    },
+  },
+  {
+    leftSided: true,
+    showImage: true,
     header: "TaskManager",
     imgs: ["task_manager.jpg"],
     codeLink: "https://github.com/gdkimaiyo/ci3_app",
     desc: "Project management app where users can create and manage a project and its related tasks. This project was designed with PHP's CodeIgniter3 Framework. Main Concepts I learnt are CRUD and MySQL.",
     customStyle: {
-      background: "#edf4e3",
-      border: "0.5px solid #2e693b",
-      btnColor: "#006b35",
+      background: "#eeeeee",
+      border: "0.5px solid #000000",
+      btnColor: "#000000",
     },
   },
 ];
@@ -62,78 +78,73 @@ export const SERVICES = [
     desc: "I conduct extensive testing using multiple approaches to ensure consistency across broswers, responsiveness, e.t.c to guarantee functionality and everything to work as expected.",
     icon: "fas fa-vial",
   },
-  {
-    title: "Coding Tutor",
-    desc: "I am a Coding Tutor. I teach computer programming languages such as JavaScript, Python, C/C++ and Web Development starting from the basics to advanced concepts. My target age groups are: 7 - 12 years and teenagers",
-    icon: "fas fa-chalkboard-user",
-  },
+  // {
+  //   title: "Coding Tutor",
+  //   desc: "I am a Coding Tutor. I teach computer programming languages such as JavaScript, Python, C/C++ and Web Development starting from the basics to advanced concepts. My target age groups are: 7 - 12 years and teenagers",
+  //   icon: "fas fa-chalkboard-user",
+  // },
 ];
 
 export const SKILLS = [
   {
-    language: "JavaScript",
-    icon: "js.png",
+    category: "User Interface",
+    skills: [
+      { language: "HTML", icon: "html5.png" },
+      { language: "CSS", icon: "css.png" },
+      { language: "Bootstrap", icon: "bootstrap.png" },
+      { language: "Tailwind", icon: "tailwindcss.png" },
+    ],
   },
+
   {
-    language: "Python",
-    icon: "python.png",
+    category: "JavaScript",
+    skills: [
+      { language: "JavaScript", icon: "js.png" },
+      { language: "Vue", icon: "vue.png" },
+      { language: "Angular", icon: "angular.png" },
+      { language: "NodeJs", icon: "nodejs.png" },
+      { language: "ExpressJS", icon: "expressjs.png" },
+    ],
   },
+
   {
-    language: "HTML",
-    icon: "html5.png",
+    category: "Python",
+    skills: [
+      { language: "Python", icon: "python.png" },
+      { language: "Flask", icon: "flask.png" },
+      { language: "dJango", icon: "django.png" },
+    ],
   },
+
   {
-    language: "CSS",
-    icon: "css.png",
+    category: "PHP",
+    skills: [
+      { language: "PHP", icon: "php2.png" },
+      { language: "Laravel", icon: "laravel.png" },
+    ],
   },
+
   {
-    language: "Angular",
-    icon: "angular.png",
+    category: "Databases",
+    skills: [
+      { language: "MongoBB", icon: "mongodb.png" },
+      { language: "MySQL", icon: "mysql.png" },
+      { language: "PostGreSQL", icon: "postgresql.png" },
+    ],
   },
+
   {
-    language: "Vue",
-    icon: "vue.png",
+    category: "Tools & Platforms",
+    skills: [
+      { language: "Git", icon: "git.png" },
+      { language: "GitHub", icon: "github.png" },
+      { language: "AWS", icon: "aws.png" },
+      { language: "Docker", icon: "docker.png" },
+      { language: "Heroku", icon: "heroku.png" },
+      { language: "Netlify", icon: "netlify.png" },
+      // { language: "C", icon: "c.png" },
+    ],
   },
-  {
-    language: "Node Js",
-    icon: "nodejs.png",
-  },
-  {
-    language: "Git",
-    icon: "git.png",
-  },
-  {
-    language: "PHP",
-    icon: "php2.png",
-  },
-  {
-    language: "Flask",
-    icon: "flask.png",
-  },
-  {
-    language: "Laravel",
-    icon: "laravel.png",
-  },
-  {
-    language: "MongoBB",
-    icon: "mongodb.png",
-  },
-  {
-    language: "MySQL",
-    icon: "mysql.png",
-  },
-  {
-    language: "PostGreSQL",
-    icon: "postgresql.png",
-  },
-  {
-    language: "Agile Development",
-    icon: "agile.png",
-  },
-  // {
-  //   language: "C",
-  //   icon: "c.png",
-  // },
 ];
 
 export const TESTIMONIALS = [

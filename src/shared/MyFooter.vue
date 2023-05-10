@@ -75,14 +75,17 @@
           <a class="q-pr-sm" clickable @click="scrollTo('abtme')"> About </a>
         </div>
         <div class="nav-btn">
-          <a class="q-pr-sm" clickable @click="scrollTo('projects')"
-            >Projects</a
-          >
+          <a class="q-pr-sm" clickable @click="scrollTo('projects')">
+            Projects
+          </a>
         </div>
         <div class="nav-btn">
           <a class="q-pr-sm" clickable @click="scrollTo('services')">
             Services
           </a>
+        </div>
+        <div class="nav-btn">
+          <a class="q-pr-sm" clickable @click="scrollTo('skills')"> Skills </a>
         </div>
         <div class="nav-btn">
           <a class="q-pr-sm" clickable @click="scrollTo('testimonials')">

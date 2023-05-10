@@ -1,18 +1,30 @@
 <template>
   <div id="about-me" class="about-section">
     <div class="section q-mt-md">
-      <div class="image-div lt-sm">
-        <q-avatar size="300px">
-          <img
-            :src="
-              getImgUrl(
-                'assets/profile_pics/',
-                pics[randomNumber(0, pics.length - 1)]
-              )
-            "
-            alt="user image"
-          />
-        </q-avatar>
+      <div class="image-div lt-sm q-mb-lg">
+        <q-list>
+          <q-item class="q-pl-none">
+            <q-item-section avatar>
+              <q-avatar size="96px">
+                <img
+                  :src="
+                    getImgUrl(
+                      'assets/profile_pics/',
+                      pics[randomNumber(0, pics.length - 1)]
+                    )
+                  "
+                  alt="user image"
+                />
+              </q-avatar>
+            </q-item-section>
+            <q-item-section class="q-ml-none">
+              <q-item-label class="text-h6 text-weight-bold">
+                Gideon Kimaiyo
+              </q-item-label>
+              <q-item-label caption> gdkimaiyo@gmail.com </q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-list>
       </div>
       <div class="content-div">
         <div class="about-header text-h4 text-weight-bold">About Me</div>
@@ -58,23 +70,21 @@
               <q-icon name="fas fa-circle" size="6px" />
             </span>
 
-            <br class="lt-sm" />
-
-            <span class="sub-label">
+            <span class="sub-label gt-xs">
               <q-icon name="fas fa-square-envelope" size="18px" />
             </span>
-            <span style="font-style: italic">gdkimaiyo@gmail.com</span>
-
-            <span class="q-px-md gt-xs">
-              <q-icon name="fas fa-circle" size="6px" />
+            <span style="font-style: italic" class="gt-xs">
+              gdkimaiyo@gmail.com
             </span>
 
-            <br class="lt-sm" />
+            <span class="q-px-md">
+              <q-icon name="fas fa-circle" size="7px" />
+            </span>
 
-            <span class="sub-label"> Languages </span>
+            <span class="sub-label gt-xs"> Languages </span>
             <span style="font-style: italic">English</span>
             <span class="q-px-sm">
-              <q-icon name="fas fa-circle" size="4px" />
+              <q-icon name="fas fa-circle" size="3px" />
             </span>
             <span style="font-style: italic">Swahili</span>
           </p>
@@ -112,6 +122,10 @@ export default defineComponent({
   },
 
   methods: {
+    isHandset() {
+      return screen.width <= 575 ? true : false;
+    },
+
     getImgUrl,
     randomNumber,
   },
@@ -124,7 +138,7 @@ export default defineComponent({
   font-size: 16px;
 }
 .about-section {
-  margin-top: 48px;
+  margin-top: 64px;
   margin-bottom: 64px;
 }
 .section {

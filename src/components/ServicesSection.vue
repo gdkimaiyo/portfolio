@@ -1,6 +1,6 @@
 <template>
-  <div id="services" class="services-section q-py-lg">
-    <div class="section q-pt-lg q-px-md">
+  <div id="services" class="services-section q-mt-xl q-py-lg">
+    <div class="section q-pt-xl q-px-md">
       <div class="text-h4 text-weight-bold">Services</div>
     </div>
     <div class="section q-pt-lg q-pb-md q-px-md">
@@ -96,7 +96,7 @@ export default defineComponent({
 }
 .services-footer {
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 48px;
 }
 
 @media only screen and (max-width: 575px) {

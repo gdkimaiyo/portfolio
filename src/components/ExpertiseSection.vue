@@ -1,14 +1,23 @@
 <template>
-  <div id="expertise" class="expertise-section q-my-lg">
-    <div class="text-h4 text-weight-bold">Expertise</div>
-    <div class="section">
-      <div class="content">
-        <div class="skill-card" v-for="(skill, index) in skills" :key="index">
-          <img
-            :src="getImgUrl('assets/se_icons/', skill.icon)"
-            :alt="skill.language + ' image'"
-            class="card-icon"
-          />
+  <div id="expertise" class="expertise-section q-pt-md q-my-lg">
+    <div class="text-h4 text-weight-bold">Skills & Expertise</div>
+    <div v-for="(category, index) in skills" :key="index">
+      <div class="text-h6 subtitle q-mt-lg q-ml-md">
+        {{ category.category }}
+      </div>
+      <div class="section">
+        <div class="content">
+          <div
+            class="skill-card"
+            v-for="(skill, indx) in category.skills"
+            :key="indx"
+          >
+            <img
+              :src="getImgUrl('assets/se_icons/', skill.icon)"
+              :alt="skill.language + ' image'"
+              class="card-icon"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -67,6 +76,10 @@ export default defineComponent({
   padding: 12px;
   height: auto;
   width: 100%;
+}
+
+.subtitle {
+  color: #6c757d;
 }
 
 @media only screen and (max-width: 575px) {
