@@ -3,17 +3,21 @@
     <LandingPage />
 
     <div class="after-landing abtme q-pt-lg q-px-md">
-      <AboutSection id="abtme" />
-      <ProjectsSection id="projects" />
+      <AboutSection id="abtme" ref="#abtme" />
+      <ProjectsSection id="projects" ref="#projects" />
     </div>
 
-    <ServicesSection id="services" />
+    <ServicesSection id="services" ref="#services" />
 
-    <div class="after-landing q-mt-lg q-pt-xl q-px-md" id="skills">
+    <div
+      class="after-landing q-mt-lg q-pt-xl q-px-md"
+      id="skills"
+      ref="#skills"
+    >
       <ExpertiseSection />
     </div>
 
-    <TestimonialsSection id="testimonials" />
+    <TestimonialsSection id="testimonials" ref="#testimonials" />
 
     <div class="after-landing q-py-xl q-px-md">
       <FindMe />

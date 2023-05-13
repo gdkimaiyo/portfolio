@@ -81,7 +81,15 @@
               <q-icon name="fas fa-circle" size="7px" />
             </span>
 
-            <span class="sub-label gt-xs"> Languages </span>
+            <span class="sub-label">
+              <span class="gt-xs">Languages</span>
+              <q-icon
+                name="fas fa-language"
+                size="18px"
+                style="padding-right: 2px"
+                class="lt-sm"
+              />
+            </span>
             <span style="font-style: italic">English</span>
             <span class="q-px-sm">
               <q-icon name="fas fa-circle" size="3px" />

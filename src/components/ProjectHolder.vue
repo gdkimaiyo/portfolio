@@ -36,6 +36,16 @@
       </div>
       <div>{{ project.desc }}</div>
       <div class="q-mt-lg" v-if="project?.desc2">{{ project.desc2 }}</div>
+      <div class="q-mt-md">
+        <div
+          v-for="(tech, indx) in project.technologies"
+          :key="indx"
+          class="technologies q-pr-sm"
+        >
+          <span>{{ tech }}</span>
+          <span v-if="indx < project.technologies.length - 1">,</span>
+        </div>
+      </div>
       <div class="q-mt-lg">
         <q-btn
           unelevated
@@ -57,7 +67,7 @@
           no-caps
           :href="project.codeLink"
           target="_blank"
-          v-if="project?.codeLink"
+          v-if="project?.codeLink && !project.private"
           :style="{
             color: project.customStyle.btnColor,
           }"
@@ -68,6 +78,27 @@
             class="q-pr-sm"
           />
           Source Code
+        </q-btn>
+        <q-btn
+          flat
+          rounded
+          no-caps
+          v-if="project.private"
+          :style="{
+            color: project.customStyle.btnColor,
+          }"
+        >
+          <q-icon name="fas fa-circle-info" size="18px" class="q-pr-sm" />
+          Private Code
+          <q-tooltip
+            :style="{
+              color: '#ffffff',
+              backgroundColor: project.customStyle.btnColor,
+            }"
+            :offset="[10, 10]"
+          >
+            <strong>Source code is private</strong>
+          </q-tooltip>
         </q-btn>
       </div>
     </div>
@@ -102,6 +133,16 @@
       </div>
       <div>{{ project.desc }}</div>
       <div class="q-mt-lg" v-if="project?.desc2">{{ project.desc2 }}</div>
+      <div class="q-mt-md">
+        <div
+          v-for="(tech, indx) in project.technologies"
+          :key="indx"
+          class="technologies q-pr-sm"
+        >
+          <span>{{ tech }}</span>
+          <span v-if="indx < project.technologies.length - 1">,</span>
+        </div>
+      </div>
       <div class="q-mt-lg">
         <q-btn
           unelevated
@@ -123,7 +164,7 @@
           no-caps
           :href="project.codeLink"
           target="_blank"
-          v-if="project?.codeLink"
+          v-if="project?.codeLink && !project.private"
           :style="{
             color: project.customStyle.btnColor,
           }"
@@ -134,6 +175,27 @@
             class="q-pr-sm"
           />
           Source Code
+        </q-btn>
+        <q-btn
+          flat
+          rounded
+          no-caps
+          v-if="project.private"
+          :style="{
+            color: project.customStyle.btnColor,
+          }"
+        >
+          <q-icon name="fas fa-circle-info" size="18px" class="q-pr-sm" />
+          Private Code
+          <q-tooltip
+            :style="{
+              color: '#ffffff',
+              backgroundColor: project.customStyle.btnColor,
+            }"
+            :offset="[10, 10]"
+          >
+            <strong>Source code is private</strong>
+          </q-tooltip>
         </q-btn>
       </div>
     </div>
@@ -214,6 +276,12 @@ export default defineComponent({
 .no-image {
   width: 100%;
   max-width: 100%;
+}
+
+.technologies {
+  display: inline-block;
+  font-size: 14px;
+  color: #6c757d;
 }
 
 @media only screen and (max-width: 575px) {
