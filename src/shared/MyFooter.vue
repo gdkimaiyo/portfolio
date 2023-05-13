@@ -166,21 +166,7 @@ export default defineComponent({
     },
 
     scrollTo(ref) {
-      if (document.getElementById(ref) === null) {
-        this.goHome();
-        return;
-      }
-      window.scrollTo(0, 0);
-      const position = document.getElementById(ref).offsetTop;
-      const offsetPosition = position + window.pageYOffset - 70;
-
-      // smooth scroll
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-        block: "start",
-        inline: "start",
-      });
+      this.$router.push({ name: "home", hash: `#${ref}` });
     },
   },
 });

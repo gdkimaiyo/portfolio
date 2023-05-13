@@ -3,60 +3,31 @@
     <q-toolbar class="toolbar bg-white text-primary q-py-sm">
       <q-toolbar-title>
         <a class="logo-btn lt-sm" clickable @click="goHome()"> My Portfolio </a>
-        <a
-          class="logo-btn gt-xs"
-          clickable
-          @click="goHome()"
-          v-if="currentRoute === '/contact' || currentRoute === '/support-me'"
-        >
-          My Portfolio
+        <a class="nav-btn gt-xs" clickable @click="goHome()">
+          <q-icon name="fas fa-house" size="18px" />
+          Home
         </a>
-        <a
-          class="nav-btn gt-xs"
-          clickable
-          @click="scrollTo('abtme')"
-          v-if="currentRoute === '/'"
-        >
+        <a class="nav-btn gt-xs" clickable @click="scrollTo('abtme')">
           <q-icon name="fas fa-circle-info" size="18px" />
           About Me
         </a>
-        <a
-          class="nav-btn gt-xs"
-          clickable
-          @click="scrollTo('projects')"
-          v-if="currentRoute === '/'"
-        >
+        <a class="nav-btn gt-xs" clickable @click="scrollTo('projects')">
           <q-icon name="fas fa-code-branch" size="18px" />
           Projects
         </a>
-        <a
-          class="nav-btn gt-xs"
-          clickable
-          @click="scrollTo('services')"
-          v-if="currentRoute === '/'"
-        >
+        <a class="nav-btn gt-xs" clickable @click="scrollTo('services')">
           <q-icon name="fas fa-gear" size="18px" />
           Services
         </a>
-        <a
-          class="nav-btn gt-xs"
-          clickable
-          @click="scrollTo('skills')"
-          v-if="currentRoute === '/'"
-        >
+        <a class="nav-btn gt-xs" clickable @click="scrollTo('skills')">
           <q-icon name="fas fa-laptop-code" size="18px" />
           Skills
         </a>
-        <a
-          class="nav-btn gt-xs"
-          clickable
-          @click="scrollTo('testimonials')"
-          v-if="currentRoute === '/'"
-        >
+        <a class="nav-btn gt-xs" clickable @click="scrollTo('testimonials')">
           <q-icon name="fas fa-comment-dots" size="18px" />
           Testimonials
         </a>
-        <!-- <a class="nav-btn gt-xs" clickable v-if="currentRoute === '/'">
+        <!-- <a class="nav-btn gt-xs" clickable>
           <q-icon name="fab fa-blogger" size="18px" />
           My Blogs
         </a> -->
@@ -104,7 +75,13 @@
               class="dropdown-menu bg-primary text-white q-pt-xl"
               style="min-width: 300px; min-height: 85vh; margin-top: 0"
             >
-              <q-item class="q-pl-xl" exact clickable v-ripple>
+              <q-item
+                class="q-pl-xl"
+                :class="{ 'active-q-item': currentRoute === '/abtme' }"
+                exact
+                clickable
+                v-ripple
+              >
                 <q-item-section
                   style="display: inline-block"
                   @click="scrollTo('abtme')"
@@ -114,7 +91,13 @@
                 </q-item-section>
               </q-item>
 
-              <q-item class="q-pl-xl" exact clickable v-ripple>
+              <q-item
+                class="q-pl-xl"
+                :class="{ 'active-q-item': currentRoute === '/projects' }"
+                exact
+                clickable
+                v-ripple
+              >
                 <q-item-section
                   style="display: inline-block"
                   @click="scrollTo('projects')"
@@ -124,7 +107,13 @@
                 </q-item-section>
               </q-item>
 
-              <q-item class="q-pl-xl" exact clickable v-ripple>
+              <q-item
+                class="q-pl-xl"
+                :class="{ 'active-q-item': currentRoute === '/services' }"
+                exact
+                clickable
+                v-ripple
+              >
                 <q-item-section
                   style="display: inline-block"
                   @click="scrollTo('services')"
@@ -134,7 +123,13 @@
                 </q-item-section>
               </q-item>
 
-              <q-item class="q-pl-xl" exact clickable v-ripple>
+              <q-item
+                class="q-pl-xl"
+                :class="{ 'active-q-item': currentRoute === '/skills' }"
+                exact
+                clickable
+                v-ripple
+              >
                 <q-item-section
                   style="display: inline-block"
                   @click="scrollTo('skills')"
@@ -144,7 +139,13 @@
                 </q-item-section>
               </q-item>
 
-              <q-item class="q-pl-xl" exact clickable v-ripple>
+              <q-item
+                class="q-pl-xl"
+                :class="{ 'active-q-item': currentRoute === '/testimonials' }"
+                exact
+                clickable
+                v-ripple
+              >
                 <q-item-section
                   style="display: inline-block"
                   @click="scrollTo('testimonials')"
@@ -229,21 +230,7 @@ export default defineComponent({
     },
 
     scrollTo(ref) {
-      if (document.getElementById(ref) === null) {
-        this.goHome();
-        return;
-      }
-      window.scrollTo(0, 0);
-      const position = document.getElementById(ref).offsetTop;
-      const offsetPosition = position + window.pageYOffset - 50;
-
-      // smooth scroll
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-        block: "start",
-        inline: "start",
-      });
+      this.$router.push({ name: "home", hash: `#${ref}` });
     },
   },
 });

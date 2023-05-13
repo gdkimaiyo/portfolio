@@ -70,6 +70,22 @@ export const scrollToTop = () => {
   };
 };
 
+export const scrollTo = (ref) => {
+  if (document.getElementById(ref) !== null) {
+    window.scrollTo(0, 0);
+    const position = document.getElementById(ref).offsetTop;
+    const offsetPosition = position + window.pageYOffset - 50;
+
+    // smooth scroll
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+      block: "start",
+      inline: "start",
+    });
+  }
+};
+
 // HELPER functions
 export const getImgUrl = (dir, image) => {
   if (dir === "assets/") {
