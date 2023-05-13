@@ -2,6 +2,7 @@ export const PROJECTS = [
   {
     leftSided: true,
     showImage: true,
+    private: true,
     header: "Mini-Netflix",
     imgs: [
       "mini-netflix-preview-image-1.png",
@@ -10,6 +11,15 @@ export const PROJECTS = [
     projectLink: "https://netflix.maiyo.dev",
     codeLink: "https://github.com/gdkimaiyo/netflix",
     desc: "Mini-Netflix is a Netflix clone application. With this app, users can view movie details such as, the movie image, title, overview, year of production, e.t.c. In addition, users can add movies or TV shows they like to their favourites list.",
+    technologies: [
+      "Angular",
+      "JavaScript",
+      "NodeJs",
+      "ExpressJS",
+      "HTML",
+      "SCSS",
+      "MongoDB",
+    ],
     customStyle: {
       background: "#f0e9ee",
       border: "0.5px solid #4b135d",
@@ -19,12 +29,13 @@ export const PROJECTS = [
   {
     leftSided: false,
     showImage: false,
+    private: false,
     header: "My Portfolio",
-    projectLink: "https://portfolio.maiyo.dev",
     codeLink: "https://github.com/gdkimaiyo/portfolio",
     desc: "This website. A typical portfolio website where one can display information about themselves such as about section, the services they offer, showcase their projects, testimonials and how to get in touch to them.",
     desc2:
       "I designed this project using Vue Js. Code reusability and component reuse were the core concepts I learnt from designing this portfolio website.",
+    technologies: ["Vue", "JavaScript", "HTML", "SCSS"],
     customStyle: {
       background: "#e9f0f4",
       border: "0.5px solid #1d4778",
@@ -34,6 +45,7 @@ export const PROJECTS = [
   {
     leftSided: false,
     showImage: true,
+    private: false,
     header: "ShengBase",
     imgs: ["shengbase.png"],
     projectLink: "https://shengbase.maiyo.dev",
@@ -41,6 +53,15 @@ export const PROJECTS = [
     desc: "ShengBase is a Sheng Dictionary. The dictionary is enriched with latest and old sheng words, which is is constantly updated by users.",
     desc2:
       "New users can easily create an account and earn points by adding new sheng words or updating existing words in the dictionary.",
+    technologies: [
+      "Vue",
+      "JavaScript",
+      "NodeJs",
+      "ExpressJS",
+      "HTML",
+      "SCSS",
+      "MongoDB",
+    ],
     customStyle: {
       background: "#edf4e3",
       border: "0.5px solid #2e693b",
@@ -50,10 +71,12 @@ export const PROJECTS = [
   {
     leftSided: true,
     showImage: true,
+    private: false,
     header: "TaskManager",
     imgs: ["task_manager.jpg"],
     codeLink: "https://github.com/gdkimaiyo/ci3_app",
     desc: "Project management app where users can create and manage a project and its related tasks. This project was designed with PHP's CodeIgniter3 Framework. Main Concepts I learnt are CRUD and MySQL.",
+    technologies: ["PHP", "CodeIgniter 3", "Bootstrap", "HTML", "CSS", "MySQL"],
     customStyle: {
       background: "#eeeeee",
       border: "0.5px solid #000000",

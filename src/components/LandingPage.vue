@@ -12,13 +12,15 @@ export default defineComponent({
   name: "LandingPage",
 
   mounted() {
-    animateFunc();
+    this.animateFunc();
   },
 
   methods: {
     isHandset() {
       return screen.width <= 575 ? true : false;
     },
+
+    animateFunc,
   },
 });
 </script>
