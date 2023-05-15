@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     leftSided: true,
     showImage: true,
-    private: true,
+    private: false,
     header: "Mini-Netflix",
     imgs: [
       "mini-netflix-preview-image-1.png",
