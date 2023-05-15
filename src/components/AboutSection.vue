@@ -5,7 +5,7 @@
         <q-list>
           <q-item class="q-pl-none">
             <q-item-section avatar>
-              <q-avatar size="96px">
+              <q-avatar size="100px">
                 <img
                   :src="
                     getImgUrl(
