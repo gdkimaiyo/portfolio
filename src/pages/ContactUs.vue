@@ -5,9 +5,13 @@
         Let's Work Together
       </div>
       <div class="page-info q-my-lg">
-        Do you have have a web application or a simple website that you need to
+        <!-- Do you have have a web application or a simple website that you need to
         be build for you? Or, you simple want a chat about my services? Drop me
-        a message below and I will reach out promptly.
+        a message below and I will reach out promptly. -->
+        Want to build a complex web application? Modernise a legacy codebase?
+        Optimise an infrastructure pipeline? Or maybe you just want to talk
+        tech? Drop me a message below and I will get back to you as soon as
+        possible.
       </div>
 
       <ContactUsForm />
