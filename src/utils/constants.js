@@ -280,8 +280,11 @@ export const SKILLS = [
       { language: "Azure", icon: "fas fas-gear" },
       { language: "Google Cloud", icon: "fas fas-gear" },
       { language: "Docker", icon: "fas fas-gear" },
+      { language: "Linux", icon: "fas fas-gear" },
       { language: "CI/CD & GitHub Actions", icon: "fas fas-gear" },
       { language: "NGINX & Apache", icon: "fas fas-gear" },
+      { language: "Heroku", icon: "fas fas-gear" },
+      { language: "Netlify", icon: "fas fas-gear" },
     ],
   },
 
