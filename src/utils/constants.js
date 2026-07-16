@@ -61,7 +61,7 @@ export const PROJECTS = [
     private: true,
     header: "Delivra",
     imgs: ["delivra-1.png", "delivra-2.png", "delivra-3.png", "delivra-4.png"],
-    codeLink: "https://github.com/gdkimaiyo/logistics",
+    codeLink: "https://github.com/gdkimaiyo/delivra",
     desc: "Delivra is a modern delivery platform that connects customers, local merchants and independent riders. Order food and groceries from your favorite businesses and get them delivered fast, while merchants grow their reach and deliverers earn on their own schedule.",
     desc2: "I designed this project using Vue3 and Quasar Framework.",
     technologies: [
@@ -101,7 +101,7 @@ export const PROJECTS = [
     private: false,
     header: "Health Facility Locator",
     imgs: ["hfl.png"],
-    codeLink: "https://github.com/gdkimaiyo/ci3_app",
+    codeLink: "https://github.com/gdkimaiyo/hfl",
     desc: "Health Facility Locator. Number one healthcare facility locator in Kenya. Find healthcare facilities near you, their main services, capacity and ownership.",
     desc2:
       "I designed this project with Quasar Framework. Main Concepts I learnt are Component reusability, API integration, MapBox and GeoLocation.",
