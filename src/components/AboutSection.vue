@@ -27,28 +27,32 @@
         </q-list>
       </div>
       <div class="content-div">
-        <div class="about-header text-h4 text-weight-bold">About Me</div>
+        <div class="about-header text-h4 text-weight-bold">About Gideon</div>
         <div class="q-mt-md">
           <p>
-            I am a <b>Software Engineer</b> from Kenya. Over a period of
-            <b>{{ years }}+</b> years, I have been building web applications
-            with focus on making them simple and user-friendly.
+            I am a <b>Software and DevOps Engineer</b> from Kenya with over
+            {{ years }} years of experience. I specialize in building, deploying
+            and maintaining resilient, secure and scalable web
+            applications—handling everything from full-stack development (with
+            Django or NodeJs and React, Vue3 or Angular) to automated cloud
+            infrastructure, CI/CD pipelines and database optimization.
           </p>
           <p>
-            On my free time, I read, spend time with my friends or do courses on
-            technologies that interest me.
+            When I'm not writing code or configuring infrastructure, I'm usually
+            reading, hanging out with friends or diving into new technologies to
+            keep my engineering toolkit sharp and up to date.
           </p>
           <p>
-            You can find me on
+            Let's connect! You can find me on
             <a
               href="https://www.linkedin.com/in/gideon-kimaiyo/"
               target="_blank"
               rel="noopener noreferrer"
               class="href-link text-primary"
             >
-              Linkedin
+              LinkedIn
             </a>
-            or
+            or check out my active repositories on
             <a
               href="https://github.com/gdkimaiyo"
               target="_blank"
@@ -57,7 +61,7 @@
             >
               GitHub
             </a>
-            where I build web applications projects like this Portfolio.
+            where I share my latest open-source experiments and projects.
           </p>
           <p>
             <span class="sub-label">
@@ -124,7 +128,7 @@ export default defineComponent({
 
   setup() {
     return {
-      years: ref(new Date().getFullYear() - 2018),
+      years: ref(new Date().getFullYear() - 2021),
       pics: ref(["dp_primary.jpg", "dp_secondary.jpg"]),
     };
   },

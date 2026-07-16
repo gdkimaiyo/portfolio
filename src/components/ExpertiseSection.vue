@@ -8,6 +8,15 @@
       <div class="section">
         <div class="content">
           <div
+            class="q-pa-md"
+            v-for="(skill, indx) in category.skills"
+            :key="indx"
+          >
+            <q-chip outline color="dark" text-color="white">
+              {{ skill.language }}
+            </q-chip>
+          </div>
+          <!-- <div
             class="skill-card"
             v-for="(skill, indx) in category.skills"
             :key="indx"
@@ -17,7 +26,7 @@
               :alt="skill.language + ' image'"
               class="card-icon"
             />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

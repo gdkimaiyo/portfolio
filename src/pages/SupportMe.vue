@@ -1,11 +1,16 @@
 <template>
   <div id="support-me">
     <div class="support-me q-py-xl">
-      <div class="page-header text-h3 text-weight-bold q-mt-lg">Support Me</div>
+      <div class="page-header text-h3 text-weight-bold q-mt-lg">
+        Support My Work
+      </div>
       <div class="page-info q-my-lg">
-        If you would like to buy me coffee or donate, feel free to use the
+        <!-- If you would like to buy me coffee or donate, feel free to use the
         following options to support me. I will highly appreciate. Thank you in
-        advance.
+        advance. -->
+        If you like my work, open source projects or tech resources and would
+        like to buy me a coffee, here are few options to support my journey. I
+        really appreciate your support. It makes a big difference. Thanks!
       </div>
 
       <div class="content">
