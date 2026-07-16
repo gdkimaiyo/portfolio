@@ -46,8 +46,10 @@
           </q-list>
 
           <div class="about q-my-md">
-            I build beautiful responsive web applications with focus on making
-            them simple and user-friendly.
+            <!-- I build beautiful responsive web applications with focus on making
+            them simple and user-friendly. -->
+            I build and deploy highly resilient, responsive web applications
+            with a focus on clean, secure code and reliable performance.
             <span class="custom-link" @click="scrollTo('abtme')">
               Learn more
             </span>

@@ -5,7 +5,11 @@
     </div>
     <div class="section q-pt-lg q-pb-md q-px-md">
       <div class="text-h5 text-weight-bold">
-        <em>I provide everything you need to create your perfect website</em>
+        <em>
+          I design, deploy and maintain robust web ecosystems—handling
+          everything from full-stack development to automated cloud deployments
+          and database optimization.
+        </em>
       </div>
     </div>
     <div class="section q-px-md">
