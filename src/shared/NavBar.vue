@@ -1,58 +1,110 @@
 <template>
   <q-header id="navbar">
-    <q-toolbar class="toolbar bg-white text-primary q-py-sm">
-      <q-toolbar-title>
-        <a class="logo-btn lt-sm" clickable @click="goHome()"> My Portfolio </a>
-        <a class="nav-btn gt-xs" clickable @click="goHome()">
-          <q-icon name="fas fa-house" size="18px" />
+    <q-toolbar
+      class="toolbar bg-white text-primary q-py-sm row items-center justify-between"
+    >
+      <div class="row items-center">
+        <!-- Mobile Logo Image -->
+        <a class="logo-btn lt-sm" clickable @click="goHome()">
+          <img
+            src="../assets/gdk-logo-512x512.png"
+            height="42"
+            width="42"
+            alt="Logo"
+          />
+        </a>
+
+        <!-- Desktop Logo Image -->
+        <a class="nav-btn gt-xs row items-center" clickable @click="goHome()">
+          <img
+            src="../assets/gdk-logo-512x512.png"
+            height="48"
+            width="48"
+            alt="Logo"
+          />
+        </a>
+      </div>
+
+      <!-- RIGHT: Nav Links & Mobile Toggle -->
+      <div class="row items-center">
+        <a
+          class="nav-btn gt-xs q-px-sm"
+          :class="{
+            'active-link':
+              activeSection === '#home' && currentRoute !== '/contact',
+          }"
+          clickable
+          @click="goHome()"
+        >
+          <!-- <q-icon name="fas fa-house" size="18px" /> -->
           Home
         </a>
-        <a class="nav-btn gt-xs" clickable @click="scrollTo('abtme')">
-          <q-icon name="fas fa-circle-info" size="18px" />
+        <a
+          class="nav-btn gt-xs q-px-sm"
+          :class="{ 'active-link': activeSection === '#abtme' }"
+          clickable
+          @click="scrollTo('abtme')"
+        >
+          <!-- <q-icon name="fas fa-circle-info" size="18px" /> -->
           About Me
         </a>
-        <a class="nav-btn gt-xs" clickable @click="scrollTo('projects')">
-          <q-icon name="fas fa-code-branch" size="18px" />
+        <a
+          class="nav-btn gt-xs q-px-sm"
+          :class="{ 'active-link': activeSection === '#projects' }"
+          clickable
+          @click="scrollTo('projects')"
+        >
+          <!-- <q-icon name="fas fa-code-branch" size="18px" /> -->
           Projects
         </a>
-        <a class="nav-btn gt-xs" clickable @click="scrollTo('services')">
-          <q-icon name="fas fa-gear" size="18px" />
+        <a
+          class="nav-btn gt-xs q-px-sm"
+          clickable
+          :class="{ 'active-link': activeSection === '#services' }"
+          @click="scrollTo('services')"
+        >
+          <!-- <q-icon name="fas fa-gear" size="18px" /> -->
           Services
         </a>
-        <a class="nav-btn gt-xs" clickable @click="scrollTo('skills')">
-          <q-icon name="fas fa-laptop-code" size="18px" />
+        <a
+          class="nav-btn gt-xs q-px-sm"
+          :class="{ 'active-link': activeSection === '#skills' }"
+          clickable
+          @click="scrollTo('skills')"
+        >
+          <!-- <q-icon name="fas fa-laptop-code" size="18px" /> -->
           Skills
         </a>
-        <a class="nav-btn gt-xs" clickable @click="scrollTo('testimonials')">
-          <q-icon name="fas fa-comment-dots" size="18px" />
+        <a
+          class="nav-btn gt-xs q-px-sm"
+          :class="{ 'active-link': activeSection === '#testimonials' }"
+          clickable
+          @click="scrollTo('testimonials')"
+        >
+          <!-- <q-icon name="fas fa-comment-dots" size="18px" /> -->
           Testimonials
         </a>
-        <!-- <a class="nav-btn gt-xs" clickable>
-          <q-icon name="fab fa-blogger" size="18px" />
-          My Blogs
-        </a> -->
-      </q-toolbar-title>
-
-      <div>
-        <a
+        <!-- <a
           class="nav-btn gt-xs"
           :class="{ 'active-link': currentRoute === '/support-me' }"
           clickable
           @click="goTo('/support-me')"
         >
           <q-icon name="fas fa-circle-dollar-to-slot" size="18px" />
-          <!-- <q-icon name="fas fa-hand-holding-dollar" size="18px" /> -->
+          <q-icon name="fas fa-hand-holding-dollar" size="18px" />
           Support Me
-        </a>
+        </a> -->
         <a
-          class="nav-btn gt-xs"
+          class="nav-btn gt-xs q-px-sm"
           :class="{ 'active-link': currentRoute === '/contact' }"
           clickable
           @click="goTo('/contact')"
         >
-          <q-icon name="fas fa-square-envelope" size="18px" />
+          <!-- <q-icon name="fas fa-square-envelope" size="18px" /> -->
           Contact Me
         </a>
+
+        <!-- Mobile Drawer Toggle -->
         <q-btn
           flat
           dense
@@ -155,16 +207,9 @@
                 </q-item-section>
               </q-item>
 
-              <!-- <q-item class="q-pl-xl" exact clickable v-ripple>
-                <q-item-section style="display: inline-block">
-                  <q-icon name="fab fa-blogger" class="q-pr-sm" />
-                  My Blogs
-                </q-item-section>
-              </q-item> -->
-
               <q-separator inset color="white" class="lt-sm q-my-lg" />
 
-              <q-item
+              <!-- <q-item
                 class="lt-sm q-pl-xl"
                 :class="{ 'active-q-item': currentRoute === '/support-me' }"
                 exact
@@ -176,7 +221,7 @@
                   <q-icon name="fas fa-circle-dollar-to-slot" class="q-pr-sm" />
                   Support Me
                 </q-item-section>
-              </q-item>
+              </q-item> -->
 
               <q-item
                 class="lt-sm q-pl-xl"
@@ -216,13 +261,22 @@ export default defineComponent({
     currentRoute() {
       return useRoute().path;
     },
+
+    activeSection() {
+      const route = useRoute();
+      if (route.path === "/") {
+        return route.hash || "#home";
+      }
+      return "#home";
+    },
   },
 
   methods: {
     goHome() {
-      this.$router.push("/").then(() => {
-        this.$router.go();
-      });
+      this.$router.push("/");
+      // this.$router.push("/").then(() => {
+      //   this.$router.go();
+      // });
     },
 
     goTo(route) {
@@ -250,8 +304,7 @@ export default defineComponent({
   padding-left: 16px;
   padding-right: 16px;
 }
-.logo-btn,
-.nav-btn {
+.logo-btn {
   font-size: 15px;
   cursor: pointer;
   font-weight: 500;
@@ -259,15 +312,52 @@ export default defineComponent({
   margin-right: 12px;
   text-decoration: none;
 }
-.nav-btn:hover,
 .logo-btn:hover {
   color: #2356ad;
 }
 .logo-btn {
   font-weight: 700;
 }
+
+.nav-btn {
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #007bff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s ease-in-out;
+
+  // Underline effect setup
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #2356ad;
+    transition: all 0.25s ease-in-out;
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    color: #2356ad;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+// Active state (Solid underline + deeper color)
 .active-link {
-  color: #2356ad;
+  color: #2356ad !important;
+
+  &::after {
+    width: 100% !important;
+  }
 }
 
 .menu-btn {

@@ -150,7 +150,7 @@ export default defineComponent({
   font-size: 16px;
 }
 .about-section {
-  margin-top: 64px;
+  padding-top: 64px;
   margin-bottom: 64px;
 }
 .section {
