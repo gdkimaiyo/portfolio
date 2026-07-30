@@ -240,8 +240,8 @@ export const SKILLS = [
     category: "Languages",
     skills: [
       { language: "Python", icon: "fas fas-gear" },
-      { language: "JavaScript", icon: "fas fas-gear" },
       { language: "TypeScript", icon: "fas fas-gear" },
+      { language: "JavaScript (ES6+)", icon: "fas fas-gear" },
       { language: "PHP", icon: "fas fas-gear" },
       { language: "SQL", icon: "fas fas-gear" },
       { language: "C/C++", icon: "fas fas-gear" },
@@ -249,10 +249,10 @@ export const SKILLS = [
   },
 
   {
-    category: "Frontend Frameworks & UI",
+    category: "Frontend Development",
     skills: [
-      { language: "React", icon: "fas fas-gear" },
-      { language: "Vue.js (Vue 3)", icon: "fas fas-gear" },
+      { language: "React.js", icon: "fas fas-gear" },
+      { language: "Vue.js", icon: "fas fas-gear" },
       { language: "Angular", icon: "fas fas-gear" },
       { language: "Ant Design", icon: "fas fas-gear" },
       { language: "Chakra UI", icon: "fas fas-gear" },
@@ -261,30 +261,32 @@ export const SKILLS = [
   },
 
   {
-    category: "Backend",
+    category: "Backend Development",
     // category: "Backend & CMS",
     skills: [
       { language: "Django", icon: "fas fas-gear" },
-      { language: "Laravel", icon: "fas fas-gear" },
-      { language: "FastAPI / Flask", icon: "fas fas-gear" },
+      { language: "Flask", icon: "fas fas-gear" },
+      { language: "FastAPI", icon: "fas fas-gear" },
+      { language: "REST APIs", icon: "fas fas-gear" },
       { language: "Node.js / Express", icon: "fas fas-gear" },
+      // { language: "Laravel", icon: "fas fas-gear" },
       // { language: "WordPress", icon: "fas fas-gear" },
       // { language: "Drupal", icon: "fas fas-gear" },
     ],
   },
 
   {
-    category: "Cloud, DevOps & Servers",
+    category: "DevOps & Cloud",
     skills: [
       { language: "AWS", icon: "fas fas-gear" },
       { language: "Azure", icon: "fas fas-gear" },
       { language: "Google Cloud", icon: "fas fas-gear" },
       { language: "Docker", icon: "fas fas-gear" },
-      { language: "Linux", icon: "fas fas-gear" },
       { language: "CI/CD & GitHub Actions", icon: "fas fas-gear" },
       { language: "NGINX & Apache", icon: "fas fas-gear" },
-      { language: "Heroku", icon: "fas fas-gear" },
       { language: "Netlify", icon: "fas fas-gear" },
+      { language: "Heroku", icon: "fas fas-gear" },
+      { language: "Linux", icon: "fas fas-gear" },
     ],
   },
 

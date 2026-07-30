@@ -4,24 +4,12 @@
 
     <div class="after-landing abtme q-pt-lg q-px-md">
       <AboutSection id="abtme" ref="#abtme" />
+      <ExpertiseSection id="skills" ref="#skills" />
       <ProjectsSection id="projects" ref="#projects" />
     </div>
 
     <ServicesSection id="services" ref="#services" />
-
-    <div
-      class="after-landing q-mt-lg q-pt-xl q-px-md"
-      id="skills"
-      ref="#skills"
-    >
-      <ExpertiseSection />
-    </div>
-
     <TestimonialsSection id="testimonials" ref="#testimonials" />
-
-    <div class="after-landing q-py-xl q-px-md">
-      <FindMe />
-    </div>
 
     <q-btn
       unelevated
@@ -45,7 +33,6 @@ import ProjectsSection from "../components/ProjectsSection.vue";
 import ServicesSection from "../components/ServicesSection.vue";
 import ExpertiseSection from "../components/ExpertiseSection.vue";
 import TestimonialsSection from "../components/TestimonialsSection.vue";
-import FindMe from "../components/FindMe.vue";
 
 import { scrollToTop } from "../utils/helpers";
 
@@ -59,7 +46,6 @@ export default defineComponent({
     ServicesSection,
     ExpertiseSection,
     TestimonialsSection,
-    FindMe,
   },
 
   mounted() {
