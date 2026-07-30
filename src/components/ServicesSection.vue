@@ -1,7 +1,7 @@
 <template>
   <div id="services" class="services-section q-mt-xl q-py-lg">
     <div class="section q-pt-xl q-px-md">
-      <div class="text-h4 text-weight-bold">Services</div>
+      <div class="aim text-h4 text-weight-bold">Services</div>
     </div>
     <div class="section q-pt-lg q-pb-md q-px-md">
       <div class="text-h5 text-weight-bold">
@@ -101,6 +101,22 @@ export default defineComponent({
 .services-footer {
   padding-top: 32px;
   padding-bottom: 48px;
+}
+
+.aim {
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.aim:after {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto 0 3px; /* This will center the border. */
+  width: 70px; /* Change this to whatever width you want. */
+  padding-top: 10px; /* This creates some space between the element and the border. */
+  border-bottom: 4px solid #ffffff; /* This creates the border. Replace black with whatever color you want. */
+  font-weight: 700;
+  max-width: 60px;
 }
 
 @media only screen and (max-width: 575px) {
