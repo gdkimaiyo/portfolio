@@ -1,6 +1,9 @@
 <template>
-  <div id="projects" class="projects-section q-my-lg">
-    <div class="page-header text-h4 text-weight-bold">Featured Projects</div>
+  <div id="projects" class="projects-section q-pt-xl">
+    <div class="text-left q-mb-xl">
+      <h2 class="section-title text-h4 text-weight-bold">Featured Projects</h2>
+      <div class="title-underline"></div>
+    </div>
     <ProjectHolder :projects="projects" />
 
     <q-btn
@@ -38,21 +41,18 @@ export default defineComponent({
   font-family: "Avenir", sans-serif;
   // font-size: 16px;
 }
-.page-header {
-  padding-top: 48px;
-  margin-bottom: 56px;
-  // color: #000000;
+
+.section-title {
+  color: #0f222d;
+  margin: 0;
 }
 
-.page-header:after {
-  content: ""; /* This is necessary for the pseudo element to work. */
-  display: block; /* This will put the pseudo element on its own line. */
-  margin: 0 auto 0 3px; /* This will center the border. */
-  width: 30%; /* Change this to whatever width you want. */
-  padding-top: 10px; /* This creates some space between the element and the border. */
-  border-bottom: 6px solid #000000; /* This creates the border. Replace black with whatever color you want. */
-  font-weight: 700;
-  max-width: 60px;
+.title-underline {
+  width: 70px;
+  height: 4px;
+  background-color: #0f222d;
+  margin: 8px 0;
+  border-radius: 2px;
 }
 
 @media only screen and (max-width: 575px) {

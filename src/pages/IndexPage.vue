@@ -6,6 +6,7 @@
       <AboutSection id="abtme" ref="#abtme" />
       <ExpertiseSection id="skills" ref="#skills" />
       <ProjectsSection id="projects" ref="#projects" />
+      <ExperienceSection id="experience" ref="#experience" />
     </div>
 
     <ServicesSection id="services" ref="#services" />
@@ -30,6 +31,7 @@ import { defineComponent } from "vue";
 import LandingPage from "../components/LandingPage.vue";
 import AboutSection from "../components/AboutSection.vue";
 import ProjectsSection from "../components/ProjectsSection.vue";
+import ExperienceSection from "../components/ExperienceSection.vue";
 import ServicesSection from "../components/ServicesSection.vue";
 import ExpertiseSection from "../components/ExpertiseSection.vue";
 import TestimonialsSection from "../components/TestimonialsSection.vue";
@@ -46,6 +48,7 @@ export default defineComponent({
     ServicesSection,
     ExpertiseSection,
     TestimonialsSection,
+    ExperienceSection,
   },
 
   mounted() {

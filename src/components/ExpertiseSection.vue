@@ -1,5 +1,5 @@
 <template>
-  <div id="expertise" class="skills-section">
+  <div id="expertise" class="skills-section q-pb-lg">
     <div class="container">
       <div class="row q-col-gutter-lg items-stretch">
         <div
