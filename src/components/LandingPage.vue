@@ -14,8 +14,8 @@
 
         <h1 class="text-h3 text-weight-bold banner-title">Gideon Kimaiyo</h1>
         <p class="text-subtitle1 banner-subtitle q-mt-md">
-          Senior Full-Stack Developer & DevOps Engineer building resilient,
-          scalable web ecosystems.
+          Senior Full-Stack Developer & DevOps Engineer. I build and deploy
+          secure and scalable solutions that solve real world problems.
         </p>
         <div class="banner-btns q-mt-lg">
           <q-btn
