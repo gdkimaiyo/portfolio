@@ -1,6 +1,9 @@
 <template>
   <div id="about-me" class="about-section">
-    <div class="about-header text-h4 text-weight-bold">About Gideon</div>
+    <div class="text-left q-mb-lg">
+      <h2 class="section-title text-h4 text-weight-bold">About Gideon</h2>
+      <div class="title-underline"></div>
+    </div>
     <div class="section q-mt-md">
       <div class="image-div q-mr-md">
         <img
@@ -11,7 +14,7 @@
       </div>
       <div class="content-div">
         <div class="q-mt-md">
-          <p>
+          <p style="color: #0f222d">
             <!-- I am a <b>Senior Full-Stack Developer and DevOps Engineer</b> with
             over {{ years }} years of experience. I specialize in building,
             deploying and maintaining secure and scalable web applications.
@@ -22,11 +25,11 @@
             I am a Senior Full-Stack Developer and DevOps Engineer with over
             {{ years }} years of experience building, deploying and maintaining
             secure, scalable web applications. I bridge the gap between product
-            development and platform architecture, handling everything from
-            backend development with Django and Node.js to modern frontend
-            interfaces with React and Vue 3 and automated cloud infrastructure.
+            development and platform architecture, handling from backend
+            development with Django or Node.js to modern frontend interfaces
+            with React or Vue 3 and automated cloud infrastructure.
           </p>
-          <p>
+          <p style="color: #0f222d">
             I specialize in architecting end-to-end ecosystems that drive
             business reliability and developer velocity. I have designed and
             deployed multi-cloud infrastructure across AWS and GCP Docker, built
@@ -35,7 +38,7 @@
             database queries to cut API latency by 30%. I focus on delivering
             clean, reusable code built for long-term scalability.
           </p>
-          <p>
+          <p style="color: #0f222d">
             When I'm not writing code or orchestrating cloud infrastructure, I'm
             usually reading, hanging out with friends or diving into emerging
             tech trends like GenAI integrations and automated backend workflows
@@ -114,20 +117,19 @@ export default defineComponent({
   font-family: "Avenir";
   font-size: 16px;
 }
-.about-header {
-  color: #000000;
+.section-title {
+  color: #0f222d;
+  margin: 0;
 }
 
-.about-header:after {
-  content: ""; /* This is necessary for the pseudo element to work. */
-  display: block; /* This will put the pseudo element on its own line. */
-  margin: 0 auto 0 3px; /* This will center the border. */
-  width: 25%; /* Change this to whatever width you want. */
-  padding-top: 10px; /* This creates some space between the element and the border. */
-  border-bottom: 6px solid #000000; /* This creates the border. Replace black with whatever color you want. */
-  font-weight: 700;
-  max-width: 60px;
+.title-underline {
+  width: 70px;
+  height: 4px;
+  background-color: #0f222d;
+  margin: 8px 0;
+  border-radius: 2px;
 }
+
 .about-section {
   padding-top: 64px;
   margin-bottom: 64px;
