@@ -419,4 +419,10 @@ export const SOCIALS = [
     color: "rgba(74, 153, 233)",
     link: "https://twitter.com/gideonGDK",
   },
+  {
+    name: "Gmail",
+    logo: "fas fa-square-envelope",
+    color: "rgba(46, 100, 188)",
+    link: "mailto:gdkimaiyo@gmail.com",
+  },
 ];
