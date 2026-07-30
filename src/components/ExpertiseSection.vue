@@ -1,32 +1,35 @@
 <template>
-  <div id="expertise" class="expertise-section q-pt-md q-my-lg">
-    <div class="text-h4 text-weight-bold">Skills & Expertise</div>
-    <div v-for="(category, index) in skills" :key="index">
-      <div class="text-h6 subtitle q-mt-lg q-ml-md">
-        {{ category.category }}
-      </div>
-      <div class="section">
-        <div class="content">
-          <div
-            class="q-pa-md"
-            v-for="(skill, indx) in category.skills"
-            :key="indx"
-          >
-            <q-chip outline color="dark" text-color="white">
-              {{ skill.language }}
-            </q-chip>
-          </div>
-          <!-- <div
-            class="skill-card"
-            v-for="(skill, indx) in category.skills"
-            :key="indx"
-          >
-            <img
-              :src="getImgUrl('assets/se_icons/', skill.icon)"
-              :alt="skill.language + ' image'"
-              class="card-icon"
-            />
-          </div> -->
+  <div id="expertise" class="skills-section">
+    <div class="container">
+      <div class="row q-col-gutter-lg items-stretch">
+        <div
+          v-for="(category, index) in skills"
+          :key="index"
+          class="col-12 col-md-4 flex"
+        >
+          <q-card flat bordered class="skill-card full-width">
+            <q-card-section class="q-pb-sm">
+              <div class="text-h6 text-weight-bold category-title">
+                {{ category.category }}
+              </div>
+            </q-card-section>
+
+            <q-separator class="card-separator" />
+
+            <!-- Horizontal Chip Container -->
+            <q-card-section class="q-pt-md">
+              <div class="row items-center q-gutter-sm">
+                <q-chip
+                  v-for="(skill, indx) in category.skills"
+                  :key="indx"
+                  clickable
+                  class="skill-chip"
+                >
+                  {{ skill.language || skill }}
+                </q-chip>
+              </div>
+            </q-card-section>
+          </q-card>
         </div>
       </div>
     </div>
@@ -55,47 +58,64 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 #expertise {
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
 }
-.section {
-  width: 100%;
+
+.container {
   max-width: 1024px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: nowrap;
-  color: #ffffff;
+  padding: 0 16px;
 }
-.content {
-  width: 100%;
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  // justify-content: center;
+
+.section-title {
+  color: #0f222d;
+  margin: 0;
 }
+
+.title-underline {
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Card Styling & Hover Animations */
 .skill-card {
-  width: 16.66%;
-  max-width: 16.66%;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &:hover {
+    border-color: #0f222d;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(15, 34, 45, 0.08) !important;
+  }
 }
 
-.card-icon {
-  padding: 12px;
-  height: auto;
-  width: 100%;
+.category-title {
+  color: #0f222d;
 }
 
-.subtitle {
-  color: #6c757d;
+.card-separator {
+  background-color: #f0effb;
 }
 
-@media only screen and (max-width: 575px) {
-  .skill-card {
-    width: 33.33%;
-    max-width: 33.33%;
-    padding: 0;
+/* Horizontal Skill Chips Styling */
+.skill-chip {
+  background-color: #f0f4f8;
+  color: #0f222d;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  margin: 4px;
+  padding: 6px 12px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #0f222d;
+    color: #ffffff;
   }
 }
 </style>

@@ -179,7 +179,7 @@ export default defineComponent({
   .section {
     flex-direction: column;
     text-align: center;
-    padding: 16px;
+    padding: 8px;
   }
   .image-div {
     width: 100%;

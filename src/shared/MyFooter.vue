@@ -47,9 +47,11 @@
 
           <div class="about q-my-md">
             <!-- I build beautiful responsive web applications with focus on making
-            them simple and user-friendly. -->
+            them simple and user-friendly.
             I build and deploy highly resilient, responsive web applications
-            with a focus on clean, secure code and reliable performance.
+            with a focus on clean, secure code and reliable performance. -->
+            Senior Full-Stack Developer & DevOps Engineer. I build and deploy
+            secure and scalable solutions that solve real world problems.
             <span class="custom-link" @click="scrollTo('abtme')">
               Learn more
             </span>
@@ -77,8 +79,16 @@
           <a class="q-pr-sm" clickable @click="scrollTo('abtme')"> About </a>
         </div>
         <div class="nav-btn">
+          <a class="q-pr-sm" clickable @click="scrollTo('skills')"> Skills </a>
+        </div>
+        <div class="nav-btn">
           <a class="q-pr-sm" clickable @click="scrollTo('projects')">
             Projects
+          </a>
+        </div>
+        <div class="nav-btn">
+          <a class="q-pr-sm" clickable @click="scrollTo('experience')">
+            Experience
           </a>
         </div>
         <div class="nav-btn">
@@ -87,26 +97,23 @@
           </a>
         </div>
         <div class="nav-btn">
-          <a class="q-pr-sm" clickable @click="scrollTo('skills')"> Skills </a>
-        </div>
-        <div class="nav-btn">
           <a class="q-pr-sm" clickable @click="scrollTo('testimonials')">
             Testimonials
           </a>
         </div>
-        <div class="nav-btn">
+        <!-- <div class="nav-btn">
           <a class="q-pr-sm" clickable>Blogs</a>
-        </div>
+        </div> -->
         <div class="nav-btn">
           <a class="q-pr-sm" clickable @click="goTo('/contact')">
             Contact Me
           </a>
         </div>
-        <div class="nav-btn">
+        <!-- <div class="nav-btn">
           <a class="q-pr-sm" clickable @click="goTo('/support-me')">
             Support Me
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
 
