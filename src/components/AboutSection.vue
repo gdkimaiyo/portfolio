@@ -1,69 +1,47 @@
 <template>
   <div id="about-me" class="about-section">
+    <div class="about-header text-h4 text-weight-bold">About Gideon</div>
     <div class="section q-mt-md">
-      <div class="image-div lt-sm q-mb-lg">
-        <q-list>
-          <q-item class="q-pl-none">
-            <q-item-section avatar>
-              <q-avatar size="100px">
-                <img
-                  :src="
-                    getImgUrl(
-                      'assets/profile_pics/',
-                      pics[randomNumber(0, pics.length - 1)]
-                    )
-                  "
-                  alt="user image"
-                />
-              </q-avatar>
-            </q-item-section>
-            <q-item-section class="q-ml-none">
-              <q-item-label class="text-h6 text-weight-bold">
-                Gideon Kimaiyo
-              </q-item-label>
-              <q-item-label caption> gdkimaiyo@gmail.com </q-item-label>
-            </q-item-section>
-          </q-item>
-        </q-list>
+      <div class="image-div q-mr-md">
+        <img
+          src="../assets/software_developer_2.png"
+          class="about-me-illustration"
+          alt="user image"
+        />
       </div>
       <div class="content-div">
-        <div class="about-header text-h4 text-weight-bold">About Gideon</div>
         <div class="q-mt-md">
           <p>
-            I am a <b>Software and DevOps Engineer</b> from Kenya with over
-            {{ years }} years of experience. I specialize in building, deploying
-            and maintaining resilient, secure and scalable web
-            applications—handling everything from full-stack development (with
-            Django or NodeJs and React, Vue3 or Angular) to automated cloud
-            infrastructure, CI/CD pipelines and database optimization.
+            <!-- I am a <b>Senior Full-Stack Developer and DevOps Engineer</b> with
+            over {{ years }} years of experience. I specialize in building,
+            deploying and maintaining secure and scalable web applications.
+            Handling everything from full-stack development with Django or
+            NodeJs and React or Vue3 to automated cloud infrastructure, CI/CD
+            pipelines and database optimization. -->
+
+            I am a Senior Full-Stack Developer and DevOps Engineer with over
+            {{ years }} years of experience building, deploying and maintaining
+            secure, scalable web applications. I bridge the gap between product
+            development and platform architecture, handling everything from
+            backend development with Django and Node.js to modern frontend
+            interfaces with React and Vue 3 and automated cloud infrastructure.
           </p>
           <p>
-            When I'm not writing code or configuring infrastructure, I'm usually
-            reading, hanging out with friends or diving into new technologies to
-            keep my engineering toolkit sharp and up to date.
+            I specialize in architecting end-to-end ecosystems that drive
+            business reliability and developer velocity. I have designed and
+            deployed multi-cloud infrastructure across AWS and GCP Docker, built
+            automated CI/CD pipelines with GitHub Actions that reduced
+            deployment overhead by over 40%, and optimized high-throughput
+            database queries to cut API latency by 30%. I focus on delivering
+            clean, reusable code built for long-term scalability.
           </p>
           <p>
-            Let's connect! You can find me on
-            <a
-              href="https://www.linkedin.com/in/gideon-kimaiyo/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="href-link text-primary"
-            >
-              LinkedIn
-            </a>
-            or check out my active repositories on
-            <a
-              href="https://github.com/gdkimaiyo"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="href-link text-primary"
-            >
-              GitHub
-            </a>
-            where I share my latest open-source experiments and projects.
+            When I'm not writing code or orchestrating cloud infrastructure, I'm
+            usually reading, hanging out with friends or diving into emerging
+            tech trends like GenAI integrations and automated backend workflows
+            to keep my engineering toolkit sharp.
           </p>
-          <p>
+          <p class="q-mt-lg">
             <span class="sub-label">
               <q-icon name="fas fa-location-dot" size="18px" />
               Nairobi,
@@ -86,13 +64,13 @@
             </span>
 
             <span class="sub-label">
-              <span class="gt-xs">Languages</span>
-              <q-icon
+              <q-icon name="fas fa-language" size="14px" />
+              <!-- <q-icon
                 name="fas fa-language"
                 size="18px"
                 style="padding-right: 2px"
                 class="lt-sm"
-              />
+              /> -->
             </span>
             <span style="font-style: italic">English</span>
             <span class="q-px-sm">
@@ -102,33 +80,20 @@
           </p>
         </div>
       </div>
-      <div class="image-div gt-xs">
-        <q-avatar size="300px">
-          <img
-            :src="
-              getImgUrl(
-                'assets/profile_pics/',
-                pics[randomNumber(0, pics.length - 1)]
-              )
-            "
-            alt="user image"
-          />
-        </q-avatar>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { defineComponent, ref } from "vue";
-import { getImgUrl, randomNumber } from "../utils/helpers";
+// import { getImgUrl, randomNumber } from "../utils/helpers";
 
 export default defineComponent({
   name: "AboutSection",
 
   setup() {
     return {
-      years: ref(new Date().getFullYear() - 2021),
+      years: ref(new Date().getFullYear() - 2019),
       pics: ref(["dp_primary.jpg", "dp_secondary.jpg"]),
     };
   },
@@ -138,8 +103,8 @@ export default defineComponent({
       return screen.width <= 575 ? true : false;
     },
 
-    getImgUrl,
-    randomNumber,
+    // getImgUrl,
+    // randomNumber,
   },
 });
 </script>
@@ -148,6 +113,20 @@ export default defineComponent({
 #about-me {
   font-family: "Avenir";
   font-size: 16px;
+}
+.about-header {
+  color: #000000;
+}
+
+.about-header:after {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto 0 3px; /* This will center the border. */
+  width: 25%; /* Change this to whatever width you want. */
+  padding-top: 10px; /* This creates some space between the element and the border. */
+  border-bottom: 6px solid #000000; /* This creates the border. Replace black with whatever color you want. */
+  font-weight: 700;
+  max-width: 60px;
 }
 .about-section {
   padding-top: 64px;
@@ -166,10 +145,15 @@ export default defineComponent({
   text-align: center;
   flex-grow: 1;
 }
+.about-me-illustration {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .content-div {
   width: 60%;
   max-width: 60%;
-  margin-right: 24px;
+  margin-left: 24px;
   align-content: center;
   flex-grow: 1;
 }
@@ -190,7 +174,6 @@ export default defineComponent({
     font-size: 14px;
   }
   .about-section {
-    margin-top: 24px;
     margin-bottom: 32px;
   }
   .section {
@@ -206,9 +189,8 @@ export default defineComponent({
     width: 100%;
     max-width: 100%;
     text-align: left;
-  }
-  .about-header {
     margin-top: 24px;
+    margin-left: 0;
   }
 }
 </style>
