@@ -50,6 +50,15 @@
         </a>
         <a
           class="nav-btn gt-xs q-px-sm"
+          :class="{ 'active-link': activeSection === '#skills' }"
+          clickable
+          @click="scrollTo('skills')"
+        >
+          <!-- <q-icon name="fas fa-laptop-code" size="18px" /> -->
+          Skills
+        </a>
+        <a
+          class="nav-btn gt-xs q-px-sm"
           :class="{ 'active-link': activeSection === '#projects' }"
           clickable
           @click="scrollTo('projects')"
@@ -59,21 +68,21 @@
         </a>
         <a
           class="nav-btn gt-xs q-px-sm"
+          :class="{ 'active-link': activeSection === '#experience' }"
+          clickable
+          @click="scrollTo('experience')"
+        >
+          <!-- <q-icon name="fas fa-code-branch" size="18px" /> -->
+          Experience
+        </a>
+        <a
+          class="nav-btn gt-xs q-px-sm"
           clickable
           :class="{ 'active-link': activeSection === '#services' }"
           @click="scrollTo('services')"
         >
           <!-- <q-icon name="fas fa-gear" size="18px" /> -->
           Services
-        </a>
-        <a
-          class="nav-btn gt-xs q-px-sm"
-          :class="{ 'active-link': activeSection === '#skills' }"
-          clickable
-          @click="scrollTo('skills')"
-        >
-          <!-- <q-icon name="fas fa-laptop-code" size="18px" /> -->
-          Skills
         </a>
         <a
           class="nav-btn gt-xs q-px-sm"
@@ -145,6 +154,22 @@
 
               <q-item
                 class="q-pl-xl"
+                :class="{ 'active-q-item': currentRoute === '/skills' }"
+                exact
+                clickable
+                v-ripple
+              >
+                <q-item-section
+                  style="display: inline-block"
+                  @click="scrollTo('skills')"
+                >
+                  <q-icon name="fas fa-laptop-code" class="q-pr-sm" />
+                  Skills
+                </q-item-section>
+              </q-item>
+
+              <q-item
+                class="q-pl-xl"
                 :class="{ 'active-q-item': currentRoute === '/projects' }"
                 exact
                 clickable
@@ -161,6 +186,22 @@
 
               <q-item
                 class="q-pl-xl"
+                :class="{ 'active-q-item': currentRoute === '/experience' }"
+                exact
+                clickable
+                v-ripple
+              >
+                <q-item-section
+                  style="display: inline-block"
+                  @click="scrollTo('experience')"
+                >
+                  <q-icon name="fas fa-briefcase" class="q-pr-sm" />
+                  Experience
+                </q-item-section>
+              </q-item>
+
+              <q-item
+                class="q-pl-xl"
                 :class="{ 'active-q-item': currentRoute === '/services' }"
                 exact
                 clickable
@@ -172,22 +213,6 @@
                 >
                   <q-icon name="fas fa-gear" class="q-pr-sm" />
                   Services
-                </q-item-section>
-              </q-item>
-
-              <q-item
-                class="q-pl-xl"
-                :class="{ 'active-q-item': currentRoute === '/skills' }"
-                exact
-                clickable
-                v-ripple
-              >
-                <q-item-section
-                  style="display: inline-block"
-                  @click="scrollTo('skills')"
-                >
-                  <q-icon name="fas fa-laptop-code" class="q-pr-sm" />
-                  Skills
                 </q-item-section>
               </q-item>
 
