@@ -120,6 +120,141 @@
           round
           class="menu-btn lt-sm"
           icon="menu"
+          aria-label="Toggle navigation menu"
+          @click="dropDownMenu = !dropDownMenu"
+        >
+          <q-menu
+            auto-close
+            max-width="450px"
+            max-height="93vh"
+            :offset="[15, 15]"
+            transition-show="jump-down"
+            transition-hide="jump-up"
+            class="lt-sm mobile-q-menu"
+          >
+            <q-list class="mobile-dropdown-menu q-py-lg">
+              <!-- ABOUT ME -->
+              <q-item
+                class="menu-item"
+                :class="{ 'active-q-item': currentRoute === '/abtme' }"
+                clickable
+                v-ripple
+                @click="scrollTo('abtme')"
+              >
+                <q-item-section avatar class="min-icon-width">
+                  <q-icon name="fas fa-circle-info" size="18px" />
+                </q-item-section>
+                <q-item-section class="text-weight-medium">
+                  About Me
+                </q-item-section>
+              </q-item>
+
+              <!-- SKILLS -->
+              <q-item
+                class="menu-item"
+                :class="{ 'active-q-item': currentRoute === '/skills' }"
+                clickable
+                v-ripple
+                @click="scrollTo('skills')"
+              >
+                <q-item-section avatar class="min-icon-width">
+                  <q-icon name="fas fa-laptop-code" size="18px" />
+                </q-item-section>
+                <q-item-section class="text-weight-medium">
+                  Skills
+                </q-item-section>
+              </q-item>
+
+              <!-- PROJECTS -->
+              <q-item
+                class="menu-item"
+                :class="{ 'active-q-item': currentRoute === '/projects' }"
+                clickable
+                v-ripple
+                @click="scrollTo('projects')"
+              >
+                <q-item-section avatar class="min-icon-width">
+                  <q-icon name="fas fa-code-branch" size="18px" />
+                </q-item-section>
+                <q-item-section class="text-weight-medium">
+                  Projects
+                </q-item-section>
+              </q-item>
+
+              <!-- EXPERIENCE -->
+              <q-item
+                class="menu-item"
+                :class="{ 'active-q-item': currentRoute === '/experience' }"
+                clickable
+                v-ripple
+                @click="scrollTo('experience')"
+              >
+                <q-item-section avatar class="min-icon-width">
+                  <q-icon name="fas fa-briefcase" size="18px" />
+                </q-item-section>
+                <q-item-section class="text-weight-medium">
+                  Experience
+                </q-item-section>
+              </q-item>
+
+              <!-- SERVICES -->
+              <q-item
+                class="menu-item"
+                :class="{ 'active-q-item': currentRoute === '/services' }"
+                clickable
+                v-ripple
+                @click="scrollTo('services')"
+              >
+                <q-item-section avatar class="min-icon-width">
+                  <q-icon name="fas fa-gear" size="18px" />
+                </q-item-section>
+                <q-item-section class="text-weight-medium">
+                  Services
+                </q-item-section>
+              </q-item>
+
+              <!-- TESTIMONIALS -->
+              <q-item
+                class="menu-item"
+                :class="{ 'active-q-item': currentRoute === '/testimonials' }"
+                clickable
+                v-ripple
+                @click="scrollTo('testimonials')"
+              >
+                <q-item-section avatar class="min-icon-width">
+                  <q-icon name="fas fa-comment-dots" size="18px" />
+                </q-item-section>
+                <q-item-section class="text-weight-medium">
+                  Testimonials
+                </q-item-section>
+              </q-item>
+
+              <q-separator color="white-10" class="menu-separator q-my-md" />
+
+              <!-- CONTACT ME -->
+              <q-item
+                class="menu-item"
+                :class="{ 'active-q-item': currentRoute === '/contact' }"
+                clickable
+                v-ripple
+                @click="goTo('/contact')"
+              >
+                <q-item-section avatar class="min-icon-width">
+                  <q-icon name="fas fa-square-envelope" size="18px" />
+                </q-item-section>
+                <q-item-section class="text-weight-medium">
+                  Contact Me
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
+        <!-- <q-btn
+          flat
+          dense
+          round
+          class="menu-btn lt-sm"
+          icon="menu"
           aria-label="Menu"
           @click="dropDownMenu = !dropDownMenu"
         >
@@ -234,7 +369,7 @@
 
               <q-separator inset color="white" class="lt-sm q-my-lg" />
 
-              <!-- <q-item
+              <q-item
                 class="lt-sm q-pl-xl"
                 :class="{ 'active-q-item': currentRoute === '/support-me' }"
                 exact
@@ -246,7 +381,7 @@
                   <q-icon name="fas fa-circle-dollar-to-slot" class="q-pr-sm" />
                   Support Me
                 </q-item-section>
-              </q-item> -->
+              </q-item>
 
               <q-item
                 class="lt-sm q-pl-xl"
@@ -263,7 +398,7 @@
               </q-item>
             </q-list>
           </q-menu>
-        </q-btn>
+        </q-btn> -->
       </div>
     </q-toolbar>
   </q-header>
@@ -385,20 +520,71 @@ export default defineComponent({
   }
 }
 
+/* Mobile Menu Toggle Trigger Button */
 .menu-btn {
-  // color: #534b84;
-  color: #f9f9f9;
-  background-color: #007bff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.08);
-  border-radius: 42.5px;
+  color: #ffffff;
+  background-color: #0f222d;
+  box-shadow: 0 4px 12px rgba(15, 34, 45, 0.15);
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:active {
+    background-color: #1e3a4b;
+  }
 }
 
-.dropdown-menu .q-item.q-router-link--active,
-.dropdown-menu .q-item--active,
-.dropdown-menu .active-q-item {
-  color: #ffffff !important;
-  background-color: #2356ad !important;
+/* Dropdown Menu Container */
+.mobile-dropdown-menu {
+  background-color: #0f222d;
+  color: #ffffff;
+  min-width: 280px;
+  max-width: 320px;
+  box-shadow: 0 12px 32px rgba(15, 34, 45, 0.25);
 }
+
+.menu-item {
+  padding: 0 24px;
+  color: #e2e8f0;
+  border-left: 4px solid transparent;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+  }
+}
+
+.mobile-dropdown-menu .q-item.q-router-link--active,
+.mobile-dropdown-menu .q-item--active,
+.mobile-dropdown-menu .active-q-item {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border-left-color: #ffffff !important;
+}
+
+.min-icon-width {
+  min-width: 32px;
+  padding-right: 12px;
+}
+
+.menu-separator {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+// .menu-btn {
+//   // color: #534b84;
+//   color: #f9f9f9;
+//   background-color: #007bff;
+//   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.08);
+//   border-radius: 42.5px;
+// }
+
+// .dropdown-menu .q-item.q-router-link--active,
+// .dropdown-menu .q-item--active,
+// .dropdown-menu .active-q-item {
+//   color: #ffffff !important;
+//   background-color: #2356ad !important;
+// }
 
 @media only screen and (max-width: 575px) {
   .logo-btn {

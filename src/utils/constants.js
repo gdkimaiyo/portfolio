@@ -446,7 +446,8 @@ export const SKILLS = [
       { language: "Flask", icon: "fas fas-gear" },
       { language: "FastAPI", icon: "fas fas-gear" },
       { language: "REST APIs", icon: "fas fas-gear" },
-      { language: "Node.js / Express", icon: "fas fas-gear" },
+      { language: "Node.js", icon: "fas fas-gear" },
+      { language: "Express.js", icon: "fas fas-gear" },
       // { language: "Laravel", icon: "fas fas-gear" },
       // { language: "WordPress", icon: "fas fas-gear" },
       // { language: "Drupal", icon: "fas fas-gear" },
@@ -460,8 +461,11 @@ export const SKILLS = [
       { language: "Azure", icon: "fas fas-gear" },
       { language: "Google Cloud", icon: "fas fas-gear" },
       { language: "Docker", icon: "fas fas-gear" },
-      { language: "CI/CD & GitHub Actions", icon: "fas fas-gear" },
-      { language: "NGINX & Apache", icon: "fas fas-gear" },
+      { language: "CI/CD", icon: "fas fas-gear" },
+      { language: "Python", icon: "fas fas-gear" },
+      { language: "GitHub Actions", icon: "fas fas-gear" },
+      { language: "NGINX", icon: "fas fas-gear" },
+      { language: "Apache", icon: "fas fas-gear" },
       { language: "Netlify", icon: "fas fas-gear" },
       { language: "Heroku", icon: "fas fas-gear" },
       { language: "Linux", icon: "fas fas-gear" },
@@ -471,17 +475,19 @@ export const SKILLS = [
   {
     category: "Databases & Caching",
     skills: [
+      { language: "MongoDB", icon: "fas fas-gear" },
       { language: "PostgreSQL", icon: "fas fas-gear" },
       { language: "MySQL", icon: "fas fas-gear" },
-      { language: "MongoDB", icon: "fas fas-gear" },
-      { language: "Redis & Celery", icon: "fas fas-gear" },
+      { language: "Redis", icon: "fas fas-gear" },
+      { language: "Celery", icon: "fas fas-gear" },
     ],
   },
 
   {
     category: "AI & Machine Learning",
     skills: [
-      { language: "Generative AI & LLMs", icon: "fas fas-gear" },
+      { language: "Generative AI", icon: "fas fas-gear" },
+      { language: "LLMs", icon: "fas fas-gear" },
       { language: "Model Fine-Tuning (SFT)", icon: "fas fas-gear" },
       { language: "Machine Learning", icon: "fas fas-gear" },
       { language: "Scikit-Learn", icon: "fas fas-gear" },
@@ -492,7 +498,8 @@ export const SKILLS = [
   {
     category: "Tools & Architectures",
     skills: [
-      { language: "Git & GitHub", icon: "fas fas-gear" },
+      { language: "Git", icon: "fas fas-gear" },
+      { language: "GitHub", icon: "fas fas-gear" },
       { language: "REST APIs", icon: "fas fas-gear" },
       { language: "Postman", icon: "fas fas-gear" },
       { language: "Figma", icon: "fas fas-gear" },
