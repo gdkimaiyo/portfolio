@@ -187,6 +187,7 @@ export default defineComponent({
   width: 100%;
   color: #ffffff;
   background-color: #448dd1;
+  // background-color: #0f222d;
 }
 .call-to-action {
   text-align: center;
