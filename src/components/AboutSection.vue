@@ -22,7 +22,7 @@
             NodeJs and React or Vue3 to automated cloud infrastructure, CI/CD
             pipelines and database optimization. -->
 
-            I am a Senior Full-Stack Developer and DevOps Engineer with over
+            I am a Senior Full-Stack Software Engineer with over
             {{ years }} years of experience building, deploying and maintaining
             secure, scalable web applications. I bridge the gap between product
             development and platform architecture, handling from backend

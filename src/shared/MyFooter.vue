@@ -1,10 +1,10 @@
 <template>
   <footer id="footer" class="footer">
     <div
-      class="call-to-action q-pt-lg q-pb-xl"
+      class="call-to-action q-pt-xl q-pb-xl"
       v-if="currentRoute !== '/contact'"
     >
-      <div class="text-h4 text-weight-bold q-mt-lg">Get in Touch</div>
+      <div class="text-h3 text-weight-bold q-mt-xl">Get in Touch</div>
       <div class="q-mt-md">
         Get in touch and find out more on my services or drop me a message we
         work together.
@@ -15,7 +15,7 @@
           rounded
           no-caps
           color="white"
-          text-color="primary"
+          text-color="dark"
           label="Let's Talk"
           to="/contact"
         />
@@ -50,8 +50,8 @@
             them simple and user-friendly.
             I build and deploy highly resilient, responsive web applications
             with a focus on clean, secure code and reliable performance. -->
-            Senior Full-Stack Developer & DevOps Engineer. I build and deploy
-            secure and scalable solutions that solve real world problems.
+            Senior Full-Stack Developer. I build and deploy secure and scalable
+            solutions that solve real world problems.
             <span class="custom-link" @click="scrollTo('abtme')">
               Learn more
             </span>
@@ -186,8 +186,8 @@ export default defineComponent({
   bottom: 0;
   width: 100%;
   color: #ffffff;
-  background-color: #448dd1;
-  // background-color: #0f222d;
+  // background-color: #448dd1;
+  background-color: #0f222d;
 }
 .call-to-action {
   text-align: center;

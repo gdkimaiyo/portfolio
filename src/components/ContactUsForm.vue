@@ -43,7 +43,9 @@
       :rules="[(val) => validateMessage(val)]"
     />
     <div class="q-mt-lg">
-      <q-btn no-caps type="submit" color="primary"> Submit </q-btn>
+      <q-btn unelevated rounded no-caps type="submit" color="primary">
+        Submit
+      </q-btn>
       <span style="padding-left: 8px" class="text-primary" v-if="isLoading">
         Submitting
         <q-spinner-dots color="primary" size="1.5rem" />

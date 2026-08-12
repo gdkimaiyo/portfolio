@@ -35,7 +35,8 @@
         <q-btn
           unelevated
           rounded
-          color="positive"
+          color="white"
+          text-color="dark"
           label="Let's work together"
           to="/contact"
         />

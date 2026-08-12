@@ -1,7 +1,7 @@
 <template>
   <div id="projects" class="projects-section q-pt-xl">
     <div class="text-left q-mb-xl">
-      <h2 class="section-title text-h4 text-weight-bold">Featured Projects</h2>
+      <h2 class="section-title text-h4 text-weight-bold">Projects</h2>
       <div class="title-underline"></div>
     </div>
     <ProjectHolder :projects="projects" />
@@ -10,7 +10,7 @@
       unelevated
       rounded
       color="primary"
-      class="q-mb-xl"
+      class="q-mb-lg"
       href="https://github.com/gdkimaiyo?tab=repositories"
       target="_blank"
       label="View All Projects"
@@ -48,7 +48,7 @@ export default defineComponent({
 }
 
 .title-underline {
-  width: 70px;
+  width: 55px;
   height: 4px;
   background-color: #0f222d;
   margin: 8px 0;
