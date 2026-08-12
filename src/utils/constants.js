@@ -473,13 +473,19 @@ export const SKILLS = [
   },
 
   {
-    category: "Databases & Caching",
+    // category: "Databases & Caching",
+    category: "Databases & Tools",
     skills: [
       { language: "MongoDB", icon: "fas fas-gear" },
       { language: "PostgreSQL", icon: "fas fas-gear" },
       { language: "MySQL", icon: "fas fas-gear" },
       { language: "Redis", icon: "fas fas-gear" },
       { language: "Celery", icon: "fas fas-gear" },
+      { language: "Git", icon: "fas fas-gear" },
+      { language: "GitHub", icon: "fas fas-gear" },
+      { language: "REST APIs", icon: "fas fas-gear" },
+      { language: "Postman", icon: "fas fas-gear" },
+      { language: "Figma", icon: "fas fas-gear" },
     ],
   },
 
@@ -495,16 +501,16 @@ export const SKILLS = [
     ],
   },
 
-  {
-    category: "Tools & Architectures",
-    skills: [
-      { language: "Git", icon: "fas fas-gear" },
-      { language: "GitHub", icon: "fas fas-gear" },
-      { language: "REST APIs", icon: "fas fas-gear" },
-      { language: "Postman", icon: "fas fas-gear" },
-      { language: "Figma", icon: "fas fas-gear" },
-    ],
-  },
+  // {
+  //   category: "Tools & Architectures",
+  //   skills: [
+  //     { language: "Git", icon: "fas fas-gear" },
+  //     { language: "GitHub", icon: "fas fas-gear" },
+  //     { language: "REST APIs", icon: "fas fas-gear" },
+  //     { language: "Postman", icon: "fas fas-gear" },
+  //     { language: "Figma", icon: "fas fas-gear" },
+  //   ],
+  // },
 ];
 
 // export const SKILLS = [

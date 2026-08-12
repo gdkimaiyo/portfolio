@@ -15,7 +15,7 @@
         </a>
 
         <!-- Desktop Logo Image -->
-        <a class="nav-btn gt-xs row items-center" clickable @click="goHome()">
+        <a class="logo-btn gt-xs row items-center" clickable @click="goHome()">
           <img
             src="../assets/gdk-logo-512x512.png"
             height="48"
@@ -48,15 +48,15 @@
           <!-- <q-icon name="fas fa-circle-info" size="18px" /> -->
           About Me
         </a>
-        <a
+        <!-- <a
           class="nav-btn gt-xs q-px-sm"
           :class="{ 'active-link': activeSection === '#skills' }"
           clickable
           @click="scrollTo('skills')"
         >
-          <!-- <q-icon name="fas fa-laptop-code" size="18px" /> -->
+          <q-icon name="fas fa-laptop-code" size="18px" />
           Skills
-        </a>
+        </a> -->
         <a
           class="nav-btn gt-xs q-px-sm"
           :class="{ 'active-link': activeSection === '#projects' }"
@@ -84,16 +84,16 @@
           <!-- <q-icon name="fas fa-gear" size="18px" /> -->
           Services
         </a>
-        <a
+        <!-- <a
           class="nav-btn gt-xs q-px-sm"
           :class="{ 'active-link': activeSection === '#testimonials' }"
           clickable
           @click="scrollTo('testimonials')"
         >
-          <!-- <q-icon name="fas fa-comment-dots" size="18px" /> -->
+          <q-icon name="fas fa-comment-dots" size="18px" />
           Testimonials
         </a>
-        <!-- <a
+        <a
           class="nav-btn gt-xs"
           :class="{ 'active-link': currentRoute === '/support-me' }"
           clickable
@@ -214,7 +214,7 @@
               </q-item>
 
               <!-- TESTIMONIALS -->
-              <q-item
+              <!-- <q-item
                 class="menu-item"
                 :class="{ 'active-q-item': currentRoute === '/testimonials' }"
                 clickable
@@ -227,7 +227,7 @@
                 <q-item-section class="text-weight-medium">
                   Testimonials
                 </q-item-section>
-              </q-item>
+              </q-item> -->
 
               <q-separator color="white-10" class="menu-separator q-my-md" />
 
@@ -468,12 +468,12 @@ export default defineComponent({
   font-size: 15px;
   cursor: pointer;
   font-weight: 500;
-  color: #007bff;
+  // color: #007bff;
   margin-right: 12px;
   text-decoration: none;
 }
 .logo-btn:hover {
-  color: #2356ad;
+  // color: #2356ad;
 }
 .logo-btn {
   font-weight: 700;
@@ -483,7 +483,7 @@ export default defineComponent({
   font-size: 15px;
   cursor: pointer;
   font-weight: 500;
-  color: #007bff;
+  color: #0f222d;
   text-decoration: none;
   position: relative;
   padding-bottom: 4px;
@@ -497,13 +497,13 @@ export default defineComponent({
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: #2356ad;
+    background-color: #0f222d;
     transition: all 0.25s ease-in-out;
     transform: translateX(-50%);
   }
 
   &:hover {
-    color: #2356ad;
+    color: #0f222d;
 
     &::after {
       width: 100%;
@@ -513,7 +513,7 @@ export default defineComponent({
 
 // Active state (Solid underline + deeper color)
 .active-link {
-  color: #2356ad !important;
+  color: #0f222d !important;
 
   &::after {
     width: 100% !important;

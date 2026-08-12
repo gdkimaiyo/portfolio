@@ -14,8 +14,8 @@
 
         <h1 class="text-h3 text-weight-bold banner-title">Gideon Kimaiyo</h1>
         <p class="text-subtitle1 banner-subtitle q-mt-md">
-          Senior Full-Stack Developer & DevOps Engineer. I build secure,
-          scalable software and cloud solutions that solve real world problems.
+          Senior Full-Stack Software Engineer. I build secure, scalable software
+          and cloud solutions that solve real world problems.
         </p>
         <div class="banner-btns q-mt-lg">
           <q-btn
@@ -151,6 +151,14 @@ export default defineComponent({
 .banner-subtitle {
   color: #1e3a4b;
 }
+
+// .btn-primary {
+//   color: #ffffff !important;
+//   background-color: #0f222d !important;
+//   border-color: #0f222d !important;
+//   font-weight: 600;
+//   transition: all 0.25s ease-in-out;
+// }
 
 .btn-secondary {
   color: #0f222d !important;
