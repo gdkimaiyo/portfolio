@@ -5,12 +5,12 @@
     <div class="after-landing abtme q-pt-lg q-px-md">
       <AboutSection id="abtme" ref="#abtme" />
       <ExpertiseSection id="skills" ref="#skills" />
+      <TestimonialsSection id="testimonials" ref="#testimonials" />
       <ProjectsSection id="projects" ref="#projects" />
       <ExperienceSection id="experience" ref="#experience" />
     </div>
 
     <ServicesSection id="services" ref="#services" />
-    <TestimonialsSection id="testimonials" ref="#testimonials" />
 
     <q-btn
       unelevated
