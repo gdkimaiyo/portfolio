@@ -64,7 +64,7 @@ export default defineComponent({
 .container {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 16px;
+  // padding: 0 16px;
 }
 
 .section-title {
@@ -116,6 +116,12 @@ export default defineComponent({
   &:hover {
     background-color: #0f222d;
     color: #ffffff;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 4px;
   }
 }
 </style>
