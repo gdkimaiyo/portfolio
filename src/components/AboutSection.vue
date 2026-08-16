@@ -1,20 +1,21 @@
 <template>
   <div id="about-me" class="about-section">
-    <div class="text-left q-mb-lg">
-      <h2 class="section-title text-h4 text-weight-bold">About Gideon</h2>
+    <!-- Section Title -->
+    <div class="about-me-heading text-center">
+      <h2 class="text-h4 text-weight-bold section-title">About Gideon</h2>
       <div class="title-underline"></div>
     </div>
     <div class="section q-mt-md">
-      <div class="image-div q-mr-md">
+      <!-- <div class="image-div q-mr-md">
         <img
           src="../assets/software_developer_2.png"
           class="about-me-illustration"
           alt="user image"
         />
-      </div>
+      </div> -->
       <div class="content-div">
-        <div class="q-mt-md">
-          <p style="color: #0f222d">
+        <div class="q-my-lg">
+          <p class="text-body1">
             <!-- I am a <b>Senior Full-Stack Developer and DevOps Engineer</b> with
             over {{ years }} years of experience. I specialize in building,
             deploying and maintaining secure and scalable web applications.
@@ -29,7 +30,7 @@
             development with Django or Node.js to modern frontend interfaces
             with React or Vue 3 and automated cloud infrastructure.
           </p>
-          <p style="color: #0f222d">
+          <p class="text-body1">
             I specialize in architecting end-to-end ecosystems that drive
             business reliability and developer velocity. I have designed and
             deployed multi-cloud infrastructure across AWS and GCP Docker, built
@@ -38,7 +39,7 @@
             database queries to cut API latency by 30%. I focus on delivering
             clean, reusable code built for long-term scalability.
           </p>
-          <p style="color: #0f222d">
+          <p class="text-body1">
             When I'm not writing code or orchestrating cloud infrastructure, I'm
             usually reading, hanging out with friends or diving into emerging
             tech trends like GenAI integrations and automated backend workflows
@@ -76,10 +77,10 @@
               /> -->
             </span>
             <span style="font-style: italic">English</span>
-            <span class="q-px-sm">
+            <span class="q-px-sm gt-xs">
               <q-icon name="fas fa-circle" size="3px" />
             </span>
-            <span style="font-style: italic">Swahili</span>
+            <span class="gt-xs" style="font-style: italic">Swahili</span>
           </p>
         </div>
       </div>
@@ -117,6 +118,10 @@ export default defineComponent({
   font-family: "Avenir";
   font-size: 16px;
 }
+
+.about-me-heading {
+  margin-bottom: 48px;
+}
 .section-title {
   color: #0f222d;
   margin: 0;
@@ -126,7 +131,8 @@ export default defineComponent({
   width: 70px;
   height: 4px;
   background-color: #0f222d;
-  margin: 8px 0;
+  // margin: 8px 0;
+  margin: 8px auto 0 auto;
   border-radius: 2px;
 }
 
@@ -153,11 +159,16 @@ export default defineComponent({
   display: block;
 }
 .content-div {
-  width: 60%;
-  max-width: 60%;
-  margin-left: 24px;
+  width: 100%;
+  max-width: 100%;
   align-content: center;
   flex-grow: 1;
+  padding: 0 24px;
+
+  background-color: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 34, 45, 0.04);
 }
 .href-link {
   text-decoration: none;
@@ -175,6 +186,10 @@ export default defineComponent({
   #about-me {
     font-size: 14px;
   }
+  .about-me-heading {
+    margin-bottom: 32px;
+  }
+
   .about-section {
     margin-bottom: 32px;
   }
@@ -191,7 +206,8 @@ export default defineComponent({
     width: 100%;
     max-width: 100%;
     text-align: left;
-    margin-top: 24px;
+    padding: 0 16px;
+    margin-top: 0;
     margin-left: 0;
   }
 }
