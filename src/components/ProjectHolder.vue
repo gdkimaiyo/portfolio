@@ -1,5 +1,5 @@
 <template>
-  <div class="projects-container">
+  <div class="projects-list">
     <div
       v-for="(project, index) in projects"
       :key="index"
@@ -16,14 +16,20 @@
       >
         <img
           :src="getImgUrl('assets/', project.imgs[0])"
-          alt="Project preview image"
+          :alt="`${project.header} preview`"
           class="project-img"
         />
       </div>
 
       <!-- CONTENT SECTION -->
-      <div class="project-content q-pa-lg">
-        <h3 class="project-title text-h5 text-weight-bold q-ma-none q-mb-sm">
+      <div
+        class="project-content q-py-md"
+        :class="{
+          'content-pad-left': project.leftSided && project.showImage,
+          'content-pad-right': !project.leftSided && project.showImage,
+        }"
+      >
+        <h3 class="project-title text-h5 text-weight-bold q-ma-none q-mb-md">
           {{ project.header }}
         </h3>
 
@@ -41,7 +47,6 @@
             v-for="(tech, indx) in project.technologies"
             :key="indx"
             dense
-            clickable
             class="tech-chip"
           >
             {{ tech }}
@@ -114,25 +119,17 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.projects-container {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
 .project-card {
   display: flex;
   flex-direction: row;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 16px;
-  overflow: hidden;
-  background-color: #ffffff;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  min-height: 360px;
+  align-items: center;
+  min-height: 380px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #cbd5e1;
 
-  &:hover {
-    border-color: #0f222d;
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(15, 34, 45, 0.08);
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   &.is-reverse {
@@ -140,9 +137,14 @@ export default defineComponent({
   }
 
   &.has-no-image {
+    min-height: auto;
+    padding-bottom: 24px;
+
     .project-content {
       width: 100%;
       max-width: 100%;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
   }
 }
@@ -152,22 +154,33 @@ export default defineComponent({
   width: 50%;
   max-width: 50%;
   flex-shrink: 0;
+  height: 320px;
   overflow: hidden;
   position: relative;
-  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 34, 45, 0.04);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(15, 34, 45, 0.08);
+
+    .project-img {
+      transform: scale(1.03);
+    }
+  }
 }
 
 .project-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top center;
   display: block;
   transition: transform 0.4s ease;
-
-  .project-card:hover & {
-    transform: scale(1.03);
-  }
 }
 
 /* Content Panel */
@@ -179,27 +192,38 @@ export default defineComponent({
   justify-content: center;
 }
 
+.content-pad-left {
+  padding-left: 40px;
+}
+
+.content-pad-right {
+  padding-right: 40px;
+}
+
 .project-title {
   color: #0f222d;
+  line-height: 1.3;
 }
 
 .project-desc-text {
   color: #4a5568;
-  line-height: 1.6;
+  line-height: 1.625;
 }
 
+/* Tech Stack Chips */
 .tech-chip {
-  background-color: #f0f4f8;
-  color: #0f222d;
+  background-color: #1e3a4b;
+  color: #ffffff;
+  font-size: 13px;
   font-weight: 500;
-  font-size: 12px;
-  border-radius: 6px;
-  padding: 4px 10px;
+  border-radius: 24px;
+  margin: 4px;
+  padding: 12px;
   transition: all 0.2s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: #0f222d;
-    color: #ffffff;
   }
 }
 
@@ -231,11 +255,15 @@ export default defineComponent({
   font-weight: 500;
 }
 
-/* Responsive Stacking */
+/* Responsive Layout */
 @media only screen and (max-width: 768px) {
+  .project-card {
+    padding-bottom: 18px;
+  }
   .project-card,
   .project-card.is-reverse {
     flex-direction: column;
+    align-items: stretch;
     min-height: auto;
   }
 
@@ -247,6 +275,13 @@ export default defineComponent({
 
   .project-image-wrapper {
     height: 220px;
+    margin-bottom: 16px;
+  }
+
+  .content-pad-left,
+  .content-pad-right {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 </style>

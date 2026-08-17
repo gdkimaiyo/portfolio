@@ -145,7 +145,7 @@ export default defineComponent({
 .container {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 16px;
+  // padding: 0 16px;
 }
 
 .section-title {
@@ -211,8 +211,8 @@ export default defineComponent({
   color: #0f222d;
   font-size: 12px;
   font-weight: 500;
-  border-radius: 6px;
-  padding: 4px 10px;
+  border-radius: 24px;
+  padding: 10px;
   transition: all 0.2s ease;
 
   &:hover {

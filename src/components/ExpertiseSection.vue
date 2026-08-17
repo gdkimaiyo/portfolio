@@ -108,9 +108,9 @@ export default defineComponent({
   color: #0f222d;
   font-size: 13px;
   font-weight: 500;
-  border-radius: 6px;
+  border-radius: 24px;
   margin: 4px;
-  padding: 6px 12px;
+  padding: 12px;
   transition: all 0.2s ease-in-out;
 
   &:hover {
