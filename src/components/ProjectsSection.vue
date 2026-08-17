@@ -1,20 +1,28 @@
 <template>
-  <div id="projects" class="projects-section q-pt-xl">
-    <div class="text-left q-mb-xl">
-      <h2 class="section-title text-h4 text-weight-bold">Projects</h2>
-      <div class="title-underline"></div>
-    </div>
-    <ProjectHolder :projects="projects" />
+  <div id="projects" class="projects-section q-pt-xl q-pb-sm q-px-md">
+    <div class="projects-container">
+      <!-- Section Header -->
+      <div class="text-left q-mb-xl">
+        <h2 class="section-title text-h4 text-weight-bold">Projects</h2>
+        <div class="title-underline"></div>
+      </div>
 
-    <q-btn
-      unelevated
-      rounded
-      color="primary"
-      class="q-mb-lg"
-      href="https://github.com/gdkimaiyo?tab=repositories"
-      target="_blank"
-      label="View All Projects"
-    />
+      <!-- Projects List Holder -->
+      <ProjectHolder :projects="projects" />
+
+      <!-- View All CTA -->
+      <!-- <div class="q-mt-none q-mb-lg">
+        <q-btn
+          unelevated
+          rounded
+          class="github-cta-btn text-weight-medium"
+          href="https://github.com/gdkimaiyo?tab=repositories"
+          target="_blank"
+          icon-right="fab fa-github"
+          label="View All Projects"
+        />
+      </div> -->
+    </div>
   </div>
 </template>
 
@@ -37,9 +45,15 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-#projects {
+.projects-section {
   font-family: "Avenir", sans-serif;
-  // font-size: 16px;
+  background-color: #f1f5f9;
+  border-radius: 72px 72px 0 0;
+}
+
+.projects-container {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .section-title {
@@ -51,16 +65,28 @@ export default defineComponent({
   width: 55px;
   height: 4px;
   background-color: #0f222d;
-  margin: 8px 0;
+  margin: 8px 0 0 0;
   border-radius: 2px;
 }
 
-@media only screen and (max-width: 575px) {
-  #projects {
-    font-size: 16px;
+.github-cta-btn {
+  background-color: #0f222d;
+  color: #ffffff;
+  font-size: 15px;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: #1e3a4b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15, 34, 45, 0.15);
   }
-  .page-header {
-    margin-bottom: 42px;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects-section {
+    border-radius: 36px 36px 0 0;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 </style>
