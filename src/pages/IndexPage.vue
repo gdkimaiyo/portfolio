@@ -6,7 +6,11 @@
       <AboutSection id="abtme" ref="#abtme" />
       <ExpertiseSection id="skills" ref="#skills" />
       <TestimonialsSection id="testimonials" ref="#testimonials" />
-      <ProjectsSection id="projects" ref="#projects" />
+    </div>
+
+    <ProjectsSection id="projects" ref="#projects" />
+
+    <div class="after-landing q-px-md">
       <ExperienceSection id="experience" ref="#experience" />
     </div>
 
