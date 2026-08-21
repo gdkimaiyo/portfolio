@@ -45,11 +45,34 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
+import { useMeta } from "quasar";
 
 export default defineComponent({
   name: "SupportMe",
+
+  setup() {
+    useMeta({
+      title: "Support My Work | Gideon Kimaiyo",
+      meta: {
+        description: {
+          name: "description",
+          content:
+            "Support Gideon Kimaiyo's open-source projects and software development work.",
+        },
+        ogTitle: {
+          property: "og:title",
+          content: "Support My Work | Gideon Kimaiyo",
+        },
+        ogDescription: {
+          property: "og:description",
+          content:
+            "Support Gideon Kimaiyo's open-source projects and engineering work.",
+        },
+      },
+    });
+  },
 });
 </script>
 
