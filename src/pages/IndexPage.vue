@@ -30,8 +30,9 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script lang="ts">
+import { defineComponent, onMounted } from "vue";
+import { useMeta } from "quasar";
 import LandingPage from "../components/LandingPage.vue";
 import AboutSection from "../components/AboutSection.vue";
 import ProjectsSection from "../components/ProjectsSection.vue";
@@ -55,20 +56,44 @@ export default defineComponent({
     ExperienceSection,
   },
 
-  mounted() {
-    scrollToTop();
-  },
-
-  methods: {
-    scrollBack() {
-      // smooth scroll
+  setup() {
+    const scrollBack = () => {
+      // Smoot scroll
       window.scrollTo({
         top: 0,
+        left: 0,
         behavior: "smooth",
-        block: "start",
-        inline: "start",
       });
-    },
+    };
+
+    useMeta({
+      title: "Gideon Kimaiyo | Senior Full-Stack Software Engineer",
+      meta: {
+        description: {
+          name: "description",
+          content:
+            "Senior Full-Stack Software & DevOps Engineer specializing in secure, scalable web applications, cloud infrastructure and modern software architectures.",
+        },
+        ogTitle: {
+          property: "og:title",
+          content: "Gideon Kimaiyo | Senior Full-Stack Software Engineer",
+        },
+        ogDescription: {
+          property: "og:description",
+          content:
+            "Senior Full-Stack Software & DevOps Engineer specializing in secure, scalable web applications, cloud infrastructure and modern software architectures.",
+        },
+      },
+    });
+
+    onMounted(() => {
+      scrollToTop();
+      scrollBack;
+    });
+
+    return {
+      scrollBack,
+    };
   },
 });
 </script>

@@ -19,14 +19,40 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
+import { useMeta } from "quasar";
+
+// Components
 import ContactUsForm from "../components/ContactUsForm.vue";
 
 export default defineComponent({
   name: "ContactUs",
 
   components: { ContactUsForm },
+
+  setup() {
+    useMeta({
+      title: "Contact Gideon Kimaiyo | Senior Full-Stack Software Engineer",
+      meta: {
+        description: {
+          name: "description",
+          content:
+            "Get in touch with Gideon Kimaiyo for web application development, legacy codebase modernization or cloud infrastructure optimization.",
+        },
+        ogTitle: {
+          property: "og:title",
+          content:
+            "Contact Gideon Kimaiyo | Senior Full-Stack Software Engineer",
+        },
+        ogDescription: {
+          property: "og:description",
+          content:
+            "Get in touch with Gideon Kimaiyo for full-stack software engineering and DevOps consulting.",
+        },
+      },
+    });
+  },
 });
 </script>
 
