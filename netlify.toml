@@ -1,5 +1,42 @@
+[build]
+  command = "quasar build"
+  publish = "dist/spa"
+  # functions = "netlify/functions"
+
+# Enable Netlify Prerendering for Crawlers and Social Bots
+[prerender]
+  enable = true
+
+# ==========================================
+# REDIRECTS & API REWRITES
+# ==========================================
+
+# Vue Router SPA Fallbac
 [[redirects]]
   from = "/*"
   to = "/"
   status = 200
-  
+
+# Express API Rewrite
+# [[redirects]]
+  # from = "/api/*"
+  # to = "/.netlify/functions/api/:splat"
+  # status = 200
+
+# ==========================================
+# SECURITY & CACHING HEADERS
+# ==========================================
+
+# Cache Control & Security Headers - Global Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Immutable Cache for Compiled Frontend Assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
