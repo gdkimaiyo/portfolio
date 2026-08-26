@@ -67,21 +67,44 @@ export default defineComponent({
     };
 
     useMeta({
-      title: "Gideon Kimaiyo | Senior Full-Stack Software Engineer",
+      title: "Gideon Kimaiyo | Senior Full-Stack AI Engineer",
       meta: {
         description: {
           name: "description",
           content:
-            "Senior Full-Stack Software & DevOps Engineer specializing in secure, scalable web applications, cloud infrastructure and modern software architectures.",
+            "Senior Full-Stack AI Engineer building production-grade AI, SaaS and cloud applications with Python, React, TypeScript, AWS and GCP.",
         },
         ogTitle: {
           property: "og:title",
-          content: "Gideon Kimaiyo | Senior Full-Stack Software Engineer",
+          content: "Gideon Kimaiyo | Senior Full-Stack AI Engineer",
         },
         ogDescription: {
           property: "og:description",
           content:
-            "Senior Full-Stack Software & DevOps Engineer specializing in secure, scalable web applications, cloud infrastructure and modern software architectures.",
+            "Senior Full-Stack AI Engineer building production-grade AI, SaaS and cloud applications with Python, React, TypeScript, AWS and GCP.",
+        },
+        ogType: { property: "og:type", content: "website" },
+        ogUrl: {
+          property: "og:url",
+          content: "https://gideonkimaiyo.netlify.app/",
+        },
+        ogImage: {
+          property: "og:image",
+          content: "https://gideonkimaiyo.netlify.app/images/og-cover.jpg",
+        },
+        twitterCard: { name: "twitter:card", content: "summary_large_image" },
+        twitterTitle: {
+          name: "twitter:title",
+          content: "Gideon Kimaiyo | Senior Full-Stack AI Engineer",
+        },
+        twitterDescription: {
+          name: "twitter:description",
+          content:
+            "Senior Full-Stack AI Engineer building production-grade AI, SaaS and cloud applications with Python, React, TypeScript, AWS and GCP.",
+        },
+        twitterImage: {
+          name: "twitter:image",
+          content: "https://gideonkimaiyo.netlify.app/images/og-cover.jpg",
         },
       },
     });
@@ -105,7 +128,7 @@ export default defineComponent({
 
 .after-landing {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1124px;
   margin: 0 auto;
 }
 

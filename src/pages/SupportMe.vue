@@ -59,7 +59,7 @@ export default defineComponent({
         description: {
           name: "description",
           content:
-            "Support Gideon Kimaiyo's open-source projects and software development work.",
+            "Support Gideon Kimaiyo's open-source projects, software engineering work and AI development initiatives.",
         },
         ogTitle: {
           property: "og:title",
@@ -68,8 +68,9 @@ export default defineComponent({
         ogDescription: {
           property: "og:description",
           content:
-            "Support Gideon Kimaiyo's open-source projects and engineering work.",
+            "Support Gideon Kimaiyo's open-source projects, software engineering work and AI development initiatives.",
         },
+        ogType: { property: "og:type", content: "website" },
       },
     });
   },

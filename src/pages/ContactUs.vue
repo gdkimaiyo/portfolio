@@ -33,23 +33,23 @@ export default defineComponent({
 
   setup() {
     useMeta({
-      title: "Contact Gideon Kimaiyo | Senior Full-Stack Software Engineer",
+      title: "Contact Gideon Kimaiyo | Senior Full-Stack AI Engineer",
       meta: {
         description: {
           name: "description",
           content:
-            "Get in touch with Gideon Kimaiyo for web application development, legacy codebase modernization or cloud infrastructure optimization.",
+            "Contact Gideon Kimaiyo for AI application development, full-stack engineering, cloud architecture and production software solutions.",
         },
         ogTitle: {
           property: "og:title",
-          content:
-            "Contact Gideon Kimaiyo | Senior Full-Stack Software Engineer",
+          content: "Contact Gideon Kimaiyo | Senior Full-Stack AI Engineer",
         },
         ogDescription: {
           property: "og:description",
           content:
-            "Get in touch with Gideon Kimaiyo for full-stack software engineering and DevOps consulting.",
+            "Get in touch with Gideon Kimaiyo for AI application development, full-stack engineering and cloud architecture.",
         },
+        ogType: { property: "og:type", content: "website" },
       },
     });
   },
