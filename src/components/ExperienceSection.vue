@@ -143,7 +143,7 @@ export default defineComponent({
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 1072px;
   margin: 0 auto;
   // padding: 0 16px;
 }

@@ -50,8 +50,11 @@
             them simple and user-friendly.
             I build and deploy highly resilient, responsive web applications
             with a focus on clean, secure code and reliable performance. -->
-            Senior Full-Stack Developer. I build and deploy secure and scalable
-            solutions that solve real world problems.
+            <!-- Senior Full-Stack Developer. I build and deploy secure and scalable
+            solutions that solve real world problems. -->
+            Senior Full Stack AI Engineer. I build production-grade scalable AI,
+            SaaS and cloud applications with Python, React, TypeScript, AWS and
+            GCP.
             <span class="custom-link" @click="scrollTo('abtme')">
               Learn more
             </span>
@@ -194,7 +197,7 @@ export default defineComponent({
 }
 .section {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -226,7 +229,7 @@ export default defineComponent({
 }
 .copyright {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 

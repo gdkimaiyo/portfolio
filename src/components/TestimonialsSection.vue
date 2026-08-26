@@ -108,12 +108,12 @@ export default defineComponent({
   font-family: "Avenir", sans-serif;
 }
 
-.testimonials-section {
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
-  // padding: 0 16px;
-}
+// .testimonials-section {
+//   width: 100%;
+//   max-width: 1024px;
+//   margin: 0 auto;
+//   // padding: 0 16px;
+// }
 
 /* Header */
 .section-title {

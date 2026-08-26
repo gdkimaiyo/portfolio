@@ -52,7 +52,7 @@ export default defineComponent({
 }
 
 .projects-container {
-  max-width: 1024px;
+  max-width: 1072px;
   margin: 0 auto;
 }
 

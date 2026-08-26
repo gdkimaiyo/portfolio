@@ -12,10 +12,20 @@
           </q-avatar>
         </div>
 
-        <h1 class="text-h3 text-weight-bold banner-title">Gideon Kimaiyo</h1>
+        <h5 class="text-h6 text-weight-bold banner-title gt-xs">
+          Gideon Kimaiyo
+        </h5>
+        <h1 class="text-h4 text-weight-bold banner-title lt-sm">
+          Senior Full Stack AI Engineer
+        </h1>
+        <h1 class="text-h3 text-weight-bold banner-title gt-xs">
+          Senior Full Stack AI Engineer
+        </h1>
         <p class="text-subtitle1 banner-subtitle q-mt-md">
-          Senior Full-Stack Software Engineer. I build secure, scalable software
-          and cloud solutions that solve real world problems.
+          <!-- Senior Full-Stack Software Engineer. I build secure, scalable software
+          and cloud solutions that solve real world problems. -->
+          I build production-grade scalable AI, SaaS and cloud applications with
+          Python, React, TypeScript, AWS and GCP.
         </p>
         <div class="banner-btns q-mt-lg">
           <q-btn
@@ -107,10 +117,10 @@ export default defineComponent({
 }
 
 .banner-container {
-  max-width: 1024px;
+  max-width: 1172px;
   margin: 0 auto;
   position: relative;
-  min-height: 480px; /* Gives a solid baseline height on desktop */
+  min-height: 83vh;
 }
 
 .banner-content {

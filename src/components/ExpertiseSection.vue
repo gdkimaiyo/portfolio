@@ -61,11 +61,11 @@ export default defineComponent({
   font-family: "Avenir", sans-serif;
 }
 
-.container {
-  max-width: 1024px;
-  margin: 0 auto;
-  // padding: 0 16px;
-}
+// .container {
+//   max-width: 1024px;
+//   margin: 0 auto;
+//   // padding: 0 16px;
+// }
 
 .section-title {
   color: #0f222d;
