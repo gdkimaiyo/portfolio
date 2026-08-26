@@ -1,7 +1,11 @@
 <template>
   <div id="about-me" class="about-section">
     <!-- Section Title -->
-    <div class="about-me-heading text-center">
+    <div class="about-me-heading text-center lt-sm">
+      <h2 class="text-h4 text-weight-bold section-title">About Gideon</h2>
+      <div class="title-underline-mobile"></div>
+    </div>
+    <div class="about-me-heading gt-xs">
       <h2 class="text-h4 text-weight-bold section-title">About Gideon</h2>
       <div class="title-underline"></div>
     </div>
@@ -21,29 +25,42 @@
             deploying and maintaining secure and scalable web applications.
             Handling everything from full-stack development with Django or
             NodeJs and React or Vue3 to automated cloud infrastructure, CI/CD
-            pipelines and database optimization. -->
+            pipelines and database optimization.
 
             I am a Senior Full-Stack Software Engineer with over
             {{ years }} years of experience building, deploying and maintaining
             secure, scalable web applications. I bridge the gap between product
             development and platform architecture, handling from backend
             development with Django or Node.js to modern frontend interfaces
-            with React or Vue 3 and automated cloud infrastructure.
+            with React or Vue 3 and automated cloud infrastructure. -->
+
+            I am a Senior Full-Stack AI Engineer with {{ years }}+ years of
+            experience building, scaling and operating production-grade software
+            across AI, life sciences, healthcare and EdTech. I specialize in
+            building end-to-end applications using Python, Django/FastAPI,
+            React, TypeScript and Node.js, with hands-on experience developing
+            RAG-powered applications, Intelligent Research Assistants, AI-driven
+            workflows and real-time collaborative systems.
           </p>
           <p class="text-body1">
-            I specialize in architecting end-to-end ecosystems that drive
-            business reliability and developer velocity. I have designed and
-            deployed multi-cloud infrastructure across AWS and GCP Docker, built
-            automated CI/CD pipelines with GitHub Actions that reduced
-            deployment overhead by over 40%, and optimized high-throughput
-            database queries to cut API latency by 30%. I focus on delivering
-            clean, reusable code built for long-term scalability.
+            I enjoy working across the entire product lifecycle, from designing
+            backend services and data workflows to building intuitive frontend
+            experiences and deploying reliable cloud infrastructure. I have
+            built and operated production systems across AWS and GCP,
+            containerized applications with Docker, automated CI/CD pipelines
+            with GitHub Actions, and optimized database and API performance for
+            data-intensive workloads. My focus is on building secure,
+            maintainable systems that are reliable in production and designed to
+            scale.
           </p>
           <p class="text-body1">
-            When I'm not writing code or orchestrating cloud infrastructure, I'm
-            usually reading, hanging out with friends or diving into emerging
-            tech trends like GenAI integrations and automated backend workflows
-            to keep my engineering toolkit sharp.
+            Beyond application development, I am interested in the intersection
+            of AI and software engineering, particularly LLM applications,
+            retrieval systems, intelligent automation and how AI can improve
+            complex business and research workflows. When I am not building
+            software, I enjoy reading, spending time with friends and exploring
+            emerging technologies that expand what modern software systems can
+            do.
           </p>
           <p class="q-mt-lg">
             <span class="sub-label">
@@ -131,13 +148,20 @@ export default defineComponent({
   width: 70px;
   height: 4px;
   background-color: #0f222d;
-  // margin: 8px 0;
+  margin: 8px 0;
+  border-radius: 2px;
+}
+
+.title-underline-mobile {
+  width: 70px;
+  height: 4px;
+  background-color: #0f222d;
   margin: 8px auto 0 auto;
   border-radius: 2px;
 }
 
 .about-section {
-  padding-top: 64px;
+  padding-top: 72px;
   margin-bottom: 64px;
 }
 .section {
@@ -191,6 +215,7 @@ export default defineComponent({
   }
 
   .about-section {
+    padding-top: 32px;
     margin-bottom: 32px;
   }
   .section {

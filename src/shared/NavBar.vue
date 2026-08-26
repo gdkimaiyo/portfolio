@@ -459,7 +459,7 @@ export default defineComponent({
 }
 .toolbar {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1172px;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
@@ -472,9 +472,9 @@ export default defineComponent({
   margin-right: 12px;
   text-decoration: none;
 }
-.logo-btn:hover {
-  // color: #2356ad;
-}
+// .logo-btn:hover {
+//   color: #2356ad;
+// }
 .logo-btn {
   font-weight: 700;
 }
@@ -539,6 +539,7 @@ export default defineComponent({
   color: #ffffff;
   min-width: 280px;
   max-width: 320px;
+  min-height: 77vh;
   box-shadow: 0 12px 32px rgba(15, 34, 45, 0.25);
 }
 

@@ -415,39 +415,46 @@ export const EXPERIENCE = [
 
 export const SKILLS = [
   {
+    category: "AI & LLM Engineering",
+    skills: [
+      { language: "RAG", icon: "fas fas-gear" },
+      { language: "LLM Applications", icon: "fas fas-gear" },
+      { language: "Generative AI", icon: "fas fas-gear" },
+      { language: "AI Workflows", icon: "fas fas-gear" },
+      { language: "Prompt Engineering", icon: "fas fas-gear" },
+      { language: "Intelligent Research Assistants", icon: "fas fas-gear" },
+      // { language: "Scikit-Learn", icon: "fas fas-gear" },
+      // { language: "Claude", icon: "fas fas-gear" },
+    ],
+  },
+
+  {
     category: "Languages",
     skills: [
       { language: "Python", icon: "fas fas-gear" },
       { language: "TypeScript", icon: "fas fas-gear" },
       { language: "JavaScript (ES6+)", icon: "fas fas-gear" },
-      { language: "PHP", icon: "fas fas-gear" },
       { language: "SQL", icon: "fas fas-gear" },
-      { language: "C/C++", icon: "fas fas-gear" },
+      // { language: "PHP", icon: "fas fas-gear" },
+      // { language: "SQL", icon: "fas fas-gear" },
+      // { language: "C/C++", icon: "fas fas-gear" },
     ],
   },
 
   {
-    category: "Frontend Development",
+    category: "Full-Stack Development",
     skills: [
       { language: "React.js", icon: "fas fas-gear" },
-      { language: "Vue.js", icon: "fas fas-gear" },
-      { language: "Angular", icon: "fas fas-gear" },
-      { language: "Ant Design", icon: "fas fas-gear" },
-      { language: "Chakra UI", icon: "fas fas-gear" },
-      { language: "Quasar", icon: "fas fas-gear" },
-    ],
-  },
-
-  {
-    category: "Backend Development",
-    // category: "Backend & CMS",
-    skills: [
       { language: "Django", icon: "fas fas-gear" },
-      { language: "Flask", icon: "fas fas-gear" },
       { language: "FastAPI", icon: "fas fas-gear" },
-      { language: "REST APIs", icon: "fas fas-gear" },
       { language: "Node.js", icon: "fas fas-gear" },
       { language: "Express.js", icon: "fas fas-gear" },
+      { language: "REST APIs", icon: "fas fas-gear" },
+      { language: "Chakra UI", icon: "fas fas-gear" },
+      { language: "Vue.js", icon: "fas fas-gear" },
+      { language: "Quasar", icon: "fas fas-gear" },
+      { language: "Angular", icon: "fas fas-gear" },
+      { language: "Ant Design", icon: "fas fas-gear" },
       // { language: "Laravel", icon: "fas fas-gear" },
       // { language: "WordPress", icon: "fas fas-gear" },
       // { language: "Drupal", icon: "fas fas-gear" },
@@ -455,62 +462,50 @@ export const SKILLS = [
   },
 
   {
-    category: "DevOps & Cloud",
+    category: "Cloud & DevOps",
     skills: [
       { language: "AWS", icon: "fas fas-gear" },
-      { language: "Azure", icon: "fas fas-gear" },
       { language: "Google Cloud", icon: "fas fas-gear" },
       { language: "Docker", icon: "fas fas-gear" },
+      { language: "AWS ECS", icon: "fas fas-gear" },
       { language: "CI/CD", icon: "fas fas-gear" },
-      { language: "Python", icon: "fas fas-gear" },
       { language: "GitHub Actions", icon: "fas fas-gear" },
       { language: "NGINX", icon: "fas fas-gear" },
-      { language: "Apache", icon: "fas fas-gear" },
-      { language: "Netlify", icon: "fas fas-gear" },
-      { language: "Heroku", icon: "fas fas-gear" },
       { language: "Linux", icon: "fas fas-gear" },
+      // { language: "Azure", icon: "fas fas-gear" },
+      // { language: "Apache", icon: "fas fas-gear" },
+      // { language: "Netlify", icon: "fas fas-gear" },
+      // { language: "Heroku", icon: "fas fas-gear" },
     ],
   },
 
   {
-    // category: "Databases & Caching",
-    category: "Databases & Tools",
+    category: "Data & Distributed Systems",
     skills: [
       { language: "MongoDB", icon: "fas fas-gear" },
       { language: "PostgreSQL", icon: "fas fas-gear" },
-      { language: "MySQL", icon: "fas fas-gear" },
       { language: "Redis", icon: "fas fas-gear" },
       { language: "Celery", icon: "fas fas-gear" },
-      { language: "Git", icon: "fas fas-gear" },
-      { language: "GitHub", icon: "fas fas-gear" },
-      { language: "REST APIs", icon: "fas fas-gear" },
-      { language: "Postman", icon: "fas fas-gear" },
-      { language: "Figma", icon: "fas fas-gear" },
+      { language: "Async Processing", icon: "fas fas-gear" },
+      { language: "Database Optimization", icon: "fas fas-gear" },
     ],
   },
 
   {
-    category: "AI & Machine Learning",
+    category: "Real-Time Systems & Integrations",
     skills: [
-      { language: "Generative AI", icon: "fas fas-gear" },
-      { language: "LLMs", icon: "fas fas-gear" },
-      { language: "Model Fine-Tuning (SFT)", icon: "fas fas-gear" },
-      { language: "Machine Learning", icon: "fas fas-gear" },
-      { language: "Scikit-Learn", icon: "fas fas-gear" },
-      { language: "Claude", icon: "fas fas-gear" },
+      { language: "Tiptap", icon: "fas fas-gear" },
+      { language: "Hocuspocus", icon: "fas fas-gear" },
+      { language: "Yjs", icon: "fas fas-gear" },
+      { language: "Real-Time Collaboration", icon: "fas fas-gear" },
+      { language: "WebSockets", icon: "fas fas-gear" },
+      { language: "Stripe", icon: "fas fas-gear" },
+      // { language: "Git", icon: "fas fas-gear" },
+      // { language: "GitHub", icon: "fas fas-gear" },
+      // { language: "Postman", icon: "fas fas-gear" },
+      // { language: "Figma", icon: "fas fas-gear" },
     ],
   },
-
-  // {
-  //   category: "Tools & Architectures",
-  //   skills: [
-  //     { language: "Git", icon: "fas fas-gear" },
-  //     { language: "GitHub", icon: "fas fas-gear" },
-  //     { language: "REST APIs", icon: "fas fas-gear" },
-  //     { language: "Postman", icon: "fas fas-gear" },
-  //     { language: "Figma", icon: "fas fas-gear" },
-  //   ],
-  // },
 ];
 
 // export const SKILLS = [
