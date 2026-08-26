@@ -33,6 +33,16 @@
           {{ project.header }}
         </h3>
 
+        <p
+          v-if="project.company.startsWith('Personal')"
+          class="company-name text-weight-bold q-mb-md"
+        >
+          {{ project.company }}
+        </p>
+        <p v-else class="company-name text-weight-bold q-mb-md">
+          @ {{ project.company }}
+        </p>
+
         <p class="project-desc-text text-body2 q-mb-md">
           {{ project.desc }}
         </p>
@@ -42,7 +52,7 @@
         </p>
 
         <!-- TECH STACK CHIPS -->
-        <div class="tech-stack row items-center q-gutter-xs q-mb-lg">
+        <div class="tech-stack row items-center q-gutter-xs q-mt-md q-mb-lg">
           <q-chip
             v-for="(tech, indx) in project.technologies"
             :key="indx"
@@ -203,6 +213,11 @@ export default defineComponent({
 .project-title {
   color: #0f222d;
   line-height: 1.3;
+}
+
+.company-name {
+  color: #4a5568;
+  font-size: 16px;
 }
 
 .project-desc-text {
