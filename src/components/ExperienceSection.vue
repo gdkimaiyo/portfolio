@@ -9,8 +9,8 @@
 
       <!-- Section Subtitle / Intro -->
       <div class="text-h6 text-left experience-intro q-mb-xl">
-        {{ years }}+ years of experience building secure, scalable software and
-        cloud solutions.
+        {{ years }}+ years of experience building secure, scalable production
+        grade AI, SaaS and cloud solutions.
       </div>
 
       <!-- Experience Cards List -->
